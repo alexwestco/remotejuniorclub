@@ -11,26 +11,34 @@
 		<p style="color: green;">Your full name.</p>
 
 		<%= d.label :name %></br>
-		<%= d.text_field :name, :required => true%>
+		<%= d.text_field :name, :required => true, :style => "width: 400px;" %>
 		<br></br><br></br>
 
 		<p style="color: green;">Your profile photo.</p>
 
 		<%= d.label :profile_image %></br>
-		<%= d.file_field :profile_image %>
+		<% if @developer.profile_image.url != '/images/original/missing.png' %>
+			Current Image:<br> <%= image_tag @developer.profile_image.url, :style =>"max-height:200px;" %><br>
+			</br><br>
+			Change Image:<br><br>
+		<% end %>
+
 		<br></br><br></br>
+		
+		<%= d.file_field :image %>
+		<br></br><br>
 
 		<p style="color: green;">Who are you? Describe yourself in a few words. :)</p>
 
 		<%= d.label :bio %></br>
-		<%= d.text_area :bio, :required => true%>
+		<%= d.text_area :bio, :required => true, :style => "width: 400px;" %>
 		<br></br><br></br>
 
 
 		<p style="color: green;">Your personal website. It must start with http:// or https://</p>
 
 		<%= d.label :personal_website %></br>
-		<%= d.text_field :personal_website, :required => true%>
+		<%= d.text_field :personal_website, :required => true, :style => "width: 400px;" %>
 		<br></br><br></br>
 
 		
@@ -39,6 +47,9 @@
 		<%= d.submit %>
 
 		<br><br>
+
+		<%= link_to "Delete Profile", @developer, :method => :delete, :style => 'font-size: 11px; color:red;' %>
+
 		
 	<% end %>
 </div>

@@ -1,5 +1,8 @@
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+
 <div style="text-align: center; font-size: 20px; padding-top: 60px; background-color: white;">
-	<h1 style="margin:30px;">New Company</h1>
+	<h1 style="margin:30px;">Edit Details</h1>
 
 
 	<%= form_for @developer do |d| %>
@@ -8,7 +11,7 @@
 		<p style="color: green;">Your full name.</p>
 
 		<%= d.label :name %></br>
-		<%= d.text_field :name, :required => true%>
+		<%= d.text_field :name, :required => true, :style => "width: 400px;" %>
 		<br></br><br></br>
 
 		<p style="color: green;">Your profile photo.</p>
@@ -17,23 +20,22 @@
 		<%= d.file_field :profile_image %>
 		<br></br><br></br>
 
-		<p style="color: green; width:400px;">Who are you? Describe yourself in a few words. :)</p>
+		<p style="color: green;">Who are you? Describe yourself in a few words. :)</p>
 
 		<%= d.label :bio %></br>
-		<%= d.text_area :bio, :required => true%>
+		<%= d.text_area :bio, :required => true, :style => "width: 400px;" %>
 		<br></br><br></br>
 
 
 		<p style="color: green;">Your personal website. It must start with http:// or https://</p>
 
 		<%= d.label :personal_website %></br>
-		<%= d.text_field :personal_website, :required => true%>
+		<%= d.text_field :personal_website, :required => true, :style => "width: 400px;" %>
 		<br></br><br></br>
 
 		
 		<br></br><br></br>
 
-		
 		<%= d.submit %>
 
 		<br><br>

@@ -1,10 +1,10 @@
-<div style="text-align: center;">
+<div style="text-align: center; background-color: white;">
 
 	<% @developers.each do |developer| %>
-		<img class="card-img-top" src="<%= developer.profile_image.url %>"" style="max-height: 100px; width: auto; height: auto; margin-bottom: 10px;">
-		<h1 style="margin: 30px;"><%= developer.name %></h1>
+		<img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:150px; margin:30px;" />
+		<h1 style="margin: 30px; margin-top: 0px;"><%= developer.name %></h1>
 		<p style="margin: 30px;"><%= developer.bio %></p>
-		<a style="margin: 30px;" href="<%= developer.personal_website %>">Personal website/blog.</a>
+		<a class="btn btn-primary" style="" href="/developers/<%= developer.id %>">View Profile</a><br><br>
 		<hr>
 	<% end %>
 

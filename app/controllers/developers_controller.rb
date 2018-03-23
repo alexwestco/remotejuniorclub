@@ -36,6 +36,13 @@ class DevelopersController < ApplicationController
 		@developer = Developer.find(params[:id])
 	end
 
+	def destroy
+		@developer = Developer.find(params[:id])
+
+	    @developer.destroy
+	    redirect_to "/"
+	end
+
 	private
 
 	def post_params
