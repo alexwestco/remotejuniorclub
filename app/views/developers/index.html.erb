@@ -1,0 +1,11 @@
+<div style="text-align: center;">
+
+	<% @developers.each do |developer| %>
+		<img class="card-img-top" src="<%= developer.profile_image.url %>"" style="max-height: 100px; width: auto; height: auto; margin-bottom: 10px;">
+		<h1 style="margin: 30px;"><%= developer.name %></h1>
+		<p style="margin: 30px;"><%= developer.bio %></p>
+		<a style="margin: 30px;" href="<%= developer.personal_website %>">Personal website/blog.</a>
+		<hr>
+	<% end %>
+
+</div>

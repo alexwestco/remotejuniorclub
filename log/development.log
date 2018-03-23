@@ -1000,3 +1000,1080 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-23 15:09:23 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (0.9ms)
+Completed 200 OK in 197ms (Views: 187.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/edit" for 127.0.0.1 at 2018-03-23 15:09:25 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/edit"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/developers/edit" for 127.0.0.1 at 2018-03-23 15:09:32 +0200
+Processing by DevelopersController#show as HTML
+  Parameters: {"id"=>"edit"}
+  Rendering developers/show.html.erb within layouts/application
+  Rendered developers/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/edit" for 127.0.0.1 at 2018-03-23 15:09:59 +0200
+Processing by DevelopersController#show as HTML
+  Parameters: {"id"=>"edit"}
+  Rendering developers/show.html.erb within layouts/application
+  Rendered developers/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/edit/1" for 127.0.0.1 at 2018-03-23 15:10:23 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/developers/edit/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/developers/edit/1" for 127.0.0.1 at 2018-03-23 15:10:27 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/developers/edit/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:10:50 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  Rendered developers/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/1" for 127.0.0.1 at 2018-03-23 15:11:05 +0200
+Processing by DevelopersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (1.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 5.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Developer with 'id'=id):
+  
+app/controllers/developers_controller.rb:16:in `show'
+Started GET "/developers/1/edit" for 127.0.0.1 at 2018-03-23 15:11:09 +0200
+Processing by DevelopersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Developer with 'id'=id):
+  
+app/controllers/developers_controller.rb:12:in `edit'
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:11:34 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    2: 	<h1 style="margin:30px;">New Company</h1>
+    3: 
+    4: 
+    5: 	<%= form_for @company do |c| %>
+    6: 
+    7: 		</br>
+    8: 		<p style="color: green;">The name of your startup.</p>
+  
+app/views/developers/new.html.erb:5:in `_app_views_developers_new_html_erb___4463772499231241115_70162986196020'
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:11:42 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    2: 	<h1 style="margin:30px;">New Company</h1>
+    3: 
+    4: 
+    5: 	<%= form_for @developer do |c| %>
+    6: 
+    7: 		</br>
+    8: 		<p style="color: green;">The name of your startup.</p>
+  
+app/views/developers/new.html.erb:5:in `_app_views_developers_new_html_erb___4463772499231241115_70162988302120'
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:11:56 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    2: 	<h1 style="margin:30px;">New Company</h1>
+    3: 
+    4: 
+    5: 	<%= form_for @developer do |d| %>
+    6: 
+    7: 		</br>
+    8: 		<p style="color: green;">The name of your startup.</p>
+  
+app/views/developers/new.html.erb:5:in `_app_views_developers_new_html_erb___4463772499231241115_70162988043580'
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:12:22 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    2: 	<h1 style="margin:30px;">New Company</h1>
+    3: 
+    4: 
+    5: 	<%= form_for @developer do |d| %>
+    6: 
+    7: 		</br>
+    8: 		<p style="color: green;">The name of your startup.</p>
+  
+app/views/developers/new.html.erb:5:in `_app_views_developers_new_html_erb___4463772499231241115_70162979482980'
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:13:12 +0200
+Processing by DevelopersController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `new' for nil:NilClass):
+  
+app/controllers/developers_controller.rb:8:in `new'
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:13:20 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `description' for #<Developer:0x007fa030e6ae60>):
+    14: 		<p style="color: green;">Describe your startup in one sentence.</p>
+    15: 
+    16: 		<%= d.label :description %></br>
+    17: 		<%= d.text_area :description, :required => true%>
+    18: 		<br></br><br></br>
+    19: 
+    20: 
+  
+app/views/developers/new.html.erb:17:in `block in _app_views_developers_new_html_erb___4463772499231241115_70162995876340'
+app/views/developers/new.html.erb:5:in `_app_views_developers_new_html_erb___4463772499231241115_70162995876340'
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:14:08 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<Developer:0x007fa02eb97640>):
+    21: 		<p style="color: green;">Your startup's website. It must start with http:// or https://</p>
+    22: 
+    23: 		<%= d.label :url %></br>
+    24: 		<%= d.text_field :url, :required => true%>
+    25: 		<br></br><br></br>
+    26: 
+    27: 		<p style="color: green;">Your company's location.</p>
+  
+app/views/developers/new.html.erb:24:in `block in _app_views_developers_new_html_erb___4463772499231241115_70162955539140'
+app/views/developers/new.html.erb:5:in `_app_views_developers_new_html_erb___4463772499231241115_70162955539140'
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:14:27 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `location' for #<Developer:0x007fa03093b430>):
+    27: 		<p style="color: green;">Your company's location.</p>
+    28: 
+    29: 		<%= d.label :location %></br>
+    30: 		<%= d.text_field :location, :required => true%>
+    31: 		<br></br><br></br>
+    32: 
+    33: 		<p style="color: green;">Your StackShare profile link. It must start with https://<br>If you don't have one, just write your basic stack (eg. 'Rails, React, Heroku')</p>
+  
+app/views/developers/new.html.erb:30:in `block in _app_views_developers_new_html_erb___4463772499231241115_70162993237820'
+app/views/developers/new.html.erb:5:in `_app_views_developers_new_html_erb___4463772499231241115_70162993237820'
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:14:50 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:15:01 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:15:07 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:15:12 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:15:20 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:16:05 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 31ms (Views: 18.7ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/developers" for 127.0.0.1 at 2018-03-23 15:16:36 +0200
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for DevelopersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/developers" for 127.0.0.1 at 2018-03-23 15:16:56 +0200
+Processing by DevelopersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HiJ7DEd6FVodhvpzbRtzXi2S1XGuI+vDTyGYx4bY2sPkYuiRhMydAh3kjZAN+AJYx1NBElIAFMqbVKk9M4iEkA==", "developer"=>{"name"=>"Alexander Sideris", "bio"=>"23 yo. Full Stack Developer. Muay Thai fighter. Based in Greece.", "personal_website"=>"http://www.alexsideris.me"}, "commit"=>"Create Developer"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.0ms)[0m  [1m[32mINSERT INTO "developers" ("name", "bio", "personal_website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Alexander Sideris"], ["bio", "23 yo. Full Stack Developer. Muay Thai fighter. Based in Greece."], ["personal_website", "http://www.alexsideris.me"], ["created_at", "2018-03-23 13:16:56.671529"], ["updated_at", "2018-03-23 13:16:56.671529"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 28ms (ActiveRecord: 15.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-23 15:16:56 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-23 15:17:27 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:17:28 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  Rendered developers/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:18:02 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:18:26 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 27ms (Views: 22.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:18:59 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:19:24 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:19:42 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:20:09 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/developers" for 127.0.0.1 at 2018-03-23 15:21:42 +0200
+Processing by DevelopersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NMO9kwVCy82ILIwGk5OnHVtbxXvryzW0we2gtbhd5u3Ogy4OxvRDlYhO++XzcNYbsZpRGBfoyr0VmJFPDQ24vg==", "developer"=>{"name"=>"Vignesh M", "bio"=>"Tech wizz living in New Delhi. Working two jobs while studying cause I am a badass and wanna make others feel stupid.", "personal_website"=>"https://vigneshm.com"}, "commit"=>"Create Developer"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "developers" ("name", "bio", "personal_website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Vignesh M"], ["bio", "Tech wizz living in New Delhi. Working two jobs while studying cause I am a badass and wanna make others feel stupid."], ["personal_website", "https://vigneshm.com"], ["created_at", "2018-03-23 13:21:42.358273"], ["updated_at", "2018-03-23 13:21:42.358273"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-23 15:21:42 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:21:45 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:22:42 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1012430468620475205)[0m
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentProfileImageToDevelopers (20180323134223)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1012430468620475205)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1012430468620475205)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAttachmentProfileImageToDevelopers (20180323134223)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.4ms)[0m  [1m[35mALTER TABLE "developers" ADD "profile_image_file_name" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "developers" ADD "profile_image_content_type" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "developers" ADD "profile_image_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "developers" ADD "profile_image_updated_at" timestamp[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180323134223"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1012430468620475205)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:43:16 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 250ms (Views: 231.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:44:06 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile_images/original/missing.png" for 127.0.0.1 at 2018-03-23 15:44:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profile_images/original/missing.png"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/developers/1/edit" for 127.0.0.1 at 2018-03-23 15:44:13 +0200
+Processing by DevelopersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Developer with 'id'=id):
+  
+app/controllers/developers_controller.rb:22:in `edit'
+Started GET "/developers/1/edit" for 127.0.0.1 at 2018-03-23 15:45:03 +0200
+Processing by DevelopersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 3.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Developer with 'id'=id):
+  
+app/controllers/developers_controller.rb:22:in `edit'
+Started GET "/developers/1/edit" for 127.0.0.1 at 2018-03-23 15:45:18 +0200
+Processing by DevelopersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 3.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Developer with 'id'=id):
+  
+app/controllers/developers_controller.rb:22:in `edit'
+Started GET "/developers/1/edit" for 127.0.0.1 at 2018-03-23 15:45:30 +0200
+Processing by DevelopersController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 404 Not Found in 6ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Developer without an ID):
+  
+app/controllers/developers_controller.rb:22:in `edit'
+Started GET "/developers/1/edit" for 127.0.0.1 at 2018-03-23 15:46:19 +0200
+Processing by DevelopersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (3.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering developers/edit.html.erb within layouts/application
+  Rendered developers/edit.html.erb within layouts/application (30.2ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 10.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `description' for #<Developer:0x007fca40bf12f8>):
+    17: 		<p style="color: green;">Describe your startup in one sentence.</p>
+    18: 
+    19: 		<%= d.label :description %></br>
+    20: 		<%= d.text_area :description, :required => true, :style => 'width:350px;'%>
+    21: 		<br></br><br></br>
+    22: 
+    23: 
+  
+app/views/developers/edit.html.erb:20:in `block in _app_views_developers_edit_html_erb__1088187006071874249_70253323177540'
+app/views/developers/edit.html.erb:8:in `_app_views_developers_edit_html_erb__1088187006071874249_70253323177540'
+Started GET "/developers/1/edit" for 127.0.0.1 at 2018-03-23 15:47:39 +0200
+Processing by DevelopersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering developers/edit.html.erb within layouts/application
+  Rendered developers/edit.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/developers/1/edit" for 127.0.0.1 at 2018-03-23 15:48:12 +0200
+Processing by DevelopersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering developers/edit.html.erb within layouts/application
+  Rendered developers/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/developers/1/edit" for 127.0.0.1 at 2018-03-23 15:48:22 +0200
+Processing by DevelopersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering developers/edit.html.erb within layouts/application
+  Rendered developers/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/developers/1" for 127.0.0.1 at 2018-03-23 15:48:39 +0200
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for DevelopersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PATCH "/developers/1" for 127.0.0.1 at 2018-03-23 15:49:13 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DevelopersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dZXWAsTQnG8gXuOlx5/5ByvhbDbfOzwt5fOeNbGDBDyP1UWfB2YUNyA8lEanfIgBwSD4VSMYwyQxhq/PBNNabw==", "developer"=>{"name"=>"Alex Sideris", "bio"=>"23 yo. Full Stack Developer. Muay Thai fighter. Based in Greece.", "personal_website"=>"http://www.alexsideris.me"}, "commit"=>"Update Developer", "id"=>"1"}
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `developer' for #<DevelopersController:0x007fca3afbab60>
+Did you mean?  developer_url):
+  
+app/controllers/developers_controller.rb:26:in `update'
+Started PATCH "/developers/1" for 127.0.0.1 at 2018-03-23 15:49:21 +0200
+Processing by DevelopersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dZXWAsTQnG8gXuOlx5/5ByvhbDbfOzwt5fOeNbGDBDyP1UWfB2YUNyA8lEanfIgBwSD4VSMYwyQxhq/PBNNabw==", "developer"=>{"name"=>"Alex Sideris", "bio"=>"23 yo. Full Stack Developer. Muay Thai fighter. Based in Greece.", "personal_website"=>"http://www.alexsideris.me"}, "commit"=>"Update Developer", "id"=>"1"}
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[33mUPDATE "developers" SET "name" = $1, "updated_at" = $2 WHERE "developers"."id" = $3[0m  [["name", "Alex Sideris"], ["updated_at", "2018-03-23 13:49:21.918659"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-23 15:49:21 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (0.4ms)
+Completed 200 OK in 164ms (Views: 162.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:49:24 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile_images/original/missing.png" for 127.0.0.1 at 2018-03-23 15:49:24 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profile_images/original/missing.png"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:51:46 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (201.0ms)
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `c' for #<#<Class:0x007fca3c13ee90>:0x007fca3c13d220>):
+    13: 
+    14: 		<p style="color: green;">Your profile photo.</p>
+    15: 
+    16: 		<%= c.label :profile_image %></br>
+    17: 		<%= c.file_field :profile_image %>
+    18: 		<br></br><br></br>
+    19: 
+  
+app/views/developers/new.html.erb:16:in `block in _app_views_developers_new_html_erb__3751953196815966264_70253284031380'
+app/views/developers/new.html.erb:5:in `_app_views_developers_new_html_erb__3751953196815966264_70253284031380'
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:51:57 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:52:18 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:52:35 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:52:58 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:52:59 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers/new" for 127.0.0.1 at 2018-03-23 15:53:04 +0200
+Processing by DevelopersController#new as HTML
+  Rendering developers/new.html.erb within layouts/application
+  Rendered developers/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/developers" for 127.0.0.1 at 2018-03-23 15:53:23 +0200
+Processing by DevelopersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WSeQyfaRQ8RsOprQz5ORONSrHebKAAN0lhwE1EN2VkOjZwNUNSfLnGxY7TOvcOA+PmqJhTYj/H1CaTUu9iYIEA==", "developer"=>{"name"=>"Alexander Sideris", "profile_image"=>#<ActionDispatch::Http::UploadedFile:0x007fca3e737f48 @tempfile=#<Tempfile:/var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/RackMultipart20180323-50457-bzvcea.png>, @original_filename="25727274.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"developer[profile_image]\"; filename=\"25727274.png\"\r\nContent-Type: image/png\r\n">, "bio"=>"Hey bro", "personal_website"=>"asd"}, "commit"=>"Create Developer"}
+Unpermitted parameter: :profile_image
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.6ms)[0m  [1m[32mINSERT INTO "developers" ("name", "bio", "personal_website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Alexander Sideris"], ["bio", "Hey bro"], ["personal_website", "asd"], ["created_at", "2018-03-23 13:53:23.164358"], ["updated_at", "2018-03-23 13:53:23.164358"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 13.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-23 15:53:23 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:53:25 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile_images/original/missing.png" for 127.0.0.1 at 2018-03-23 15:53:25 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profile_images/original/missing.png"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:53:39 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 37ms (Views: 29.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/profile_images/original/missing.png" for 127.0.0.1 at 2018-03-23 15:53:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profile_images/original/missing.png"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/developers/1/edit" for 127.0.0.1 at 2018-03-23 15:53:46 +0200
+Processing by DevelopersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering developers/edit.html.erb within layouts/application
+  Rendered developers/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/developers/1" for 127.0.0.1 at 2018-03-23 15:53:52 +0200
+Processing by DevelopersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4QyHHtRygbvyf0dDC8CqQurYflq+5qxcNY4sBFi9VCIbTBSDF8QJ4/IdMKBrI9tEABnqOULFU1Xh+x3+7e0KcQ==", "developer"=>{"name"=>"Alex Sideris", "profile_image"=>#<ActionDispatch::Http::UploadedFile:0x007fca42048d50 @tempfile=#<Tempfile:/var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/RackMultipart20180323-50457-149hg1s.png>, @original_filename="25727274.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"developer[profile_image]\"; filename=\"25727274.png\"\r\nContent-Type: image/png\r\n">, "bio"=>"23 yo. Full Stack Developer. Muay Thai fighter. Based in Greece.", "personal_website"=>"http://www.alexsideris.me"}, "commit"=>"Update Developer", "id"=>"1"}
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[paperclip] Trying to link /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/RackMultipart20180323-50457-149hg1s.png to /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50457-ijbd4s.png
+[paperclip] Trying to link /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50457-ijbd4s.png to /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50457-15mhp2y.png
+Command :: file -b --mime '/var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50457-15mhp2y.png'
+[paperclip] Trying to link /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50457-ijbd4s.png to /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50457-1ikx5kk.png
+Command :: file -b --mime '/var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50457-1ikx5kk.png'
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "developers" SET "profile_image_file_name" = $1, "profile_image_content_type" = $2, "profile_image_file_size" = $3, "profile_image_updated_at" = $4, "updated_at" = $5 WHERE "developers"."id" = $6[0m  [["profile_image_file_name", "25727274.png"], ["profile_image_content_type", "image/png"], ["profile_image_file_size", 155197], ["profile_image_updated_at", "2018-03-23 13:53:52.228449"], ["updated_at", "2018-03-23 13:53:52.260267"], ["id", 1]]
+[paperclip] saving /developers/profile_images/000/000/001/original/25727274.png
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3561ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-23 15:53:55 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:53:57 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile_images/original/missing.png" for 127.0.0.1 at 2018-03-23 15:53:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profile_images/original/missing.png"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/profile_images/original/missing.png" for 127.0.0.1 at 2018-03-23 15:54:13 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profile_images/original/missing.png"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/developers/1/edit" for 127.0.0.1 at 2018-03-23 15:56:30 +0200
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DevelopersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering developers/edit.html.erb within layouts/application
+  Rendered developers/edit.html.erb within layouts/application (204.9ms)
+Completed 200 OK in 254ms (Views: 224.2ms | ActiveRecord: 4.0ms)
+
+
+Started PATCH "/developers/1" for 127.0.0.1 at 2018-03-23 15:56:36 +0200
+Processing by DevelopersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DwJOPx9jjECv/hWU+EP9TT9BxEXOf/d+hJ6EfButCV31Qt2i3NUEGK+cYneYoIxL1YBQJjJcCHdQ67WGrv1XDg==", "developer"=>{"name"=>"Alex Sideris", "profile_image"=>#<ActionDispatch::Http::UploadedFile:0x007fb4af618df0 @tempfile=#<Tempfile:/var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/RackMultipart20180323-50762-1b9qp65.png>, @original_filename="25727274.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"developer[profile_image]\"; filename=\"25727274.png\"\r\nContent-Type: image/png\r\n">, "bio"=>"23 yo. Full Stack Developer. Muay Thai fighter. Based in Greece.", "personal_website"=>"http://www.alexsideris.me"}, "commit"=>"Update Developer", "id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[paperclip] Trying to link /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/RackMultipart20180323-50762-1b9qp65.png to /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50762-1rscih9.png
+[paperclip] Trying to link /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50762-1rscih9.png to /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50762-1bsmvc6.png
+Command :: file -b --mime '/var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50762-1bsmvc6.png'
+[paperclip] Trying to link /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50762-1rscih9.png to /var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50762-q3wufv.png
+Command :: file -b --mime '/var/folders/2n/f2g3b39d65d8f6htpr2kthvw0000gn/T/16ec189ae2955418365d42d42f83d6f820180323-50762-q3wufv.png'
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "developers" SET "profile_image_file_name" = $1, "profile_image_updated_at" = $2, "updated_at" = $3 WHERE "developers"."id" = $4[0m  [["profile_image_file_name", "25727274.png"], ["profile_image_updated_at", "2018-03-23 13:56:37.981708"], ["updated_at", "2018-03-23 13:56:37.999132"], ["id", 1]]
+[paperclip] deleting developers/profile_images/000/000/001/original/25727274.png
+[paperclip] saving developers/profile_images/000/000/001/original/25727274.png
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3578ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-23 15:56:40 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:56:42 +0200
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile_images/original/missing.png" for 127.0.0.1 at 2018-03-23 15:56:42 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profile_images/original/missing.png"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/developers" for 127.0.0.1 at 2018-03-23 15:57:17 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 227ms (Views: 208.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/profile_images/original/missing.png" for 127.0.0.1 at 2018-03-23 15:57:17 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/profile_images/original/missing.png"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'

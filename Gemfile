@@ -32,6 +32,9 @@ gem 'spring',        group: :development
 
 gem 'puma'
 
+gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
