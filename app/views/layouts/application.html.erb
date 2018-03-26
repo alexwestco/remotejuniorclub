@@ -18,13 +18,16 @@
   <div class="container">
     <ul class="nav navbar-nav">
       <li class="active">
-        <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+        <a href="/"><span class="glyphicon glyphicon-home"></span> Remote Junior Club</a>
+      </li>
+      <li>
+        <a href="/"><span class="glyphicon glyphicon-fire"></span> Front Page</a>
       </li>
       <li>
         <a href="/developers"><span class="glyphicon glyphicon-user"></span> Developers</a>
       </li>
       <li>
-        <a target="_blank" href="https://remotejuniorclub.slack.com/messages"><span class="glyphicon glyphicon-heart-empty"></span> Chat</a>
+        <a target="_blank" href="https://remotejuniorclub.slack.com/messages"><span class="glyphicon glyphicon-heart"></span> Chat</a>
       </li>
       <li>
         <a href="/jobs"><span class="glyphicon glyphicon-globe"></span> Jobs</a>
@@ -32,9 +35,14 @@
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li class="navbar-right">
-        <a href="https://devcenter.heroku.com"><span class="glyphicon glyphicon-log-in"></span> Sign In</a>
-      </li>
+      <% if !developer_signed_in? %>
+        <li>
+          <a href="/sign_in"><span class="glyphicon glyphicon-log-in"></span> Sign In</a>
+        </li>
+      <% else %>
+        <li>
+          <a href="/developers/profile"> My Profile</a>
+        </li>      <% end %>
     </ul>
   </div>
 </nav>

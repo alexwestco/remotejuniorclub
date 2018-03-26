@@ -1,0 +1,26 @@
+<div style="height:1000px; text-align: center; margin-top: 50px;">
+<p style="font-size: 25px; padding:10px; margin-bottom: 40px;"><b>Log in</b></p>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <p style=""><b>Email</b></p>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :style => 'width:250px; height:35px;' %>
+  </div>
+
+  <div class="field" style="margin-top: 10px;">
+    <p style="padding-top: 10px;"><b>Password</b></p>
+    <%= f.password_field :password, autocomplete: "off", :style => 'width:250px; height:35px;'  %>
+  </div>
+
+  <div class="actions" style="margin:20px; padding:10px;">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<a href="/developers/sign_up" style="color:grey; font-size: 13px; margin-left:10%; margin-right: 10%;">Want to Sign Up for Remote Junior Club?</a>
+
+
+
+</div>
+

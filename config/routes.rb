@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
+
+  get 'developers/profile'
+
+  get 'developers/edit_profile'
+
+  get 'developers/show_profile'
+
   devise_for :developers
+
   resources :widgets
   
   # The priority is based upon order of creation: first created -> highest priority.
@@ -12,6 +20,13 @@ Rails.application.routes.draw do
   resources :developers
 
   resources :side_projects
+
+  devise_scope :developer do
+    get 'sign_in', to: 'devise/sessions#new'
+  end
+
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,0 +1,29 @@
+<div style="height:1000px; text-align: center; margin-top: 50px;">
+<p style="font-size: 25px; padding:10px; margin-bottom: 40px;"><b>Sign Up</b></p>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <p style=""><b>Email</b></p>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :style => 'width:250px; height:35px;' %>
+  </div>
+
+  <div class="field">
+    <p style="padding-top: 30px;"><b>Password</b><span style="color:grey; font-size: 13px;"> (6 characters minimum)</span></p>
+
+    
+    <%= f.password_field :password, autocomplete: "off", :style => 'width:250px; height:35px;'%>
+  </div>
+
+  <div class="field">
+    <p style="padding-top: 30px;"><b>Password Confirmation</b></p>
+    <%= f.password_field :password_confirmation, autocomplete: "off", :style => 'width:250px; height:35px;' %>
+  </div>
+
+  <div class="actions" style="margin:20px; padding:10px;">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+</div>

@@ -32,8 +32,17 @@ class DevelopersController < ApplicationController
     	end
   	end
 
-	def show
+  	def profile
+    	@developer = Developer.find(current_developer.id)
+  	end
+
+  	def edit_profile
+		@developer = Developer.find(current_developer.id) 
+	end
+
+	def show_profile
 		@developer = Developer.find(params[:id])
+		@side_projects = SideProject.where(:developer_id => current_developer.id).reverse
 	end
 
 	def destroy
@@ -42,6 +51,8 @@ class DevelopersController < ApplicationController
 	    @developer.destroy
 	    redirect_to "/"
 	end
+
+	
 
 	private
 
