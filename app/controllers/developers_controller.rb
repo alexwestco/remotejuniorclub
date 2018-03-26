@@ -42,7 +42,7 @@ class DevelopersController < ApplicationController
 
 	def show_profile
 		@developer = Developer.find(params[:id])
-		@side_projects = SideProject.where(:developer_id => current_developer.id).reverse
+		@side_projects = SideProject.where(:developer_id => params[:id]).reverse
 	end
 
 	def destroy

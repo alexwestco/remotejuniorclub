@@ -15,7 +15,7 @@
 <div style="background-color: #191919; height:500px; text-align: center; ">
 	<h1 style="padding:50px; color: white;">We are a community of junior developers chasing the same dream!</h1>
 	<% @developers.each do |developer| %>
-		<a href="/developers/<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:150px; margin:30px;" /></a>
+		<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:150px; margin:30px;" /></a>
 
 	<% end %>
 </div>

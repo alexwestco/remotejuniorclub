@@ -8635,3 +8635,34 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-26 17:36:50 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered welcome/index.erb within layouts/application (37.7ms)
+Completed 200 OK in 295ms (Views: 278.5ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/developers/show_profile?id=1" for 127.0.0.1 at 2018-03-26 17:36:54 +0300
+Processing by DevelopersController#show_profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/developers_controller.rb:45:in `show_profile'
+Started GET "/developers/show_profile?id=1" for 127.0.0.1 at 2018-03-26 17:37:24 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DevelopersController#show_profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSideProject Load (0.7ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects" WHERE "side_projects"."developer_id" = $1[0m  [["developer_id", 1]]
+  Rendering developers/show_profile.html.erb within layouts/application
+  Rendered developers/show_profile.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 284ms (Views: 204.8ms | ActiveRecord: 9.3ms)
+
+
