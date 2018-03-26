@@ -1,0 +1,56 @@
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+
+<div style="text-align: center; font-size: 20px; padding-top: 60px; background-color: white;">
+	<h1 style="margin:30px;">Add Side Project</h1>
+
+
+	<%= form_for @side_project do |sp| %>
+
+		</br>
+		<p style="color: green;">The side project's name.</p>
+
+		<%= sp.label :name %>*</br>
+		<%= sp.text_field :name, :required => true, :style => "width: 400px;" %>
+		<br></br><br></br>
+
+		<p style="color: green;">Describe your side project.</p>
+
+		<%= sp.label :description %>*</br>
+		<%= sp.text_area :description, :style => "width: 400px;" %>
+		<br></br><br></br>
+
+		<p style="color: green;">Logo/image.</p>
+
+		<%= sp.label :image %></br>
+		<%= sp.file_field :image, :style => "width: 400px;" %>
+		<br></br><br></br>
+
+
+		<p style="color: green;">Where can we find a working version of your side project? It must start with http:// or https://</p>
+
+		<%= sp.label :website %></br>
+		<%= sp.text_field :website, :style => "width: 400px;" %>
+		<br></br><br></br>
+
+		<p style="color: green;">What is the tech stack of the project? (eg. 'Rails, Heroku, Bootstrap')</p>
+
+		<%= sp.label :tech_stack %>*</br>
+		<%= sp.text_field :tech_stack, :required => true, :style => "width: 400px;" %>
+		<br></br><br></br>
+
+		<p style="color: green;">Is your code accessible? It must start with http:// or https://</p>
+
+		<%= sp.label :github_repo %></br>
+		<%= sp.text_field :github_repo, :style => "width: 400px;" %>
+		<br></br><br></br>
+
+		
+		<br></br><br></br>
+
+		<%= sp.submit %>
+
+		<br><br>
+		
+	<% end %>
+</div>

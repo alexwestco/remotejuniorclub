@@ -6,8 +6,18 @@
 <h1 style="margin: 30px;"><%= @developer.name %></h1>
 <p style="margin: 30px;"><%= @developer.bio %></p>
 <a style="margin: 30px;" href="<%= @developer.personal_website %>">Personal website/blog.</a><br><br>
+<hr>
+<h1>Side Projects</h1>
+<hr>
 
-<a class="btn btn-success" style="" href="/side_projects/new">Add Side Project</a><br><br>
-
+	<% @side_projects.each do |sp| %>
+		<img id="card-img-top" src="<%= sp.image.url %>" style=" height:150px; margin:30px;" />
+		<h1 style="margin: 30px; margin-top: 0px;"><%= sp.name %></h1>
+		<p style="margin: 30px;"><%= sp.description %></p>
+		<p style="margin: 30px;"><%= sp.tech_stack %></p>
+		<a target="_blank" href="<%= sp.github_repo %>">View Github Repository</a><br><br>
+		<a target="_blank" href="<%= sp.website %>">Visit Website</a>
+		<hr>
+	<% end %>
 
 </div>

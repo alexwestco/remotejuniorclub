@@ -1,0 +1,11 @@
+<div style="height:1000px; text-align: center; margin-top: 50px;">
+
+<h1>Your Side Projects</h1>
+<hr>
+
+	<% @side_projects.each do |sp| %>
+		<a href="/side_projects/<%= sp.id %>/edit" style="margin: 30px; margin-top: 0px;"><%= sp.name %></a>
+		<hr>
+	<% end %>
+
+</div>

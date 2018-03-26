@@ -4,7 +4,7 @@
 		<img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:150px; margin:30px;" />
 		<h1 style="margin: 30px; margin-top: 0px;"><%= developer.name %></h1>
 		<p style="margin: 30px;"><%= developer.bio %></p>
-		<a class="btn btn-primary" style="" href="/developers/<%= developer.id %>">View Profile</a><br><br>
+		<a class="btn btn-primary" style="" href="/developers/show_profile?id=<%= developer.id %>">View Profile</a><br><br>
 		<hr>
 	<% end %>
 

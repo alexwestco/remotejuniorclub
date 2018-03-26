@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   resources :developers
 
+  get 'side_projects/edit_side_projects'
+
   resources :side_projects
 
   devise_scope :developer do

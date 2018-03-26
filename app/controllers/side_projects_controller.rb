@@ -9,6 +9,7 @@ class SideProjectsController < ApplicationController
 
 	def create
 	    @side_project = SideProject.new(post_params)
+	    @side_project.developer_id = current_developer.id
 
 	    if @side_project.save
 	   	  redirect_to "/"
@@ -42,10 +43,14 @@ class SideProjectsController < ApplicationController
 	    redirect_to "/"
 	end
 
+	def edit_side_projects
+		@side_projects = SideProject.where(:developer_id => current_developer.id).reverse
+	end
+
 	private
 
 	def post_params
-		params.require(:side_project).permit(:name, :description, :github_repo, :website, :pimage)
+		params.require(:side_project).permit(:name, :description, :github_repo, :website, :image, :tech_stack)
 	end
 
 
