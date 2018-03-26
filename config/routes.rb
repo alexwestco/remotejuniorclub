@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :developers
+
+  resources :side_projects
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
