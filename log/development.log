@@ -8599,3 +8599,39 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-26 16:18:28 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered welcome/index.erb within layouts/application (3.0ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/developers/profile" for 127.0.0.1 at 2018-03-26 16:23:16 +0300
+Processing by DevelopersController#profile as HTML
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering developers/profile.html.erb within layouts/application
+  Rendered developers/profile.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 44ms (Views: 36.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/developers/sign_out/" for 127.0.0.1 at 2018-03-26 16:23:18 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4qaQqmExAUyl3j4JFIj79biRXvJYJjcw5jU5o0lJ+1A1ysMjF5tdSc7OKwSblILfvaXEbOsyWlIJjCO3B1Xhhg=="}
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-26 16:23:18 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered welcome/index.erb within layouts/application (2.1ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.3ms)
+
+

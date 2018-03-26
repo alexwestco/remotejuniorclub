@@ -17,7 +17,7 @@
 		<p style="color: green;">Your profile photo.</p>
 
 		<%= d.label :profile_image %></br>
-		<% if @developer.profile_image.url != '/images/original/missing.png' %>
+		<% if @developer.profile_image.url != '/profile_images/original/missing.png' %>
 			Current Image:<br> <%= image_tag @developer.profile_image.url, :style =>"max-height:200px;" %><br>
 			</br><br>
 			Change Image:<br><br>
@@ -25,7 +25,7 @@
 
 		<br></br><br></br>
 		
-		<%= d.file_field :image %>
+		<%= d.file_field :profile_image %>
 		<br></br><br>
 
 		<p style="color: green;">Who are you? Describe yourself in a few words. :)</p>
