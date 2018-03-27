@@ -100,6 +100,7 @@ GEM
     nio4r (2.2.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    oauth (0.5.4)
     orm_adapter (0.5.0)
     paperclip (5.2.1)
       activemodel (>= 4.2.0)
@@ -177,6 +178,8 @@ GEM
     turbolinks (5.1.0)
       turbolinks-source (~> 5.1)
     turbolinks-source (5.1.0)
+    twurl (0.9.3)
+      oauth (~> 0.4)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
     uglifier (4.1.4)
@@ -196,6 +199,7 @@ DEPENDENCIES
   devise
   jbuilder
   jquery-rails
+  nokogiri
   paperclip
   pg (~> 0.18)
   puma
@@ -205,6 +209,7 @@ DEPENDENCIES
   sdoc
   spring
   turbolinks
+  twurl
   uglifier
 
 RUBY VERSION

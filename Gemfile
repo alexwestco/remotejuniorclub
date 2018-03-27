@@ -37,6 +37,12 @@ gem 'aws-sdk', '~> 2.3'
 
 gem 'devise'
 
+# For web scraping
+gem 'nokogiri'
+
+# For web scraping Twitter
+gem 'twurl'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
