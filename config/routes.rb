@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     get 'sign_in', to: 'devise/sessions#new'
   end
 
-
+  resources :jobs
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
