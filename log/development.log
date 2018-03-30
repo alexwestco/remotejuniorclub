@@ -8901,3 +8901,948 @@ Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.0ms)
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1012430468620475205)[0m
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveCompanyFromJobs (20180330162832)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.8ms)[0m  [1m[35mALTER TABLE "jobs" DROP "company"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180330162832"]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1012430468620475205)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1012430468620475205)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDescriptionToJobs (20180330162916)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "jobs" ADD "description" text[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180330162916"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1012430468620475205)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mJob Load (12.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Quality Assurance / Software Business Analyst"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Quality Assurance / Software Business Analyst"], ["url", "https://t.co/saLEDesuGX"], ["created_at", "2018-03-30 16:30:20.682733"], ["updated_at", "2018-03-30 16:30:20.682733"], ["description", "DESCRIPTION: About us What’s most important to you?  A great place to work? A stable, successful company?  Or making a meaningful impact?   How about all of..."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Associate Director of User Experience"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Associate Director of User Experience"], ["url", "https://t.co/5mr9PQPgfq"], ["created_at", "2018-03-30 16:30:21.179972"], ["updated_at", "2018-03-30 16:30:21.179972"], ["description", "DESCRIPTION: Normal 0 false false false EN-US JA X-NONE..."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Graphic Designer"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Graphic Designer"], ["url", "https://t.co/adthj28vkT"], ["created_at", "2018-03-30 16:30:21.645751"], ["updated_at", "2018-03-30 16:30:21.645751"], ["description", "DESCRIPTION:   We are seeking a talented and enthusiastic Graphic Designer to join our dynamic in-house Creative Team. The Graphic Designer is directly responsible for developing print and..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Product Specialist, Customer Success"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Product Specialist, Customer Success"], ["url", "https://t.co/wcUW9SLKBu"], ["created_at", "2018-03-30 16:30:22.141188"], ["updated_at", "2018-03-30 16:30:22.141188"], ["description", "DESCRIPTION: Product Specialist, Customer Success Full-time — Tend Running a diversified farm is complex. Tend is making it simpler by helping farm managers streamline their..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Freelance Writers - Social Media Content Creators Only"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Freelance Writers - Social Media Content Creators Only"], ["url", "https://t.co/yoQdSUXqQ4"], ["created_at", "2018-03-30 16:30:22.597046"], ["updated_at", "2018-03-30 16:30:22.597046"], ["description", "DESCRIPTION: Normal 0 false false false EN-US X-NONE X-NONE..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "QA Manager"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "QA Manager"], ["url", "https://t.co/2ITQi5XACC"], ["created_at", "2018-03-30 16:30:23.079562"], ["updated_at", "2018-03-30 16:30:23.079562"], ["description", "DESCRIPTION: About Us Guardhat is more than just a dynamic industrial wearable company - it is leading the charge in industrial safety. Using IoT technologies, Guardhat creates cutting-edge products..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "WordPress Theme &amp; Plugin Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "WordPress Theme &amp; Plugin Developer"], ["url", "https://t.co/iJDvuemCXP"], ["created_at", "2018-03-30 16:30:23.540050"], ["updated_at", "2018-03-30 16:30:23.540050"], ["description", "DESCRIPTION: About Our Company ElegantThemes.com is a leader in WordPress Theme &amp; Plugin Development. We have been building the top premium WordPress themes and plugins for the..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Creative Director"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Creative Director"], ["url", "https://t.co/Vj3GKHxmOr"], ["created_at", "2018-03-30 16:30:24.031682"], ["updated_at", "2018-03-30 16:30:24.031682"], ["description", "DESCRIPTION: About Us – Please allow us to introduce ourselves Sir Kensington’s is a food innovation company, best known for making condiments with character. We work to bring integrity..."]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Front-End Web Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Front-End Web Developer"], ["url", "https://t.co/mDdSf7VRPX"], ["created_at", "2018-03-30 16:30:24.688216"], ["updated_at", "2018-03-30 16:30:24.688216"], ["description", "DESCRIPTION: Fervor Creative is a strategic design, interactive and branding agency located in beautiful Scottsdale, Arizona. We’re looking for a front-end web developer who lives and breathes..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Web Application Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Web Application Developer"], ["url", "https://t.co/Ts2vHOSR9L"], ["created_at", "2018-03-30 16:30:25.210401"], ["updated_at", "2018-03-30 16:30:25.210401"], ["description", "DESCRIPTION: Bachelor’s Degree in Computer Science or equivalent field of study. Experience in Software Development with a focus on Web Application/Website Development in an enterprise-level..."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior Software Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior Software Developer"], ["url", "https://t.co/QQprE21igX"], ["created_at", "2018-03-30 16:30:25.700037"], ["updated_at", "2018-03-30 16:30:25.700037"], ["description", "DESCRIPTION: Overview: Design, create, modify, and implement websites, web applications, and APIs. Evaluate code to ensure it is properly structured, meets industry standards, and is compatible with..."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Database Architect"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Database Architect"], ["url", "https://t.co/5XZ54jEYwb"], ["created_at", "2018-03-30 16:30:26.204527"], ["updated_at", "2018-03-30 16:30:26.204527"], ["description", "DESCRIPTION: Required: Bachelor’s Degree in Computer Science or equivalent field of study with an emphasis in database development and or design or 4 years of experience in database development and..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Backend Web Developer (Laravel)"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Backend Web Developer (Laravel)"], ["url", "https://t.co/VR9w8z2upH"], ["created_at", "2018-03-30 16:30:26.683049"], ["updated_at", "2018-03-30 16:30:26.683049"], ["description", "DESCRIPTION: Who We Are ScaleLab is a leading digital talent network on a mission to help online influencers expand their audience and overall career through technology and top-level agency services...."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Account Executive"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Account Executive"], ["url", "https://t.co/1RP8yUXQtx"], ["created_at", "2018-03-30 16:30:27.184982"], ["updated_at", "2018-03-30 16:30:27.184982"], ["description", "DESCRIPTION: About us: Our motivation to create Fleetsmith stemmed from our deep frustration with existing computer management solutions. We knew we could do a lot better. Our product is powerful, yet..."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Content Marketing Manager"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Content Marketing Manager"], ["url", "https://t.co/SRUdUZMIZr"], ["created_at", "2018-03-30 16:30:27.637129"], ["updated_at", "2018-03-30 16:30:27.637129"], ["description", "DESCRIPTION: About us: Our motivation to create Fleetsmith stemmed from our deep frustration with existing computer management solutions. We knew we could do a lot better. Our product is powerful, yet..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Business Analyst"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Business Analyst"], ["url", "https://t.co/N4yVDMH4tx"], ["created_at", "2018-03-30 16:30:28.154510"], ["updated_at", "2018-03-30 16:30:28.154510"], ["description", "DESCRIPTION: About us: Our motivation to create Fleetsmith stemmed from our deep frustration with existing computer management solutions. We knew we could do a lot better. Our product is powerful, yet..."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "iOS Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "iOS Developer"], ["url", "https://t.co/IcfoNF354p"], ["created_at", "2018-03-30 16:30:28.619155"], ["updated_at", "2018-03-30 16:30:28.619155"], ["description", "DESCRIPTION: Fitbot is looking for a second iOS developer to join our team in Boulder, Colorado. You’ll be responsible for working directly with the founders, our developers, our designers, and the..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Freelance Designer"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Freelance Designer"], ["url", "https://t.co/d60nlAX3V4"], ["created_at", "2018-03-30 16:30:29.117819"], ["updated_at", "2018-03-30 16:30:29.117819"], ["description", "DESCRIPTION: Freelance Designer for studio that works with nonprofits Minds On Design Lab is a digital and design team located in Brooklyn, NY that serves as partners to nonprofit organizations. The..."]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Software Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Software Developer"], ["url", "https://t.co/cAtycgQptk"], ["created_at", "2018-03-30 16:30:29.640918"], ["updated_at", "2018-03-30 16:30:29.640918"], ["description", "DESCRIPTION: Do you get excited about scaling, securing, and maintaining systems, so that our clients and our team have the tools they need, when they need them? Does troubleshooting, tinkering, and designing..."]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Quality Assurance / Software Business Analyst"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Associate Director of User Experience"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Graphic Designer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Product Specialist, Customer Success"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Freelance Writers - Social Media Content Creators Only"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "QA Manager"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "WordPress Theme &amp; Plugin Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Creative Director"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Front-End Web Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Web Application Developer"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior Software Developer"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Database Architect"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Backend Web Developer (Laravel)"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Account Executive"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Content Marketing Manager"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Business Analyst"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "iOS Developer"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Freelance Designer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Software Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2018-03-30 19:33:02 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (1.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered welcome/index.erb within layouts/application (73.5ms)
+Completed 200 OK in 388ms (Views: 356.4ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-30 19:33:03 +0300
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-03-30 19:33:03 +0300
+Started GET "/jobs" for 127.0.0.1 at 2018-03-30 19:33:06 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 77ms (Views: 67.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-03-30 19:34:12 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-03-30 19:34:22 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-03-30 19:34:31 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 1]]
+  [1m[35m (12.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 2]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Quality Assurance / Software Business Analyst"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Quality Assurance / Software Business Analyst"], ["url", "https://t.co/saLEDesuGX"], ["created_at", "2018-03-30 16:40:55.638748"], ["updated_at", "2018-03-30 16:40:55.638748"], ["description", "DESCRIPTION: About us What’s most important to you?  A great place to work? A stable, successful company?  Or making a meaningful impact?   How about all of..."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Associate Director of User Experience"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Associate Director of User Experience"], ["url", "https://t.co/5mr9PQPgfq"], ["created_at", "2018-03-30 16:40:56.137285"], ["updated_at", "2018-03-30 16:40:56.137285"], ["description", "DESCRIPTION: Normal 0 false false false EN-US JA X-NONE..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Graphic Designer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Graphic Designer"], ["url", "https://t.co/adthj28vkT"], ["created_at", "2018-03-30 16:40:56.614372"], ["updated_at", "2018-03-30 16:40:56.614372"], ["description", "DESCRIPTION:   We are seeking a talented and enthusiastic Graphic Designer to join our dynamic in-house Creative Team. The Graphic Designer is directly responsible for developing print and..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Product Specialist, Customer Success"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Product Specialist, Customer Success"], ["url", "https://t.co/wcUW9SLKBu"], ["created_at", "2018-03-30 16:40:57.134427"], ["updated_at", "2018-03-30 16:40:57.134427"], ["description", "DESCRIPTION: Product Specialist, Customer Success Full-time — Tend Running a diversified farm is complex. Tend is making it simpler by helping farm managers streamline their..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Freelance Writers - Social Media Content Creators Only"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Freelance Writers - Social Media Content Creators Only"], ["url", "https://t.co/yoQdSUXqQ4"], ["created_at", "2018-03-30 16:40:57.648296"], ["updated_at", "2018-03-30 16:40:57.648296"], ["description", "DESCRIPTION: Normal 0 false false false EN-US X-NONE X-NONE..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "QA Manager"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "QA Manager"], ["url", "https://t.co/2ITQi5XACC"], ["created_at", "2018-03-30 16:40:58.113200"], ["updated_at", "2018-03-30 16:40:58.113200"], ["description", "DESCRIPTION: About Us Guardhat is more than just a dynamic industrial wearable company - it is leading the charge in industrial safety. Using IoT technologies, Guardhat creates cutting-edge products..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "WordPress Theme &amp; Plugin Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "WordPress Theme &amp; Plugin Developer"], ["url", "https://t.co/iJDvuemCXP"], ["created_at", "2018-03-30 16:40:58.634961"], ["updated_at", "2018-03-30 16:40:58.634961"], ["description", "DESCRIPTION: About Our Company ElegantThemes.com is a leader in WordPress Theme &amp; Plugin Development. We have been building the top premium WordPress themes and plugins for the..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Creative Director"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Creative Director"], ["url", "https://t.co/Vj3GKHxmOr"], ["created_at", "2018-03-30 16:40:59.202379"], ["updated_at", "2018-03-30 16:40:59.202379"], ["description", "DESCRIPTION: About Us – Please allow us to introduce ourselves Sir Kensington’s is a food innovation company, best known for making condiments with character. We work to bring integrity..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Front-End Web Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Front-End Web Developer"], ["url", "https://t.co/mDdSf7VRPX"], ["created_at", "2018-03-30 16:40:59.689033"], ["updated_at", "2018-03-30 16:40:59.689033"], ["description", "DESCRIPTION: Fervor Creative is a strategic design, interactive and branding agency located in beautiful Scottsdale, Arizona. We’re looking for a front-end web developer who lives and breathes..."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Web Application Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Web Application Developer"], ["url", "https://t.co/Ts2vHOSR9L"], ["created_at", "2018-03-30 16:41:00.210310"], ["updated_at", "2018-03-30 16:41:00.210310"], ["description", "DESCRIPTION: Bachelor’s Degree in Computer Science or equivalent field of study. Experience in Software Development with a focus on Web Application/Website Development in an enterprise-level..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior Software Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior Software Developer"], ["url", "https://t.co/QQprE21igX"], ["created_at", "2018-03-30 16:41:00.699194"], ["updated_at", "2018-03-30 16:41:00.699194"], ["description", "DESCRIPTION: Overview: Design, create, modify, and implement websites, web applications, and APIs. Evaluate code to ensure it is properly structured, meets industry standards, and is compatible with..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Database Architect"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Database Architect"], ["url", "https://t.co/5XZ54jEYwb"], ["created_at", "2018-03-30 16:41:01.197899"], ["updated_at", "2018-03-30 16:41:01.197899"], ["description", "DESCRIPTION: Required: Bachelor’s Degree in Computer Science or equivalent field of study with an emphasis in database development and or design or 4 years of experience in database development and..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Backend Web Developer (Laravel)"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Backend Web Developer (Laravel)"], ["url", "https://t.co/VR9w8z2upH"], ["created_at", "2018-03-30 16:41:01.706245"], ["updated_at", "2018-03-30 16:41:01.706245"], ["description", "DESCRIPTION: Who We Are ScaleLab is a leading digital talent network on a mission to help online influencers expand their audience and overall career through technology and top-level agency services...."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Account Executive"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Account Executive"], ["url", "https://t.co/1RP8yUXQtx"], ["created_at", "2018-03-30 16:41:02.312610"], ["updated_at", "2018-03-30 16:41:02.312610"], ["description", "DESCRIPTION: About us: Our motivation to create Fleetsmith stemmed from our deep frustration with existing computer management solutions. We knew we could do a lot better. Our product is powerful, yet..."]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Content Marketing Manager"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Content Marketing Manager"], ["url", "https://t.co/SRUdUZMIZr"], ["created_at", "2018-03-30 16:41:03.072735"], ["updated_at", "2018-03-30 16:41:03.072735"], ["description", "DESCRIPTION: About us: Our motivation to create Fleetsmith stemmed from our deep frustration with existing computer management solutions. We knew we could do a lot better. Our product is powerful, yet..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Business Analyst"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Business Analyst"], ["url", "https://t.co/N4yVDMH4tx"], ["created_at", "2018-03-30 16:41:03.772652"], ["updated_at", "2018-03-30 16:41:03.772652"], ["description", "DESCRIPTION: About us: Our motivation to create Fleetsmith stemmed from our deep frustration with existing computer management solutions. We knew we could do a lot better. Our product is powerful, yet..."]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "iOS Developer"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "iOS Developer"], ["url", "https://t.co/IcfoNF354p"], ["created_at", "2018-03-30 16:41:04.370209"], ["updated_at", "2018-03-30 16:41:04.370209"], ["description", "DESCRIPTION: Fitbot is looking for a second iOS developer to join our team in Boulder, Colorado. You’ll be responsible for working directly with the founders, our developers, our designers, and the..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Freelance Designer"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Freelance Designer"], ["url", "https://t.co/d60nlAX3V4"], ["created_at", "2018-03-30 16:41:05.017459"], ["updated_at", "2018-03-30 16:41:05.017459"], ["description", "DESCRIPTION: Freelance Designer for studio that works with nonprofits Minds On Design Lab is a digital and design team located in Brooklyn, NY that serves as partners to nonprofit organizations. The..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Software Developer"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Software Developer"], ["url", "https://t.co/cAtycgQptk"], ["created_at", "2018-03-30 16:41:05.717534"], ["updated_at", "2018-03-30 16:41:05.717534"], ["description", "DESCRIPTION: Do you get excited about scaling, securing, and maintaining systems, so that our clients and our team have the tools they need, when they need them? Does troubleshooting, tinkering, and designing..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Front End with Angular 2/4 or 5 Developer at Boyle Software"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Front End with Angular 2/4 or 5 Developer at Boyle Software"], ["url", "https://t.co/V9lWBiRDMM"], ["created_at", "2018-03-30 16:41:09.020027"], ["updated_at", "2018-03-30 16:41:09.020027"], ["description", "DESCRIPTION: Boyle Software is looking for Front End developers with Angular 2 &amp; 4 (or even 5!) experience to work full-time in Manhattan. The right candidates will have the following: 3+ years of…"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "SS7 Solution Engineer, Carrier Network Operations at First Orion"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "SS7 Solution Engineer, Carrier Network Operations at First Orion"], ["url", "https://t.co/dbwcS3aVGp"], ["created_at", "2018-03-30 16:41:09.787563"], ["updated_at", "2018-03-30 16:41:09.787563"], ["description", "DESCRIPTION: First Orion is an industry-leading call protection and data provider, developing software and services to enable our customers to take complete control over their telecommunications, powered by world…"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Junior .Net Web Frontend Software Developer at Grimm Reaper Information Technology"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Junior .Net Web Frontend Software Developer at Grimm Reaper Information Technology"], ["url", "https://t.co/JzUBahUIfj"], ["created_at", "2018-03-30 16:41:10.589099"], ["updated_at", "2018-03-30 16:41:10.589099"], ["description", "DESCRIPTION: Grimm Reaper Information Technology (GRIT) is looking for a Junior Web Frontend Software Developer to join our team for full-time salaried position which we’re looking to fill immediately.…"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior Software Engineer PHP at Alturos Destinations GmbH"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior Software Engineer PHP at Alturos Destinations GmbH"], ["url", "https://t.co/LOqmL3mDEF"], ["created_at", "2018-03-30 16:41:11.147101"], ["updated_at", "2018-03-30 16:41:11.147101"], ["description", "DESCRIPTION: Alturos Destinations ist ein internationaler Key Player, welcher mit seinen Lösungen für eine perfekte Planung und Umsetzung von Digitalisierungsstrategien im Tourismus sorgt. Aufgrund…"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Perfect Channel"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Perfect Channel"], ["url", "https://t.co/SXSZcgN66e"], ["created_at", "2018-03-30 16:41:11.784919"], ["updated_at", "2018-03-30 16:41:11.784919"], ["description", "DESCRIPTION: We are an organisation which offers agile and continuous improvement. Working for Perfect Channel gives our staff members the opportunity to gain hands-on experience from working in small, self…"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Simulation Engineer (Robotics) at Aeolus Robotics"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Simulation Engineer (Robotics) at Aeolus Robotics"], ["url", "https://t.co/uB4To9eUDy"], ["created_at", "2018-03-30 16:41:12.503783"], ["updated_at", "2018-03-30 16:41:12.503783"], ["description", "DESCRIPTION: You will develop and maintain simulation tools useful for testing software from integrated robotic teams and planning and execution team. You will create simulation models, set up a simulation and…"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Robotics Software Engineer at Aeolus Robotics"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Robotics Software Engineer at Aeolus Robotics"], ["url", "https://t.co/KLzznqhAK8"], ["created_at", "2018-03-30 16:41:13.108754"], ["updated_at", "2018-03-30 16:41:13.108754"], ["description", "DESCRIPTION: Job Responsibilities: You will design, implement and test robotic software that integrates low-level components into useful robot behaviours: Design, implement and test new use cases for the Aeolus…"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Cyber Security Incident Response and Attack Analyst at JP Morgan Chase"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (12.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Cyber Security Incident Response and Attack Analyst at JP Morgan Chase"], ["url", "https://t.co/wg9mDUGxPq"], ["created_at", "2018-03-30 16:41:13.621375"], ["updated_at", "2018-03-30 16:41:13.621375"], ["description", "DESCRIPTION: Working in Cybersecurity takes pure passion for technology, speed, a constant desire to learn, and above all, vigilance in keeping every last asset safe and sound. You’ll be on the front lines of…"]]
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Content Engineer - Data Loss Protection at JP Morgan Chase"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Content Engineer - Data Loss Protection at JP Morgan Chase"], ["url", "https://t.co/N1e276WDMM"], ["created_at", "2018-03-30 16:41:14.345607"], ["updated_at", "2018-03-30 16:41:14.345607"], ["description", "DESCRIPTION: As an experience professional in our Cybersecurity organization, you’re equally committed to watching over our data today, as well as finding innovative new ways to protect it in the future. To do…"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "SIEM Content Engineer at JP Morgan Chase"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "SIEM Content Engineer at JP Morgan Chase"], ["url", "https://t.co/A1iuAMUZWk"], ["created_at", "2018-03-30 16:41:14.976605"], ["updated_at", "2018-03-30 16:41:14.976605"], ["description", "DESCRIPTION: As an experienced professional in our Cybersecurity organization, you’re equally committed to watching over our data today, as well as finding innovative new ways to protect it in the future. To do…"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Unix Application Support Engineer at JP Morgan Chase"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Unix Application Support Engineer at JP Morgan Chase"], ["url", "https://t.co/tElb5Cr50t"], ["created_at", "2018-03-30 16:41:15.726968"], ["updated_at", "2018-03-30 16:41:15.726968"], ["description", "DESCRIPTION: Cyber Technology Controls Cyber Technology Controls (CTC) delivers streamlined and consistent solutions supporting JPMorgan Chase’s Security &amp; Controls and IT Risk agendas with a focus on risk…"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Criteo Labs"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Criteo Labs"], ["url", "https://t.co/Tyg64TxCI9"], ["created_at", "2018-03-30 16:41:16.407034"], ["updated_at", "2018-03-30 16:41:16.407034"], ["description", "DESCRIPTION: We are looking for individuals who strive for tremendous personal and team success. You accomplish big and little things with distinction. You entertain a variety of ideas. You have an open mind, can…"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Oracle Database Developer at Coolblue"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Oracle Database Developer at Coolblue"], ["url", "https://t.co/6FU4rKcBJt"], ["created_at", "2018-03-30 16:41:16.872418"], ["updated_at", "2018-03-30 16:41:16.872418"], ["description", "DESCRIPTION: As a Oracle database developer, you are responsible for creating and maintaining the database components for applications that allow Coolblue to deliver on its promises.What you tell at parties\"I…"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Tech Lead Data Science at Coolblue"], ["LIMIT", 1]]
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Tech Lead Data Science at Coolblue"], ["url", "https://t.co/gZYJR2dO6o"], ["created_at", "2018-03-30 16:41:17.500789"], ["updated_at", "2018-03-30 16:41:17.500789"], ["description", "DESCRIPTION: As a Team Lead Data Science at Coolblue, you're responsible for building and managing a team that excels in delivering high quality, efficient software.What you tell people at parties I'm the…"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Tech Lead PHP at Coolblue"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Tech Lead PHP at Coolblue"], ["url", "https://t.co/nVvPmnNTcv"], ["created_at", "2018-03-30 16:41:18.019884"], ["updated_at", "2018-03-30 16:41:18.019884"], ["description", "DESCRIPTION: As a Tech Lead PHP at Coolblue, you're responsible for building and managing a team that excels in delivering high quality, efficient software.What you tell your friends\"I bring smiles to our…"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Cyber Intrusions Forensics Manager at JP Morgan Chase"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Cyber Intrusions Forensics Manager at JP Morgan Chase"], ["url", "https://t.co/ucCCj2zb6K"], ["created_at", "2018-03-30 16:41:18.513718"], ["updated_at", "2018-03-30 16:41:18.513718"], ["description", "DESCRIPTION:  As a Vice President in our Cybersecurity organization, you’re equally committed to watching over our data today, as well as finding innovative new ways to protect it in the future. To do that,…"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Cyber Intrusions Forensics Manager at JP Morgan Chase"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "jobs" SET "url" = $1, "updated_at" = $2 WHERE "jobs"."id" = $3[0m  [["url", "https://t.co/oTw5qGI1Vl"], ["updated_at", "2018-03-30 16:41:19.026680"], ["id", 54]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior JAVA Engineer at VANAD Enovation"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior JAVA Engineer at VANAD Enovation"], ["url", "https://t.co/pVRaUvzSDf"], ["created_at", "2018-03-30 16:41:19.564951"], ["updated_at", "2018-03-30 16:41:19.564951"], ["description", "DESCRIPTION: Algemeen Je werkt in een van de scrum teams in Capelle aan den IJssel. Je ontwerpt, bouwt en test applicaties waarin je samen met je team verantwoordelijk bent voor de gehele software development…"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior Android Developer - Millions of Users at Catawiki"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior Android Developer - Millions of Users at Catawiki"], ["url", "https://t.co/VCwVkzTOdE"], ["created_at", "2018-03-30 16:41:20.126819"], ["updated_at", "2018-03-30 16:41:20.126819"], ["description", "DESCRIPTION: What you will do  Our Android development team builds, maintains and perfects our auction app that has 150,000+ active monthly users. Within the team you’ll be given plenty of freedom to…"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior Front-End Developer - React at Catawiki"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior Front-End Developer - React at Catawiki"], ["url", "https://t.co/TTvnyVSQ60"], ["created_at", "2018-03-30 16:41:20.656546"], ["updated_at", "2018-03-30 16:41:20.656546"], ["description", "DESCRIPTION: What you will do As a Senior Front-End Developer for Catawiki you’ll be part of an agile development team of 50+ developers and will mostly be developing parts of the product that are used by…"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Web/Interactive Designer (Remote Welcome) - Sanborn"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Web/Interactive Designer (Remote Welcome) - Sanborn"], ["url", "https://t.co/V2jQUqfo7R"], ["created_at", "2018-03-30 16:41:22.342007"], ["updated_at", "2018-03-30 16:41:22.342007"], ["description", "DESCRIPTION: Sanborn is currently on the hunt for an enthusiastic, energetic soul to join our design team. We are looking for a designer who wants to be challenged in a fast-paced …"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Lead Designer - Matter Jobs on AngelList"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Lead Designer - Matter Jobs on AngelList"], ["url", "https://t.co/T7c4vVpyWW"], ["created_at", "2018-03-30 16:41:22.911181"], ["updated_at", "2018-03-30 16:41:22.911181"], ["description", "DESCRIPTION: Apply now for Lead Designer Job at Matter in San Francisco - Amazing Feedback. No Boss Required. Founded by the founder of HALL.com which sold to Atlassian in 2015. We are based in SF, and are funded..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Job opening: UI/UX Designer/Developer at Qbox Elasticsearch as a Service"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Job opening: UI/UX Designer/Developer at Qbox Elasticsearch as a Service"], ["url", "https://t.co/x3KvybdCrQ"], ["created_at", "2018-03-30 16:41:23.380687"], ["updated_at", "2018-03-30 16:41:23.380687"], ["description", "DESCRIPTION: Job opening: UI/UX Designer/Developer at Qbox Elasticsearch as a Service. Apply at Workable."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior UX Designer | GS&amp;F"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior UX Designer | GS&amp;F"], ["url", "https://t.co/5cp3roTxM1"], ["created_at", "2018-03-30 16:41:23.859666"], ["updated_at", "2018-03-30 16:41:23.859666"], ["description", "DESCRIPTION: "]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Future Labs - Civic Imagineer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Future Labs - Civic Imagineer"], ["url", "https://t.co/nKmMW8jObc"], ["created_at", "2018-03-30 16:41:24.349665"], ["updated_at", "2018-03-30 16:41:24.349665"], ["description", "DESCRIPTION: Overview of Future Laboratories Future Laboratories will be society’s R&amp;D department. Just as Bell Labs came to life a century ago to pursue the technical moonshots of their times, Future Labs exists..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "UX, UI Designer - daycommerce.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "UX, UI Designer - daycommerce.com"], ["url", "https://t.co/OK86tn8Ba1"], ["created_at", "2018-03-30 16:41:24.802036"], ["updated_at", "2018-03-30 16:41:24.802036"], ["description", "DESCRIPTION: "]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Job opening: Digital Designer at Freelancer.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Job opening: Digital Designer at Freelancer.com"], ["url", "https://t.co/ljL8jIYEcL"], ["created_at", "2018-03-30 16:41:25.302410"], ["updated_at", "2018-03-30 16:41:25.302410"], ["description", "DESCRIPTION: Job opening: Digital Designer at Freelancer.com. Apply at Workable."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Visual Designer - hear.com Jobs on AngelList"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Visual Designer - hear.com Jobs on AngelList"], ["url", "https://t.co/eXr8UKL8R7"], ["created_at", "2018-03-30 16:41:25.788493"], ["updated_at", "2018-03-30 16:41:25.788493"], ["description", "DESCRIPTION: Apply now for Visual Designer Job at hear.com in San Francisco - Our mission is to change the way hearing aids are sold. We were founded in 2012 and are on our way to becoming the global market..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "UI Designer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "UI Designer"], ["url", "https://t.co/7a8WWGtFWA"], ["created_at", "2018-03-30 16:41:26.334522"], ["updated_at", "2018-03-30 16:41:26.334522"], ["description", "DESCRIPTION: Oakland"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Hype Group | Creative Communications Agency in Tampa Bay, FL and Austin, TX"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Hype Group | Creative Communications Agency in Tampa Bay, FL and Austin, TX"], ["url", "https://t.co/Av5JkHXeke"], ["created_at", "2018-03-30 16:41:26.808543"], ["updated_at", "2018-03-30 16:41:26.808543"], ["description", "DESCRIPTION: Branding, Strategy, Design, Development, Public Relations, Social and more. A full service agency, located in St. Petersburg, FL and Austin, TX."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Mirko Ilic Corp. is Hiring"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Mirko Ilic Corp. is Hiring"], ["url", "https://t.co/qW36te8fOs"], ["created_at", "2018-03-30 16:41:27.274512"], ["updated_at", "2018-03-30 16:41:27.274512"], ["description", "DESCRIPTION: "]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Looking for Freelance freelance PPC/Adword Expert / OneIMS / Cochin, Anywhere In Kerala"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Looking for Freelance freelance PPC/Adword Expert / OneIMS / Cochin, Anywhere In Kerala"], ["url", "https://t.co/F2LcljvdfI"], ["created_at", "2018-03-30 16:41:29.208194"], ["updated_at", "2018-03-30 16:41:29.208194"], ["description", "DESCRIPTION: OneIMS, Cochin, Anywhere In Kerala, Freelance or consulting, Business/Management"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Angular Web Developer / jumper.ai / Mumbai"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Angular Web Developer / jumper.ai / Mumbai"], ["url", "https://t.co/HIyrcHVlwI"], ["created_at", "2018-03-30 16:41:29.708571"], ["updated_at", "2018-03-30 16:41:29.708571"], ["description", "DESCRIPTION: jumper.ai, Mumbai, Full-time employment, Programming"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Fullstack Developer / jumper.ai / Mumbai"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Fullstack Developer / jumper.ai / Mumbai"], ["url", "https://t.co/Tc1TGiJ5dY"], ["created_at", "2018-03-30 16:41:30.477833"], ["updated_at", "2018-03-30 16:41:30.477833"], ["description", "DESCRIPTION: jumper.ai, Mumbai, Full-time employment, Programming"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Backend Python Developer / jumper.ai / Mumbai"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Backend Python Developer / jumper.ai / Mumbai"], ["url", "https://t.co/texX9nBGZe"], ["created_at", "2018-03-30 16:41:31.255292"], ["updated_at", "2018-03-30 16:41:31.255292"], ["description", "DESCRIPTION: jumper.ai, Mumbai, Full-time employment, Programming"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Data Engineer / 10i Commerce Services Pvt.Ltd / Bangalore"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Data Engineer / 10i Commerce Services Pvt.Ltd / Bangalore"], ["url", "https://t.co/fH5w5yBSz1"], ["created_at", "2018-03-30 16:41:32.036692"], ["updated_at", "2018-03-30 16:41:32.036692"], ["description", "DESCRIPTION: 10i Commerce Services Pvt.Ltd, Bangalore, Full-time employment, Programming"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Angular UI developer / Learnonthego / Anywhere"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Angular UI developer / Learnonthego / Anywhere"], ["url", "https://t.co/F4QCcuWJXU"], ["created_at", "2018-03-30 16:41:32.708638"], ["updated_at", "2018-03-30 16:41:32.708638"], ["description", "DESCRIPTION: Learnonthego, Anywhere, Short-term contract, Programming"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior Frontend Developer (React/Vue/Angular) / Timeless / Chennai"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior Frontend Developer (React/Vue/Angular) / Timeless / Chennai"], ["url", "https://t.co/bpSh8oLHm0"], ["created_at", "2018-03-30 16:41:33.223190"], ["updated_at", "2018-03-30 16:41:33.223190"], ["description", "DESCRIPTION: Timeless, Chennai, Full-time employment, Programming"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Contract Position - BigData Product Development - React,Redux, JS - ES6, ES7 / Symantec / Bangalore"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Contract Position - BigData Product Development - React,Redux, JS - ES6, ES7 / Symantec / Bangalore"], ["url", "https://t.co/coorvAwF0D"], ["created_at", "2018-03-30 16:41:33.759656"], ["updated_at", "2018-03-30 16:41:33.759656"], ["description", "DESCRIPTION: Symantec, Bangalore, Short-term contract, Programming"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Contractor Position - Design &amp; Develop UI for an Analytics Product / Symantec / Bangalore"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Contractor Position - Design &amp; Develop UI for an Analytics Product / Symantec / Bangalore"], ["url", "https://t.co/JyszbRlJWK"], ["created_at", "2018-03-30 16:41:34.242270"], ["updated_at", "2018-03-30 16:41:34.242270"], ["description", "DESCRIPTION: Symantec, Bangalore, Short-term contract, Programming"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "React Developer, Full Stack or MEAN Stack Expert / MobileFirst Applications Pvt Ltd. / Ahmedabad"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "React Developer, Full Stack or MEAN Stack Expert / MobileFirst Applications Pvt Ltd. / Ahmedabad"], ["url", "https://t.co/fux4w987fd"], ["created_at", "2018-03-30 16:41:34.727446"], ["updated_at", "2018-03-30 16:41:34.727446"], ["description", "DESCRIPTION: MobileFirst Applications Pvt Ltd., Ahmedabad, Full-time employment, Programming"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Business Development Executive / Creative Curve / Bengaluru"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Business Development Executive / Creative Curve / Bengaluru"], ["url", "https://t.co/jlJdVFa3yW"], ["created_at", "2018-03-30 16:41:35.198883"], ["updated_at", "2018-03-30 16:41:35.198883"], ["description", "DESCRIPTION: Creative Curve, Bengaluru, Full-time employment, Business/Management"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Django (Python) Developer @ Vebbler / Vebbler Technologies / Bangalore"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Django (Python) Developer @ Vebbler / Vebbler Technologies / Bangalore"], ["url", "https://t.co/6QUcx4cvNF"], ["created_at", "2018-03-30 16:41:35.716897"], ["updated_at", "2018-03-30 16:41:35.716897"], ["description", "DESCRIPTION: Vebbler Technologies, Bangalore, Full-time employment, Programming"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Technical Project Manager / Dimagi / Delhi"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Technical Project Manager / Dimagi / Delhi"], ["url", "https://t.co/jN1prDTtvX"], ["created_at", "2018-03-30 16:41:36.186016"], ["updated_at", "2018-03-30 16:41:36.186016"], ["description", "DESCRIPTION: Dimagi, Delhi, Full-time employment, Programming"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Sql developer / 10i Commerce Services Pvt.Ltd / Bangalore"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sql developer / 10i Commerce Services Pvt.Ltd / Bangalore"], ["url", "https://t.co/iOEjLYr9zN"], ["created_at", "2018-03-30 16:41:36.700868"], ["updated_at", "2018-03-30 16:41:36.700868"], ["description", "DESCRIPTION: 10i Commerce Services Pvt.Ltd, Bangalore, Full-time employment, Programming"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Front End Engineer / Thrillophilia.com / Jaipur"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Front End Engineer / Thrillophilia.com / Jaipur"], ["url", "https://t.co/3RQCZVWAjn"], ["created_at", "2018-03-30 16:41:37.169564"], ["updated_at", "2018-03-30 16:41:37.169564"], ["description", "DESCRIPTION: Thrillophilia.com, Jaipur, Full-time employment, Programming"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Software Developer (Backend/FullStack) / Thrillophilia.com / Jaipur"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Software Developer (Backend/FullStack) / Thrillophilia.com / Jaipur"], ["url", "https://t.co/nIhe8surdG"], ["created_at", "2018-03-30 16:41:37.711797"], ["updated_at", "2018-03-30 16:41:37.711797"], ["description", "DESCRIPTION: Thrillophilia.com, Jaipur, Full-time employment, Programming"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Digital Marketer / Navigus / Bangalore"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Digital Marketer / Navigus / Bangalore"], ["url", "https://t.co/6L3TeU5bNT"], ["created_at", "2018-03-30 16:41:38.180741"], ["updated_at", "2018-03-30 16:41:38.180741"], ["description", "DESCRIPTION: Navigus, Bangalore, Full-time employment, Business/Management"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Full Stack Engineer / Navigus / Bangalore"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Full Stack Engineer / Navigus / Bangalore"], ["url", "https://t.co/MlXn6R3uwL"], ["created_at", "2018-03-30 16:41:38.681866"], ["updated_at", "2018-03-30 16:41:38.681866"], ["description", "DESCRIPTION: Navigus, Bangalore, Full-time employment, Programming"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Corporate Communication Internship / Navigus / Bangalore"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Corporate Communication Internship / Navigus / Bangalore"], ["url", "https://t.co/NGibQEuuBO"], ["created_at", "2018-03-30 16:41:39.185786"], ["updated_at", "2018-03-30 16:41:39.185786"], ["description", "DESCRIPTION: Navigus, Bangalore, Internship, Customer Support"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Hiring for Business Development Manager / Henote Technologies / Bangalore"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Hiring for Business Development Manager / Henote Technologies / Bangalore"], ["url", "https://t.co/rciAEFiEy8"], ["created_at", "2018-03-30 16:41:39.623722"], ["updated_at", "2018-03-30 16:41:39.623722"], ["description", "DESCRIPTION: Henote Technologies, Bangalore, Full-time employment, Business/Management"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior Backend Developer | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior Backend Developer | Jobspresso"], ["url", "https://t.co/aVoaXO4Hba"], ["created_at", "2018-03-30 16:41:46.485168"], ["updated_at", "2018-03-30 16:41:46.485168"], ["description", "DESCRIPTION: What is Mixtiles? We’re helping people put photos on walls. Canvas prints and framed photos are OLD products that haven’t seen innovation in years. We’re using software, industrial design and..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Backend Engineer (Ruby / Elixir) | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Backend Engineer (Ruby / Elixir) | Jobspresso"], ["url", "https://t.co/s5fEQEpZLI"], ["created_at", "2018-03-30 16:41:47.363443"], ["updated_at", "2018-03-30 16:41:47.363443"], ["description", "DESCRIPTION: DRIVER EXPERIENCE TEAM @HEETCH The top priority of our user-driven team is the happiness of our drivers. From the moment they decide to join us until they enter our marketplace, drivers will be using..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Front-End Engineer | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Front-End Engineer | Jobspresso"], ["url", "https://t.co/fz4AENWiIo"], ["created_at", "2018-03-30 16:41:48.157475"], ["updated_at", "2018-03-30 16:41:48.157475"], ["description", "DESCRIPTION: More than 4 million users and 70,000 paying customers depend on Buffer, and we’re grateful to work every day developing intuitive features to make their experience better. We’re looking for a..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Design Instructor | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Design Instructor | Jobspresso"], ["url", "https://t.co/dVcfpGIFja"], ["created_at", "2018-03-30 16:41:48.830266"], ["updated_at", "2018-03-30 16:41:48.830266"], ["description", "DESCRIPTION: Treehouse brings affordable technology education to people everywhere in order to help them achieve their dreams and change the world. We’re on a mission to make technology education affordable and..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Client Services Associate | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Client Services Associate | Jobspresso"], ["url", "https://t.co/h64XQl8abJ"], ["created_at", "2018-03-30 16:41:49.317860"], ["updated_at", "2018-03-30 16:41:49.317860"], ["description", "DESCRIPTION: What is Knewton? At Knewton, we believe each student is unique and that their knowledge is not defined by their last answer. Sometimes what a student needs at any moment may not be the next lesson in..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Site Reliability Engineer | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Site Reliability Engineer | Jobspresso"], ["url", "https://t.co/XdpOX1nb5J"], ["created_at", "2018-03-30 16:41:49.809889"], ["updated_at", "2018-03-30 16:41:49.809889"], ["description", "DESCRIPTION: We are looking for Site Reliability Engineers! Would you like to join the highly dynamic team responsible for the reliability and performance of a global top-10 website, Wikipedia? We have several..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Head of Communications | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Head of Communications | Jobspresso"], ["url", "https://t.co/vyFyKyi0mf"], ["created_at", "2018-03-30 16:41:50.321294"], ["updated_at", "2018-03-30 16:41:50.321294"], ["description", "DESCRIPTION: Hi there! We’re looking for a Head of Communications to own and advance our PR strategy and objectives. Zapier is on a mission to make everyone more productive at work. More than 2.5 million profes..."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "General News Writer, Overnight | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "General News Writer, Overnight | Jobspresso"], ["url", "https://t.co/trX9NTbvJT"], ["created_at", "2018-03-30 16:41:50.803864"], ["updated_at", "2018-03-30 16:41:50.803864"], ["description", "DESCRIPTION: Bustle is seeking a part-time, remote, Overnight General News Writer to help fill various verticals with intelligent, thoughtful, and fast articles. Applicants should be well-versed in news and..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Integration Specialist | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Integration Specialist | Jobspresso"], ["url", "https://t.co/okXWCguHqu"], ["created_at", "2018-03-30 16:41:51.289775"], ["updated_at", "2018-03-30 16:41:51.289775"], ["description", "DESCRIPTION: What is Knewton? At Knewton, we believe each student is unique and that their knowledge is not defined by their last answer. Sometimes what a student needs at any moment may not be the next lesson in..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Campaigner, Women's Rights | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Campaigner, Women's Rights | Jobspresso"], ["url", "https://t.co/KZDFU9MZLI"], ["created_at", "2018-03-30 16:41:51.786339"], ["updated_at", "2018-03-30 16:41:51.786339"], ["description", "DESCRIPTION: Change.org is seeking a highly-motivated individual for a full-time campaigner role starting as soon as possible focused on running social change campaigns in the issue area of Women’s Rights. This..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Full-Stack Web Developer | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Full-Stack Web Developer | Jobspresso"], ["url", "https://t.co/iqJ9tuLFVe"], ["created_at", "2018-03-30 16:41:52.282856"], ["updated_at", "2018-03-30 16:41:52.282856"], ["description", "DESCRIPTION: Salary: $100,000 – $140,000 Come help us create the future of Stack Overflow. We’re looking for creative developers who are excited about building tools to support the growth of our company from..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior Customer Success Engineer | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior Customer Success Engineer | Jobspresso"], ["url", "https://t.co/Y8JRzgfv7V"], ["created_at", "2018-03-30 16:41:52.766007"], ["updated_at", "2018-03-30 16:41:52.766007"], ["description", "DESCRIPTION: Salary: $85K – $115K At Stack Overflow, our mission is to serve developers. Whether we’re helping developers get answers to their questions or find new jobs, we build products that make millions of..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Frontend Engineer | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Frontend Engineer | Jobspresso"], ["url", "https://t.co/wCd8pHn8q7"], ["created_at", "2018-03-30 16:41:53.252748"], ["updated_at", "2018-03-30 16:41:53.252748"], ["description", "DESCRIPTION: Hi there! We’re looking for a Frontend Engineer to join the engineering team at Zapier. Want to create a simple product that allows anyone to do complex, incredible things with the world’s APIs? Then..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Partner Manager, Launches | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Partner Manager, Launches | Jobspresso"], ["url", "https://t.co/m6nMKOfetC"], ["created_at", "2018-03-30 16:41:53.735798"], ["updated_at", "2018-03-30 16:41:53.735798"], ["description", "DESCRIPTION: Hi there! We’re looking for someone who’s eager to help our newest and fastest-growing partners, like Zoom, Calendly, and Airtable, succeed in launching and growing their Zapier integration. If..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Support Operations Manager | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Support Operations Manager | Jobspresso"], ["url", "https://t.co/94E9deS5Us"], ["created_at", "2018-03-30 16:41:54.253241"], ["updated_at", "2018-03-30 16:41:54.253241"], ["description", "DESCRIPTION: Hi there! We’re looking for someone to help cultivate our growing Support team at Zapier. The Support Operations Manager helps shepherd all the initiatives in Support that have Leads(e.g. Documenta..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Head of Communications | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Technical Account Manager | Jobspresso"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Technical Account Manager | Jobspresso"], ["url", "https://t.co/99vHSM6G2a"], ["created_at", "2018-03-30 16:41:55.694829"], ["updated_at", "2018-03-30 16:41:55.694829"], ["description", "DESCRIPTION: The TAM is a single point-of-contact to manage the resolution of any product support issues the customer may be experiencing. More importantly, the TAM delivers proactive guidance to the customer to..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior C++ Developer @ DahliaMatic Sp. z o.o."], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior C++ Developer @ DahliaMatic Sp. z o.o."], ["url", "https://t.co/4I4GiA5ioE"], ["created_at", "2018-03-30 16:41:57.367025"], ["updated_at", "2018-03-30 16:41:57.367025"], ["description", "DESCRIPTION: Senior C++ mobile position at DahliaMatic Sp. z o.o. in Warsaw, Poland. 600 - 1200 PLN / Day"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Backend Developer @ Ework Group"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Backend Developer @ Ework Group"], ["url", "https://t.co/h0npQGg5sW"], ["created_at", "2018-03-30 16:41:57.887003"], ["updated_at", "2018-03-30 16:41:57.887003"], ["description", "DESCRIPTION: Backend backend position at Ework Group in Copenhagen, Denmark. 20000 - 36800 PLN / Month"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "C/C++ Developer @ DahliaMatic Sp. z o.o."], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "C/C++ Developer @ DahliaMatic Sp. z o.o."], ["url", "https://t.co/p1Ev8mOyut"], ["created_at", "2018-03-30 16:41:58.626498"], ["updated_at", "2018-03-30 16:41:58.626498"], ["description", "DESCRIPTION: C/C++ mobile position at DahliaMatic Sp. z o.o. in Warsaw, Poland. 600 - 1200 PLN / Day"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Java Architect @ Axxiome Polska Sp. z o.o."], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Java Architect @ Axxiome Polska Sp. z o.o."], ["url", "https://t.co/GB9mDCrpFo"], ["created_at", "2018-03-30 16:41:59.107153"], ["updated_at", "2018-03-30 16:41:59.107153"], ["description", "DESCRIPTION: Java fullstack position at Axxiome Polska Sp. z o.o. in Wrocław, Poland. 16500 - 21000 PLN / Month"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Scala Developer @ Infor Polska"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Scala Developer @ Infor Polska"], ["url", "https://t.co/90RNcXSiTH"], ["created_at", "2018-03-30 16:41:59.554825"], ["updated_at", "2018-03-30 16:41:59.554825"], ["description", "DESCRIPTION: Scala backend position at Infor Polska in Wrocław, Poland. 12000 - 18000 PLN / Month"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Database &amp; System Architect @ Brand24 S.A."], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Database &amp; System Architect @ Brand24 S.A."], ["url", "https://t.co/CvgfrAnoVu"], ["created_at", "2018-03-30 16:42:00.025499"], ["updated_at", "2018-03-30 16:42:00.025499"], ["description", "DESCRIPTION: Database &amp; System backend position at Brand24 S.A. in Wroclaw, Poland. 10000 - 15000 PLN / Month"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Java Developer @ Pirios S.A."], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Java Developer @ Pirios S.A."], ["url", "https://t.co/rLMdW4XKyT"], ["created_at", "2018-03-30 16:42:00.501261"], ["updated_at", "2018-03-30 16:42:00.501261"], ["description", "DESCRIPTION: Java fullstack position at Pirios S.A. in Kraków, Poland. 7000 - 14000 PLN / Month"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Mid/Senior .NET Developer @ GBS Partners for Simployer Tech Polska"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Mid/Senior .NET Developer @ GBS Partners for Simployer Tech Polska"], ["url", "https://t.co/EQvflaqQHM"], ["created_at", "2018-03-30 16:42:00.976242"], ["updated_at", "2018-03-30 16:42:00.976242"], ["description", "DESCRIPTION: Mid/Senior .NET fullstack position at GBS Partners for Simployer Tech Polska in Gdańsk, Poland. 7000 - 14000 PLN / Month"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Site Reliability Engineer @ Synerise"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Site Reliability Engineer @ Synerise"], ["url", "https://t.co/n3KTDD1aWC"], ["created_at", "2018-03-30 16:42:01.468218"], ["updated_at", "2018-03-30 16:42:01.468218"], ["description", "DESCRIPTION: Site Reliability devops position at Synerise in Warsaw, Poland. 10000 - 16000 PLN / Month"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Project Manager @ Netguru"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Project Manager @ Netguru"], ["url", "https://t.co/KKe8cPYd4B"], ["created_at", "2018-03-30 16:42:02.268374"], ["updated_at", "2018-03-30 16:42:02.268374"], ["description", "DESCRIPTION: Project projectManager position at Netguru in Poznań, Poland. 6875 - 8750 PLN / Month"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Regular Front-end Developer @ Miquido"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Regular Front-end Developer @ Miquido"], ["url", "https://t.co/2mo3jtmwbz"], ["created_at", "2018-03-30 16:42:03.096428"], ["updated_at", "2018-03-30 16:42:03.096428"], ["description", "DESCRIPTION: Regular Front-end frontend position at Miquido in Kraków, Poland. 7500 - 11500 PLN / Month"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Python Backend Engineer @ Synerise"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Python Backend Engineer @ Synerise"], ["url", "https://t.co/Fklzez7RVt"], ["created_at", "2018-03-30 16:42:03.971147"], ["updated_at", "2018-03-30 16:42:03.971147"], ["description", "DESCRIPTION: Python Backend backend position at Synerise in Warsaw, Poland. 8000 - 16000 PLN / Month"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Junior iOS Developer @ EL Passion"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Junior iOS Developer @ EL Passion"], ["url", "https://t.co/EQOhxTiq5e"], ["created_at", "2018-03-30 16:42:04.679928"], ["updated_at", "2018-03-30 16:42:04.679928"], ["description", "DESCRIPTION: Junior iOS mobile position at EL Passion in Warsaw, Poland. 2800 - 5400 PLN / Month"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Frontend Developer Developer @ FIS-SST"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Frontend Developer Developer @ FIS-SST"], ["url", "https://t.co/GGU1pHqFFJ"], ["created_at", "2018-03-30 16:42:05.211120"], ["updated_at", "2018-03-30 16:42:05.211120"], ["description", "DESCRIPTION: Frontend Developer frontend position at FIS-SST in Gliwice, Poland. 8000 - 12000 PLN / Month"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Java Developer @ DahliaMatic Sp. z o.o."], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Java Developer @ DahliaMatic Sp. z o.o."], ["url", "https://t.co/RNFYwPmanZ"], ["created_at", "2018-03-30 16:42:05.689505"], ["updated_at", "2018-03-30 16:42:05.689505"], ["description", "DESCRIPTION: Java backend position at DahliaMatic Sp. z o.o. in Warsaw, Poland. 400 - 800 PLN / Day"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "PHP Developer Developer @ Openform s.c."], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "PHP Developer Developer @ Openform s.c."], ["url", "https://t.co/l5XWOJFDFV"], ["created_at", "2018-03-30 16:42:06.212778"], ["updated_at", "2018-03-30 16:42:06.212778"], ["description", "DESCRIPTION: PHP Developer backend position at Openform s.c. in Kraków, Poland. 5000 - 7000 PLN / Month"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "QA Automation Engineer @ OpsTalent"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "QA Automation Engineer @ OpsTalent"], ["url", "https://t.co/b8LCFn1GEr"], ["created_at", "2018-03-30 16:42:06.675834"], ["updated_at", "2018-03-30 16:42:06.675834"], ["description", "DESCRIPTION: QA Automation testing position at OpsTalent in Wrocław, Poland. 7000 - 10000 PLN / Month"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", ".NET Developer @ ProData Consult"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ".NET Developer @ ProData Consult"], ["url", "https://t.co/ALbNCKYSQW"], ["created_at", "2018-03-30 16:42:07.138720"], ["updated_at", "2018-03-30 16:42:07.138720"], ["description", "DESCRIPTION: .NET frontend position at ProData Consult in Warsaw, Poland. 19200 - 23200 PLN / Month"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Quality Assurance Expert @ Netguru"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Quality Assurance Expert @ Netguru"], ["url", "https://t.co/aYB5rna5UI"], ["created_at", "2018-03-30 16:42:07.696789"], ["updated_at", "2018-03-30 16:42:07.696789"], ["description", "DESCRIPTION: Quality Assurance testing position at Netguru in Poznań, Poland. 6500 - 8500 PLN / Month"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "C++/UI Developer @ Siili"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "C++/UI Developer @ Siili"], ["url", "https://t.co/Vii0XwRqcX"], ["created_at", "2018-03-30 16:42:08.153340"], ["updated_at", "2018-03-30 16:42:08.153340"], ["description", "DESCRIPTION: C++/UI fullstack position at Siili in Szczecin, Poland. 6000 - 12000 PLN / Month"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Japanese-English Application Support at Broadway Technology"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Japanese-English Application Support at Broadway Technology"], ["url", "https://t.co/2RLL0rStZP"], ["created_at", "2018-03-30 16:42:09.622936"], ["updated_at", "2018-03-30 16:42:09.622936"], ["description", "DESCRIPTION: Broadway Technology is hiring a remote Japanese-English Application Support. Do you enjoy working with customers to find and resolve bottlenecks within complex systems? Do you get bored doing the..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Japanese-English Application Support at Broadway Technology"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Robotics Software Engineer at Aeolus Robotics"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Robotics Software Engineer at Aeolus Robotics"], ["url", "https://t.co/JDLVk2tkXp"], ["created_at", "2018-03-30 16:42:10.538086"], ["updated_at", "2018-03-30 16:42:10.538086"], ["description", "DESCRIPTION: Aeolus Robotics is hiring a remote Robotics Software Engineer. Job Responsibilities:You will design, implement and test robotic software that integrates low-level components into useful robot..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Simulation Engineer at Aeolus Robotics"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Simulation Engineer at Aeolus Robotics"], ["url", "https://t.co/YemzJSJB9c"], ["created_at", "2018-03-30 16:42:10.994565"], ["updated_at", "2018-03-30 16:42:10.994565"], ["description", "DESCRIPTION: Aeolus Robotics is hiring a remote Simulation Engineer. You will develop and maintain simulation tools useful for testing software from integrated robotic teams and planning and execution team. You..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (2.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Japanese-English Application Support at Broadway Technology"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Java Spring Developer at bonfire"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Java Spring Developer at bonfire"], ["url", "https://t.co/LIbK5aQWil"], ["created_at", "2018-03-30 16:42:12.065893"], ["updated_at", "2018-03-30 16:42:12.065893"], ["description", "DESCRIPTION: bonfire is hiring a remote Java Spring Developer. Bonfire.com is transforming the way people buy and sell high ­quality custom apparel. As a leading online fundraising site, we’ve helped thousands of..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Senior React Native Engineer at Brushfire"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Senior React Native Engineer at Brushfire"], ["url", "https://t.co/waE2zVqzr4"], ["created_at", "2018-03-30 16:42:12.585672"], ["updated_at", "2018-03-30 16:42:12.585672"], ["description", "DESCRIPTION: Brushfire is hiring a remote Senior React Native Engineer. Brushfire is looking for a Senior React Native Engineer (U.S. ONLY) who isdriven to create captivating and interactive mobile experiences;..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote DevOps Engineer at Semaphore CI"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote DevOps Engineer at Semaphore CI"], ["url", "https://t.co/dQeMnlG1cy"], ["created_at", "2018-03-30 16:42:13.094993"], ["updated_at", "2018-03-30 16:42:13.094993"], ["description", "DESCRIPTION: Semaphore CI is hiring a remote DevOps Engineer. Do you want to help us build the best continuous delivery service in the world?[SemaphoreCI.com](http://semaphoreci.com/?utm_source=remoteio&amp;utm_med..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Senior Full Stack Engineer at Subtext Media"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Senior Full Stack Engineer at Subtext Media"], ["url", "https://t.co/eC0uffqX7I"], ["created_at", "2018-03-30 16:42:13.607550"], ["updated_at", "2018-03-30 16:42:13.607550"], ["description", "DESCRIPTION: Subtext Media is hiring a remote Senior Full Stack Engineer. Full Time: Senior Full Stack Engineer (Remote) at Subtext Media in Remote..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Angular JS Developer at bonfire"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Angular JS Developer at bonfire"], ["url", "https://t.co/F5iPo7dNd5"], ["created_at", "2018-03-30 16:42:14.279416"], ["updated_at", "2018-03-30 16:42:14.279416"], ["description", "DESCRIPTION: bonfire is hiring a remote Angular JS Developer. Bonfire team is in search for a senior **AngularJS** developer. You would be working on implementing new features as well as enhancing existing ones...."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Senior Full Stack Engineer at Subtext Media"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "jobs" SET "url" = $1, "updated_at" = $2 WHERE "jobs"."id" = $3[0m  [["url", "https://t.co/eC0uff9mga"], ["updated_at", "2018-03-30 16:42:15.018658"], ["id", 131]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Looking for golang developers work on Blockchain development projects at Decred Recruiting"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Looking for golang developers work on Blockchain development projects at Decred Recruiting"], ["url", "https://t.co/zwit1A8YmV"], ["created_at", "2018-03-30 16:42:15.570635"], ["updated_at", "2018-03-30 16:42:15.570635"], ["description", "DESCRIPTION: Decred Recruiting is hiring a remote Looking for golang developers work on Blockchain development projects. Remote, United States - We're actively seeking Golang programmers who are interested in..."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote PHP Laravel Engineer Lenox Park Solutions at High-Growth FinTech Company"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote PHP Laravel Engineer Lenox Park Solutions at High-Growth FinTech Company"], ["url", "https://t.co/DfrSR4xsCL"], ["created_at", "2018-03-30 16:42:16.079669"], ["updated_at", "2018-03-30 16:42:16.079669"], ["description", "DESCRIPTION: High-Growth FinTech Company is hiring a remote PHP Laravel Engineer Lenox Park Solutions. Lenox Park Solutions is seeking a PHP Engineer with 2-5 years of commercial experience. As a PHP Engineer,..."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Senior Product Manager at Citrusbyte"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Senior Product Manager at Citrusbyte"], ["url", "https://t.co/1IZOsl7KGM"], ["created_at", "2018-03-30 16:42:16.548436"], ["updated_at", "2018-03-30 16:42:16.548436"], ["description", "DESCRIPTION: Citrusbyte is hiring a remote Senior Product Manager. Company OverviewCitrusbyte is a team of craftspeople and experts who build amazing products and believe in cultivating a high degree of leaders..."]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Web Developer at Sonatype"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Web Developer at Sonatype"], ["url", "https://t.co/wrdTiCFbRm"], ["created_at", "2018-03-30 16:42:17.109145"], ["updated_at", "2018-03-30 16:42:17.109145"], ["description", "DESCRIPTION: Sonatype is hiring a remote Web Developer. Sonatype’s mission is to enable organizations to better manage their software supply chain.  We offer a series of products and services including the Nexus..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Bilingual Japanese/English Trading Appli at Broadway Technology"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Bilingual Japanese/English Trading Appli at Broadway Technology"], ["url", "https://t.co/18t1y2ZQaW"], ["created_at", "2018-03-30 16:42:17.770625"], ["updated_at", "2018-03-30 16:42:17.770625"], ["description", "DESCRIPTION: Broadway Technology is hiring a remote Bilingual Japanese/English Trading Appli. Do you enjoy working with customers to find and resolve bottlenecks within complex systems? Do you get bored doing the..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote PHP Laravel Engineer Lenox Park Solutions at High-Growth FinTech Company"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "jobs" SET "url" = $1, "updated_at" = $2 WHERE "jobs"."id" = $3[0m  [["url", "https://t.co/DfrSR4P3uj"], ["updated_at", "2018-03-30 16:42:18.263165"], ["id", 134]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Senior Designer at black-pixel"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Senior Designer at black-pixel"], ["url", "https://t.co/L2ehkKs8fH"], ["created_at", "2018-03-30 16:42:18.969918"], ["updated_at", "2018-03-30 16:42:18.969918"], ["description", "DESCRIPTION: black-pixel is hiring a remote Senior Designer. Black Pixel is a creative digital products agency. We design and develop beautiful and powerful apps for iOS, tvOS, watchOS, Mac, Android, and the web...."]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Senior React Native Engineer at Brushfire"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Remote Java Spring Developer at bonfire"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "jobs" SET "url" = $1, "updated_at" = $2 WHERE "jobs"."id" = $3[0m  [["url", "https://t.co/LIbK5azkTL"], ["updated_at", "2018-03-30 16:42:20.680396"], ["id", 128]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "QA Analyst (contract) at MoveOn.org"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "QA Analyst (contract) at MoveOn.org"], ["url", "https://t.co/WsayeL6eLi"], ["created_at", "2018-03-30 16:42:22.478411"], ["updated_at", "2018-03-30 16:42:22.478411"], ["description", "DESCRIPTION: MoveOn.org Civic Action and MoveOn.org Political Action Request for Proposals Project Title: Quality Assurance on MoveOn software systems Proposals accepted on a rolling basis until: Friday, Ap"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Java Spring Developer at Bonfire"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Java Spring Developer at Bonfire"], ["url", "https://t.co/6lFkL2gEqs"], ["created_at", "2018-03-30 16:42:23.179228"], ["updated_at", "2018-03-30 16:42:23.179228"], ["description", "DESCRIPTION: Bonfire.com is transforming the way people buy and sell high ­quality custom apparel. As a leading online fundraising site, we’ve helped thousands of causes and organizations raise millions of dollars"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Angular JS Developer at Bonfire"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Angular JS Developer at Bonfire"], ["url", "https://t.co/51iTONF5u8"], ["created_at", "2018-03-30 16:42:23.722084"], ["updated_at", "2018-03-30 16:42:23.722084"], ["description", "DESCRIPTION: Bonfire team is in search for a senior AngularJS developer. You would be working on implementing new features as well as enhancing existing ones. We are looking for a long-term relationship and commit"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Senior Designer at Black Pixel"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Senior Designer at Black Pixel"], ["url", "https://t.co/3932T7tlP9"], ["created_at", "2018-03-30 16:42:24.193592"], ["updated_at", "2018-03-30 16:42:24.193592"], ["description", "DESCRIPTION: Black Pixel is a creative digital products agency. We design and develop beautiful and powerful apps for iOS, tvOS, watchOS, Mac, Android, and the web. We’re headquartered in Seattle, with team member"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Web Developer (Ruby) at Ballistiq"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Web Developer (Ruby) at Ballistiq"], ["url", "https://t.co/nlhkfhUov3"], ["created_at", "2018-03-30 16:42:24.669173"], ["updated_at", "2018-03-30 16:42:24.669173"], ["description", "DESCRIPTION: DESCRIPTION Ballistiq is looking for a mid-to-senior Ruby developer to help us build beautiful, highly functional web applications. We build amazing web and mobile apps for our clients and al"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Front-End Developer (Angular | React) at Ballistiq"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Front-End Developer (Angular | React) at Ballistiq"], ["url", "https://t.co/dyzPvQpzXP"], ["created_at", "2018-03-30 16:42:25.136084"], ["updated_at", "2018-03-30 16:42:25.136084"], ["description", "DESCRIPTION: DESCRIPTION Ballistiq is looking for a senior front-end developer (Angular or React) to help us build beautiful, highly functional web applications. We build amazing web and mobile apps for o"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Full-Stack Software Engineering Generalist at PolicyStat"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Full-Stack Software Engineering Generalist at PolicyStat"], ["url", "https://t.co/nvT5OBAg7r"], ["created_at", "2018-03-30 16:42:25.613580"], ["updated_at", "2018-03-30 16:42:25.613580"], ["description", "DESCRIPTION: Make An Impact On Healthcare PolicyStat’s (http://www.icontracts.com/policy-management/) mission is to improve healthcare delivery through better processes. We help our clients make their polici"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Publisher Engineer at Mediavine"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Publisher Engineer at Mediavine"], ["url", "https://t.co/aqGENprU7u"], ["created_at", "2018-03-30 16:42:26.165931"], ["updated_at", "2018-03-30 16:42:26.165931"], ["description", "DESCRIPTION: DESCRIPTION Mediavine, a fast-growing advertising management company representing over 2500 websites in the food, lifestyle, and entertainment space, is searching for a Publisher Engineer. We"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Sr. full-stack engineer at Sticker Mule"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sr. full-stack engineer at Sticker Mule"], ["url", "https://t.co/OLROKhNjzE"], ["created_at", "2018-03-30 16:42:26.669567"], ["updated_at", "2018-03-30 16:42:26.669567"], ["description", "DESCRIPTION: We created Sticker Mule to be the best place to work and shop. That means making ordering fast, simple and fun while creating a stable, low stress and enjoyable place for talented people to work."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Full-Stack Web Developer at Beehivr"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Full-Stack Web Developer at Beehivr"], ["url", "https://t.co/orJ7kCnM3O"], ["created_at", "2018-03-30 16:42:27.183021"], ["updated_at", "2018-03-30 16:42:27.183021"], ["description", "DESCRIPTION: About us Located in Repentigny, Beehive offers a platform to create interactive content for private iPad networks. Our solution allows companies to to create and deploy apps to improve communic"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Lead/Senior Ruby on Rails Developer at Bit Zesty"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Lead/Senior Ruby on Rails Developer at Bit Zesty"], ["url", "https://t.co/FcxKDh77Hw"], ["created_at", "2018-03-30 16:42:27.646780"], ["updated_at", "2018-03-30 16:42:27.646780"], ["description", "DESCRIPTION: DESCRIPTION ABOUT BIT ZESTY We are an innovation agency specialising in making digital experiences that create real value for users and organisations. We make digital products for clients"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Android Developer at Big Nerd Ranch"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Android Developer at Big Nerd Ranch"], ["url", "https://t.co/0PzoFWaGsa"], ["created_at", "2018-03-30 16:42:28.122685"], ["updated_at", "2018-03-30 16:42:28.122685"], ["description", "DESCRIPTION: At Big Nerd Ranch we empower individuals and organizations to dream big and achieve more through innovative digital product development and training. We do this through our signature immersive bootca"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "iOS Developer at Big Nerd Ranch"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "iOS Developer at Big Nerd Ranch"], ["url", "https://t.co/hmaxrw0e5F"], ["created_at", "2018-03-30 16:42:28.655230"], ["updated_at", "2018-03-30 16:42:28.655230"], ["description", "DESCRIPTION: At Big Nerd Ranch we empower individuals and organizations to dream big and achieve more through innovative digital product development and training. We do this through our signature immersive bootca"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Mobile Developer iOS/Android Wearables (m/f) at komoot"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Mobile Developer iOS/Android Wearables (m/f) at komoot"], ["url", "https://t.co/LqPBJJS28V"], ["created_at", "2018-03-30 16:42:29.280401"], ["updated_at", "2018-03-30 16:42:29.280401"], ["description", "DESCRIPTION: Millions of people experience real-life adventures with our apps. We help users all over the world discover the best hiking and biking routes, working to empower everybody to explore more of the great"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Backend Web Developer at Bear Group"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Backend Web Developer at Bear Group"], ["url", "https://t.co/KEEoUtTjNr"], ["created_at", "2018-03-30 16:42:29.814949"], ["updated_at", "2018-03-30 16:42:29.814949"], ["description", "DESCRIPTION: Bear Group is a leading web development firm based in Seattle looking for an experienced backend web developer to join our team. You will have the opportunity to work with leading companies and market"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Back End NodeJS Engineer at Beamery"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Back End NodeJS Engineer at Beamery"], ["url", "https://t.co/sS639wdFyH"], ["created_at", "2018-03-30 16:42:30.341512"], ["updated_at", "2018-03-30 16:42:30.341512"], ["description", "DESCRIPTION: We’re building a new generation of AI-driven recruiting tech that changes the way people do their job. To make that happen, we work hard at understanding what our users need, and we build it using cut"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Developer at Bandcamp"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Developer at Bandcamp"], ["url", "https://t.co/Am3HeqAoff"], ["created_at", "2018-03-30 16:42:30.791994"], ["updated_at", "2018-03-30 16:42:30.791994"], ["description", "DESCRIPTION: Bandcamp is looking for a talented software engineer with strong mobile application development skills. You’ll create new features while working with our team of designers, engineers, and support expe"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Art Director at Bandcamp"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Art Director at Bandcamp"], ["url", "https://t.co/DiDkBPvE4a"], ["created_at", "2018-03-30 16:42:31.244265"], ["updated_at", "2018-03-30 16:42:31.244265"], ["description", "DESCRIPTION: Bandcamp is seeking a talented individual for our design team to help us create and direct artwork, design new editorial features, improve existing ones and make the editorial on Bandcamp a shining be"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Brazilian NodeJS Lead Developer at BIM Direct"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Brazilian NodeJS Lead Developer at BIM Direct"], ["url", "https://t.co/8Gn9S35FZ3"], ["created_at", "2018-03-30 16:42:31.723148"], ["updated_at", "2018-03-30 16:42:31.723148"], ["description", "DESCRIPTION: We are looking an experienced and dynamic Lead Node.js developer to join our rapidly growing BIM Direct team. You'll be working in a fast-paced, agile environment using Node.js, PM2, and TDD with Moch"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Front End Engineer - Angular2+ and Ionic2+ at Modus Create"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Front End Engineer - Angular2+ and Ionic2+ at Modus Create"], ["url", "https://t.co/MKGKZRTsNc"], ["created_at", "2018-03-30 16:42:32.196986"], ["updated_at", "2018-03-30 16:42:32.196986"], ["description", "DESCRIPTION: You are a forward thinking, creative problem solver with a passion for core JavaScript. If you’ve got the chops and want to ditch the cubicle, apply to the best lean startup development team on the pl"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Demio: Director of Marketing (Exciting Startup!)"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Demio: Director of Marketing (Exciting Startup!)"], ["url", "https://t.co/EERH47O1cS"], ["created_at", "2018-03-30 16:42:35.596130"], ["updated_at", "2018-03-30 16:42:35.596130"], ["description", "DESCRIPTION: Are you looking for an exciting marketing position at a remote-based, fun, and growing company? How about a role where there’s no micromanaging, a ton of autonomy and room to test all your big or..."]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Crossword Hobbyist: Full-Stack Developer"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Crossword Hobbyist: Full-Stack Developer"], ["url", "https://t.co/iBu1Pzxkkf"], ["created_at", "2018-03-30 16:42:36.354940"], ["updated_at", "2018-03-30 16:42:36.354940"], ["description", "DESCRIPTION: About the RoleDo you have a passion for building elegant, scalable systems to delight hundreds of thousands of users? At Crossword Hobbyist (https://crosswordhobbyist.com) and My Word Search (https..."]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "EVERFI: Ruby on Rails Engineer - anywhere in the US!"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "EVERFI: Ruby on Rails Engineer - anywhere in the US!"], ["url", "https://t.co/r0BURtWVZ8"], ["created_at", "2018-03-30 16:42:36.960347"], ["updated_at", "2018-03-30 16:42:36.960347"], ["description", "DESCRIPTION: EVERFI, Inc. is the leading education technology company that provides learners of all ages education for the real world, through innovative and scalable digital learning. Founded in 2008, EVERFI is..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Doximity: Full-Stack Ruby Software Engineer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Doximity: Full-Stack Ruby Software Engineer"], ["url", "https://t.co/nPfGYF8UH5"], ["created_at", "2018-03-30 16:42:37.443638"], ["updated_at", "2018-03-30 16:42:37.443638"], ["description", "DESCRIPTION: Why work at Doximity? Doximity is the leading social network for healthcare professionals with over 70% of U.S. doctors as members. We have strong revenues, real market traction, and we're putting a..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "MoveOn.org: QA Analyst (contract)"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "MoveOn.org: QA Analyst (contract)"], ["url", "https://t.co/tHemP9POCT"], ["created_at", "2018-03-30 16:42:37.909768"], ["updated_at", "2018-03-30 16:42:37.909768"], ["description", "DESCRIPTION: MoveOn.org Civic Action and MoveOn.org Political ActionRequest for Proposals Project Title: Quality Assurance on MoveOn software systems Proposals accepted on a rolling basis until: Friday, April 13,..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Doximity: Data Engineer, Infrastructure"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Doximity: Data Engineer, Infrastructure"], ["url", "https://t.co/TsfJ1nYSLf"], ["created_at", "2018-03-30 16:42:38.391923"], ["updated_at", "2018-03-30 16:42:38.391923"], ["description", "DESCRIPTION: Why work at Doximity? Doximity is the leading social network for healthcare professionals with over 70% of U.S. doctors as members. We have strong revenues, real market traction, and we're putting a..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Doximity: Machine Learning Engineer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Doximity: Machine Learning Engineer"], ["url", "https://t.co/3HJ8ECpR8t"], ["created_at", "2018-03-30 16:42:38.841678"], ["updated_at", "2018-03-30 16:42:38.841678"], ["description", "DESCRIPTION: Why work at Doximity?Doximity is the leading social network for healthcare professionals with over 70% of U.S. doctors as members. We have strong revenues, real market traction, and we're putting a..."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "The New York Times : Senior Software Engineer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "The New York Times : Senior Software Engineer"], ["url", "https://t.co/rID8jyKORy"], ["created_at", "2018-03-30 16:42:39.347992"], ["updated_at", "2018-03-30 16:42:39.347992"], ["description", "DESCRIPTION: Wirecutter is seeking an experienced senior full stack engineer to join the team that is responsible for the application, APIs, and client interfaces that serve our product reviews and power our..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Harvest: QA Engineer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Harvest: QA Engineer"], ["url", "https://t.co/f51ASHOgsQ"], ["created_at", "2018-03-30 16:42:39.791956"], ["updated_at", "2018-03-30 16:42:39.791956"], ["description", "DESCRIPTION: Harvest is an independent software company making tools that help businesses run smoothly. For the past 11 years, our customers have relied on our products as a critical part of their day-to-day..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "New York Times: Software Engineer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "New York Times: Software Engineer"], ["url", "https://t.co/Z4yCOLNlAz"], ["created_at", "2018-03-30 16:42:40.258253"], ["updated_at", "2018-03-30 16:42:40.258253"], ["description", "DESCRIPTION: Wirecutter is seeking an experienced full stack engineer to join the team that is responsible for the application, APIs, and client interfaces that serve our product reviews and power our business...."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "OpenCraft: Open Source Developer &amp; DevOps (Python, Django, AWS, OpenStack)"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "OpenCraft: Open Source Developer &amp; DevOps (Python, Django, AWS, OpenStack)"], ["url", "https://t.co/UJltyH1WIk"], ["created_at", "2018-03-30 16:42:40.718701"], ["updated_at", "2018-03-30 16:42:40.718701"], ["description", "DESCRIPTION: Development specialized on the free software project Open edX, used by many universities and companies to run online courses. See edx.org, stanford.edu or fun-mooc.fr for examples of Open edX..."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Five Good Friends: Rails Full-Stack Software Engineer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Five Good Friends: Rails Full-Stack Software Engineer"], ["url", "https://t.co/X2nZWcdYNB"], ["created_at", "2018-03-30 16:42:41.245147"], ["updated_at", "2018-03-30 16:42:41.245147"], ["description", "DESCRIPTION: Five Good Friends is reinventing home care. Combining easy to use technology with skilled and caring people we are building Australia’s best care company. We are raising people’s ambitions as to what..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "IOOGO: Full Stack Engineer"], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "IOOGO: Full Stack Engineer"], ["url", "https://t.co/ZIVkZum9PM"], ["created_at", "2018-03-30 16:42:41.757096"], ["updated_at", "2018-03-30 16:42:41.757096"], ["description", "DESCRIPTION: We are looking for a full-stack engineer who is looking for more than just a job. We are a young company and need someone with experience that can help steer us in the right direction, technically..."]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "NaturalForce Nutrition Inc.: Digital CRM Manager"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "NaturalForce Nutrition Inc.: Digital CRM Manager"], ["url", "https://t.co/yrVJV1u1Q0"], ["created_at", "2018-03-30 16:42:42.277352"], ["updated_at", "2018-03-30 16:42:42.277352"], ["description", "DESCRIPTION: Read more about our company fire here: https://naturalforce.com/our-story/ Follow us here: https://www.linkedin.com/company/naturalforce/ Digital CRM Manager Natural Force is looking for a passionate..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "ProductPlan: Senior Software Engineer"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "ProductPlan: Senior Software Engineer"], ["url", "https://t.co/YFir4p8nrO"], ["created_at", "2018-03-30 16:42:42.757864"], ["updated_at", "2018-03-30 16:42:42.757864"], ["description", "DESCRIPTION: As a ProductPlan Senior Software Developer, you will be responsible for helping design and develop new features and architecture for our industry leading product. Use test-driven development, code..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Aha Media Group: Director of Account Management"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Aha Media Group: Director of Account Management"], ["url", "https://t.co/gp2ndEfEVD"], ["created_at", "2018-03-30 16:42:43.366959"], ["updated_at", "2018-03-30 16:42:43.366959"], ["description", "DESCRIPTION: Aha Media Group, a boutique content strategy and copywriting consultancy, is seeking a Director of Account Management to oversee our Account Managers. This position will report to the Vice President..."]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Aha Media Group: Account Manager"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Aha Media Group: Account Manager"], ["url", "https://t.co/V2w2v9ElCm"], ["created_at", "2018-03-30 16:42:43.998417"], ["updated_at", "2018-03-30 16:42:43.998417"], ["description", "DESCRIPTION: Aha Media Group, a boutique content strategy and copywriting consultancy, is seeking an Account Manager to join our account management team.The ideal candidate will bring a consultative and strategic..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Cables and Sensors: Remote Customer Service Representative"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Cables and Sensors: Remote Customer Service Representative"], ["url", "https://t.co/EbKn6HFE5R"], ["created_at", "2018-03-30 16:42:44.559831"], ["updated_at", "2018-03-30 16:42:44.559831"], ["description", "DESCRIPTION: Who We AreCables &amp; Sensors is a highly efficient, fast-growing company that manufactures and distributes patient monitor accessories for the medical industry in the US and Europe. We are a small..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "alar software llc: Back end lead developer for transportation analytics software startup"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "alar software llc: Back end lead developer for transportation analytics software startup"], ["url", "https://t.co/sNrYM7D3AU"], ["created_at", "2018-03-30 16:42:45.050298"], ["updated_at", "2018-03-30 16:42:45.050298"], ["description", "DESCRIPTION: We are looking for experienced back-end engineers to help design and build out our platform. We’re aiming to aggregate logistics data to enable customers to operate more efficiently and connect them..."]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."title" = $1 LIMIT $2[0m  [["title", "Breeze Church Management: Senior PHP/MySQL Developer"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "url", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Breeze Church Management: Senior PHP/MySQL Developer"], ["url", "https://t.co/ybskNRxssY"], ["created_at", "2018-03-30 16:42:45.527208"], ["updated_at", "2018-03-30 16:42:45.527208"], ["description", "DESCRIPTION: Do you dream about PHP code? Create MySQL database structures on napkins for fun? Have a passion for helping churches?If so, we’d love to talk!Breeze is a software company focused on serving churches..."]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/developers" for 127.0.0.1 at 2018-03-30 19:43:06 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 333ms (Views: 317.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-03-30 19:43:08 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 58ms (Views: 46.2ms | ActiveRecord: 6.3ms)
+
+

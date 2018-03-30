@@ -1,0 +1,10 @@
+<div style="text-align: center; background-color: white;">
+
+	<% @jobs.each do |job| %>
+		<h3 style="margin: 20px; margin-top: 0px;"><%= job.title %></h3>
+		<p style="margin: 20px;"><%= job.description %></p>
+		<a target="_blank" class="btn btn-primary" style="" href="<%= job.url %>">Apply Now</a><br>
+		<hr>
+	<% end %>
+
+</div>
