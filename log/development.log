@@ -19736,3 +19736,1197 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 58ms (Views: 48.9ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:40:17 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (14.8ms)
+  [1m[36mDeveloper Load (1.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 288ms (Views: 268.8ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:41:18 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.7ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:41:42 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (16.0ms)
+  [1m[36mDeveloper Load (1.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 303ms (Views: 282.1ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:41:56 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.5ms)
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:42:11 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:42:20 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:42:39 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:43:24 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:43:39 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:44:04 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:44:11 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:44:15 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.3ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:46:25 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.3ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:46:51 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 17:46:59 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (4.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 26.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 17:47:00 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.9ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (30.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 52.8ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 17:47:04 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (2.5ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (0.6ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (11.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 33.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 17:47:06 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (1.3ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (7.9ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 48.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:47:15 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:48:42 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Job Load (0.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered jobs/index.html.erb within layouts/application (252.4ms)
+Completed 401 Unauthorized in 258ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `developer' for #<#<Class:0x007ffd26871c68>:0x007ffd28ab0b08>
+Did you mean?  developer_url):
+    11: 	    <p style="padding-top:25%; font-size:35px; background-color: #;">Awesome remote jobs from all over the globe</p>
+    12: 	    <p style="padding-left: 15%; padding-right: 15%;">This is the best job board in the world for junior developers looking to go remote. <br>I don't just scrape popular job boards and job aggregators for junior positions, but also look for positions asking for zero, one or two years of experience and don't specifically say 'junior'.</p>
+    13: 	    <br>
+    14: 	    <img id="card-img-top" src="<%= developer.profile_image.url %>" style="height:150px; margin:30px;" />
+    15: 
+    16: 
+    17: 	</div>
+  
+app/views/jobs/index.html.erb:14:in `_app_views_jobs_index_html_erb___143396479448714348_70362642877240'
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:49:04 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:49:12 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:50:35 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.8ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:51:09 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.6ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:51:51 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.5ms)
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:52:50 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:54:52 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.8ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:55:31 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:55:43 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (18.0ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 17:55:49 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 17:56:05 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (3.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 17:56:10 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (1.0ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (21.2ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 44.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 17:56:33 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (4.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 17:57:29 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (3.9ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 38.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 17:58:11 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (2.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 17:58:24 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (4.4ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 17:58:37 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (2.9ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 17:58:50 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (2.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 17:58:59 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (2.5ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:03:29 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (3.8ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:04:18 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (2.9ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:04:36 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (1.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (13.2ms)
+  [1m[36mDeveloper Load (1.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 46.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:04:39 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (1.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (7.1ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:04:40 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (4.2ms)
+  [1m[36mDeveloper Load (1.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:04:44 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (2.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (6.8ms)
+  [1m[36mDeveloper Load (1.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 46.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:04:46 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (5.0ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:04:58 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (3.9ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (13.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 53.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 18:05:01 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.2ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 18:05:20 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:05:43 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (2.9ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (10.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 34.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:05:56 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (3.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:05:58 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (4.2ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 37.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:06:06 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (6.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 55.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:06:25 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:06:41 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.3ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:07:38 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.2ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:07:45 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (3.3ms)
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:08:09 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.8ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:08:27 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.4ms)
+  [1m[36mDeveloper Load (0.8ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:08:35 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (4.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 41.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:08:37 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (3.6ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 43.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:08:57 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.2ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:09:04 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.6ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:09:09 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (3.5ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (9.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 31.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:09:13 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (1.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (12.3ms)
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 46.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:09:24 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:09:54 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (3.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:09:55 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (4.2ms)
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 43.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:10:48 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (3.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:10:55 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (2.7ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:11:25 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (3.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:11:35 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (2.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:12:05 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (3.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:12:14 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.9ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:12:44 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:12:55 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.2ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:13:31 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:13:39 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (1.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (5.8ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 38.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:13:40 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (1.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (2.7ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (10.9ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 56.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:13:41 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (4.0ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (2.3ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (14.3ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 51.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:13:42 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (1.1ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (20.8ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 75.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:13:50 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (1.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (6.2ms)
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:13:50 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (2.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (6.7ms)
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 49.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 18:13:52 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (2.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.2ms)
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 47.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:15:50 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (1.8ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (4.7ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (11.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 52.1ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:15:53 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (1.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (11.7ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 96ms (Views: 90.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:15:58 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (1.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (2.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (11.4ms)
+  [1m[36mDeveloper Load (0.8ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 47.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:16:22 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (3.3ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:16:30 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.8ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:17:03 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (2.0ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (9.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 36.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:17:04 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (2.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (11.6ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 43.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:21:32 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (8.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (24.4ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 79.6ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:21:34 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (4.2ms)
+  [1m[36mDeveloper Load (0.8ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 48.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:21:36 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (3.1ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (0.5ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (24.6ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 71.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:23:31 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (4.8ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:24:02 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (7.8ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:24:25 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (5.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:25:24 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (4.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 24.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:26:12 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (6.5ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:26:21 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (4.7ms)
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:26:36 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (5.1ms)
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:26: unknown regexp option - p
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:26: unmatched close parenthesis: /b> );@output_buffer.safe_append='</
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:32: unknown regexp options - dv
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:34: syntax error, unexpected '<'
+</div>
+ ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:37: unknown regexp option - b
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:42: unknown regexp option - d
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:42: syntax error, unexpected tIDENTIFIER, expecting ')'
+				<a href="/side_projects/'.freeze;@output_buffer.appen
+				                       ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:42: syntax error, unexpected tIDENTIFIER, expecting ')'
+r.safe_append='"><img id="card-img-top" src="'.freeze;@outpu
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:42: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+pend='"><img id="card-img-top" src="'.freeze;@output_buffer.
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:42: syntax error, unexpected tIDENTIFIER, expecting ')'
+r.safe_append='" style="border-radius: 50%; height:120px; ma
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:42: syntax error, unexpected ':', expecting ')'
+ppend='" style="border-radius: 50%; height:120px; margin:10p
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:42: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+: 50%; height:120px; margin:10px;" /></a><br>
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:43: syntax error, unexpected tIDENTIFIER, expecting ')'
+						<a style="color:black; text-decoration: none;
+						               ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:43: syntax error, unexpected ':', expecting ')'
+"color:black; text-decoration: none;" href="/side_projects/'
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:43: syntax error, unexpected tIDENTIFIER, expecting ')'
+fer.safe_append='" style="font-size: 18px;"><b>'.freeze;@out
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:43: syntax error, unexpected ':', expecting ')'
+fe_append='" style="font-size: 18px;"><b>'.freeze;@output_bu
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:52: syntax error, unexpected tIDENTIFIER, expecting ')'
+<div style="background-color: #222222; height:500px;
+                      ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:52: syntax error, unexpected ':', expecting ')'
+<div style="background-color: #222222; height:500px; text-a
+                             ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:53: syntax error, unexpected '<'
+ padding:30px; color:white;"><b>We discuss and help each oth
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:53: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+x; color:white;"><b>We discuss and help each other in the ch
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:53: syntax error, unexpected keyword_in, expecting ')'
+discuss and help each other in the chat!</b> 😇 </p>
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:53: unknown regexp option - p
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:54: syntax error, unexpected '<'
+	<img id="card-img-top" src="htt
+	 ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+	<img id="card-img-top" src="https://i.imgur.com/dYeW02Q.
+	                          ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+i.imgur.com/dYeW02Q.png" style="height:300px; margin:30px;" 
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:54: syntax error, unexpected '>'
+height:300px; margin:30px;" />
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:58: unknown regexp option - b
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:62: unknown regexp options - dvlpr
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:62: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+f="/developers/show_profile?id='.freeze;@output_buffer.appen
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:62: syntax error, unexpected tIDENTIFIER, expecting ')'
+r.safe_append='"><img id="card-img-top" src="'.freeze;@outpu
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:62: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+pend='"><img id="card-img-top" src="'.freeze;@output_buffer.
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:62: syntax error, unexpected tIDENTIFIER, expecting ')'
+r.safe_append='" style="border-radius: 50%; height:120px; ma
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:62: syntax error, unexpected ':', expecting ')'
+ppend='" style="border-radius: 50%; height:120px; margin:10p
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:62: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+: 50%; height:120px; margin:10px;" /></a><br>
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:63: syntax error, unexpected tIDENTIFIER, expecting ')'
+				<span style="font-size: 11px;"> <b>'.freeze;@ou
+				                 ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:63: syntax error, unexpected ':', expecting ')'
+				<span style="font-size: 11px;"> <b>'.freeze;@output_b
+				                       ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+				<span style="font-size: 11px;"><span class="gly
+				                 ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:64: syntax error, unexpected ':', expecting ')'
+				<span style="font-size: 11px;"><span class="glyphicon
+				                       ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+ 11px;"><span class="glyphicon glyphicon-fire"></span> <b>26
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:64: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+ass="glyphicon glyphicon-fire"></span> <b>26 applications th
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:65: syntax error, unexpected tIDENTIFIER, expecting ')'
+				<p><span class="glyphicon glyphicon-fire"></span> <b>1 
+				                         ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:65: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+ass="glyphicon glyphicon-fire"></span> <b>1 new project this
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:73: syntax error, unexpected tIDENTIFIER, expecting ')'
+<footer style="background-color: black; text-align: cen
+                         ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:73: syntax error, unexpected ':', expecting ')'
+ooter style="background-color: black; text-align: center; co
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:73: syntax error, unexpected ':', expecting ')'
+ound-color: black; text-align: center; color:white; font-siz
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:73: syntax error, unexpected ':', expecting ')'
+enter; color:white; font-size: 13px;">
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:73: unterminated string meets end of file
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/views/welcome/index.erb:73: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/welcome/index.erb:26: unknown regexp option - p
+app/views/welcome/index.erb:26: unmatched close parenthesis: /b> );@output_buffer.safe_append='</
+app/views/welcome/index.erb:32: unknown regexp options - dv
+app/views/welcome/index.erb:34: syntax error, unexpected '<'
+app/views/welcome/index.erb:37: unknown regexp option - b
+app/views/welcome/index.erb:42: unknown regexp option - d
+app/views/welcome/index.erb:42: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:42: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:42: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/welcome/index.erb:42: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:42: syntax error, unexpected ':', expecting ')'
+app/views/welcome/index.erb:42: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/welcome/index.erb:43: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:43: syntax error, unexpected ':', expecting ')'
+app/views/welcome/index.erb:43: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:43: syntax error, unexpected ':', expecting ')'
+app/views/welcome/index.erb:52: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:52: syntax error, unexpected ':', expecting ')'
+app/views/welcome/index.erb:53: syntax error, unexpected '<'
+app/views/welcome/index.erb:53: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/welcome/index.erb:53: syntax error, unexpected keyword_in, expecting ')'
+app/views/welcome/index.erb:53: unknown regexp option - p
+app/views/welcome/index.erb:54: syntax error, unexpected '<'
+app/views/welcome/index.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:54: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:54: syntax error, unexpected '>'
+app/views/welcome/index.erb:58: unknown regexp option - b
+app/views/welcome/index.erb:62: unknown regexp options - dvlpr
+app/views/welcome/index.erb:62: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/welcome/index.erb:62: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:62: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/welcome/index.erb:62: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:62: syntax error, unexpected ':', expecting ')'
+app/views/welcome/index.erb:62: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/welcome/index.erb:63: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:63: syntax error, unexpected ':', expecting ')'
+app/views/welcome/index.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:64: syntax error, unexpected ':', expecting ')'
+app/views/welcome/index.erb:64: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:64: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/welcome/index.erb:65: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:65: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/welcome/index.erb:73: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/welcome/index.erb:73: syntax error, unexpected ':', expecting ')'
+app/views/welcome/index.erb:73: syntax error, unexpected ':', expecting ')'
+app/views/welcome/index.erb:73: syntax error, unexpected ':', expecting ')'
+app/views/welcome/index.erb:73: unterminated string meets end of file
+app/views/welcome/index.erb:73: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-04-10 18:26:45 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mSideProject Load (0.5ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  Rendered welcome/index.erb within layouts/application (5.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:27:13 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.9ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/developers" for 127.0.0.1 at 2018-04-10 18:28:40 +0300
+Processing by DevelopersController#index as HTML
+  Rendering developers/index.html.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered developers/index.html.erb within layouts/application (2.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/side_projects" for 127.0.0.1 at 2018-04-10 18:28:41 +0300
+Processing by SideProjectsController#index as HTML
+  Rendering side_projects/index.html.erb within layouts/application
+  [1m[36mSideProject Load (0.2ms)[0m  [1m[34mSELECT "side_projects".* FROM "side_projects"[0m
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered side_projects/index.html.erb within layouts/application (5.3ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 43.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-04-10 18:29:10 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 36.3ms | ActiveRecord: 0.8ms)
+
+

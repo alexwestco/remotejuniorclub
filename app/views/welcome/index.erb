@@ -23,7 +23,7 @@
 			<div style="float: left; padding-left: 3%;">
 				<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a>
 				<% if developer.name != nil %>
-					<p style="color:white; font-size: 18px;"><%= developer.name.strip.split(" ")[0] %></p>
+					<p style="color:white;"><b><%= developer.name.strip.split(" ")[0] %></b></p>
 				<% end %>
 			</div>
 
@@ -60,6 +60,7 @@
 		<% @developers.each do |developer| %>
 			<div style="float: left; padding-left: 3%;">
 				<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a><br>
+				<span style="font-size: 11px;"> <b><%= developer.name.strip.split(" ")[0] %></b></p>
 				<span style="font-size: 11px;"><span class="glyphicon glyphicon-fire"></span> <b>26 applications this month!</b></p>
 				<p><span class="glyphicon glyphicon-fire"></span> <b>1 new project this month!</b></p>
 			</div>
