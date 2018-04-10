@@ -1,23 +1,26 @@
 <div style="height:1000px; text-align: center; margin-top: 50px;">
 
+<div style="">
+	<img id="card-img-top" src="<%= @developer.profile_image.url %>" style="border-radius: 50%; height:150px; margin:30px;" />
 
-<img id="card-img-top" src="<%= @developer.profile_image.url %>" style="border-radius: 50%; height:150px; margin:30px;" />
-
-<h1 style="margin: 30px;"><%= @developer.name %></h1>
-<p style="margin: 30px;"><%= @developer.bio %></p>
-<a target="_blank" style="margin: 30px;" href="<%= @developer.personal_website %>">Personal website/blog.</a><br><br>
+	<h1 style="margin: 30px;"><%= @developer.name %></h1>
+	<p style="margin: 30px;"><%= @developer.bio %></p>
+	<a target="_blank" style="margin: 30px;" href="<%= @developer.personal_website %>">Personal website/blog.</a><br><br>
+</div>
 <hr>
 <h1><%= @developer.name.strip.split(" ")[0] %>'s Side Projects</h1>
 <hr>
 
 	<% @side_projects.each do |sp| %>
-		<img id="card-img-top" src="<%= sp.image.url %>" style=" height:150px; margin:30px;" />
-		<h1 style="margin: 30px; margin-top: 0px;"><%= sp.name %></h1>
-		<p style="margin: 30px;"><%= sp.description %></p>
-		<p style="margin: 30px;"><%= sp.tech_stack %></p>
-		<a target="_blank" href="<%= sp.github_repo %>">View Github Repository</a><br><br>
-		<a target="_blank" href="<%= sp.website %>">Visit Website</a>
-		<hr>
+	<div style="background-image: linear-gradient(to bottom, #fff 0%, #cfd9df 100%);">
+		<img id="card-img-top" src="<%= sp.image.url %>" style="border-radius: 50%; height:150px; margin:30px;" />
+		<p style="margin: 0px; margin-top: 0px;"><b><%= sp.name %></b></p>
+		<p style="margin: 30px;"><%= sp.description %> (<a href="/developers/show_profile?id=<%= sp.developer_id %>">Made by <%= Developer.find(sp.developer_id).name %></a>)</p>
+		<a target="_blank" class="btn btn-primary" style="" href="<%= sp.website %>">View Details</a><br><br><br><hr>
+
+		
+		
+	</div>
 	<% end %>
 
 </div>
