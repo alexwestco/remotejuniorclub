@@ -5,49 +5,50 @@
         -o-background-size: cover;
         background-size: cover;
         height: 100vh;
-        background-color: #060;
         color: #fff;
         text-align: center;
         text-shadow: 0 1px 3px rgba(0,0,0,.5);">
 		<img src="https://i.imgur.com/WnCI104.png" style="height: 150px; margin-top: 150px;">
 	    <h1 style="margin:30px; background-color: #;">Remote Junior Club</h1>
-	    <h4 style="margin:30px; background-color: #;">The place where you show off your work and land that awesome job!</h4>
-		<a class="btn btn-primary" style="margin-top:20px; padding:10px;" href="/jobs">Browse Jobs!</a><br><br>
+	    <h4 style="margin:30px; background-color: #;">Show off your work, land that remote job  ✈️ </h4>
 
 	</div>
 
 </header>
 
-<div style="background-color: #191919; height:500px; text-align: center; ">
-	<div class="col-lg-6" style="background-color: white;">
-		<p style="font-size: 22px; padding:20px; color: white;">We are a community of junior developers chasing down the same dream!</p>
-	</div>
-	<div class="col-lg-6">
-		<% @developers.each do |developer| %>
-			<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:100px; margin:30px;" /></a>
-
-		<% end %>
-	</div>
-</div>
-
-<div style="height:500px; text-align: center; ">
-	<p style="font-size: 22px; padding:20px;">We build projects!</p>
-	<% @side_projects.each do |sp| %>
-		<a href="/side_projects/<%= sp.id %>"><img id="card-img-top" src="<%= sp.image.url %>" style="border-radius: 50%; height:150px; margin:30px;" /></a>
+<div style="background-color: #222222; height:500px; text-align: center; ">
+	<p style="font-size: 25px; padding:30px; color: white;"><b>We are a community of junior developers chasing down the same dream!</b> 💻</p>
+	<% @developers.each do |developer| %>
+		<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a>
+		<p style="color:white; font-size: 18px;"><%= developer.name.strip.split(" ")[0] %></p>
 
 	<% end %>
 </div>
 
-<div style="background-color: #191919; height:500px; text-align: center; ">
-	<p style="font-size: 22px; padding:20px; color:white;">We discuss in the chat!</p>
+<div style=" height:500px; text-align: center; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%);">
+	<p style="font-size: 25px; padding:30px; "><b>We show off our work and inspire each other!</b> 😍</p>
+	<% @side_projects.each do |sp| %>
+		<a href="/side_projects/<%= sp.id %>"><img id="card-img-top" src="<%= sp.image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a>
+		<p style="font-size: 22px;"><%= sp.name %></p>
+
+	<% end %>
+</div>
+
+<div style="background-color: #222222; height:500px; text-align: center;">
+	<p style="font-size: 25px; padding:30px; color:white;"><b>We discuss our issues and help each other in the chat!</b> 😇 </p>
 	<img id="card-img-top" src="https://i.imgur.com/dYeW02Q.png" style="height:300px; margin:30px;" />
 </div>
 
-<div style="height:500px; text-align: center; ">
-	<p style="font-size: 22px; padding:20px;">We send out CVs every single day!</p>
+<div style="height:500px; text-align: center; background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 120%);">
+	<p style="font-size: 25px; padding:30px;"><b>We send out CVs every single day and keep each other accountable!</b> 😎</p>
 	<% @developers.each do |developer| %>
 		<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:150px; margin:30px;" /></a>
-		<p>16 applications this week!</p>
+		<p><span class="glyphicon glyphicon-fire"></span> Sent 26 applications this month!</p>
+		<p><span class="glyphicon glyphicon-fire"></span> Built 1 new project this month!</p>
 
 	<% end %>
 </div>
+
+<footer style="background-color: black; text-align: center; color:white; font-size: 13px;">
+	Remote Junior Club © 2018
+</footer>

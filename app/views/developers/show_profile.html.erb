@@ -5,9 +5,9 @@
 
 <h1 style="margin: 30px;"><%= @developer.name %></h1>
 <p style="margin: 30px;"><%= @developer.bio %></p>
-<a style="margin: 30px;" href="<%= @developer.personal_website %>">Personal website/blog.</a><br><br>
+<a target="_blank" style="margin: 30px;" href="<%= @developer.personal_website %>">Personal website/blog.</a><br><br>
 <hr>
-<h1>Side Projects</h1>
+<h1><%= @developer.name.strip.split(" ")[0] %>'s Side Projects</h1>
 <hr>
 
 	<% @side_projects.each do |sp| %>

@@ -1,13 +1,14 @@
-<div style="text-align: center; background-color: white;">
+<h1 style="text-align: center; margin:30px;">Side Projects</h1>
+<hr>
+<div style="text-align: center; background-color: white; background-image: linear-gradient(to bottom, #fff 0%, #cfd9df 130%);">
 
 	<% @side_projects.each do |sp| %>
 		<img id="card-img-top" src="<%= sp.image.url %>" style="border-radius: 50%; height:150px; margin:30px;" />
 		<h1 style="margin: 30px; margin-top: 0px;"><%= sp.name %></h1>
 		<p style="margin: 30px;"><%= sp.description %></p>
-		<a target="_blank" class="btn btn-primary" style="" href="<%= sp.website %>">Visit Website</a>
+		<a target="_blank" class="btn btn-primary" style="" href="<%= sp.website %>">View Details</a><br><br>
 		
-		<a target="_blank" class="btn btn-primary" style="" href="<%= sp.github_repo %>">View Code</a><p style="margin: 20px;">Made with: <%= sp.tech_stack %></p>
-		<a class="" style="color:#191919" href="/developers/show_profile?id=<%= sp.developer_id %>">Made by <%= Developer.find(sp.developer_id).name %></a><br>
+		
 		<hr>
 	<% end %>
 
