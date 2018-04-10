@@ -39,8 +39,8 @@
 	<div style="padding-left: 10%;">
 		<% @side_projects.each do |sp| %>
 			<div style="float: left; padding-left: 3%;">
-				<a href="/side_projects/<%= sp.id %>"><img id="card-img-top" src="<%= sp.image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a>
-						<p style="font-size: 22px;"><%= sp.name %></p>
+				<a href="/side_projects/<%= sp.id %>"><img id="card-img-top" src="<%= sp.image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a><br>
+						<a style="color:black; text-decoration: none;" href="/side_projects/<%= sp.id %>" style="font-size: 18px;"><b><%= sp.name %></b></a>
 
 			</div>
 
@@ -50,21 +50,23 @@
 </div>
 
 <div style="background-color: #222222; height:500px; text-align: center;">
-	<p style="font-size: 25px; padding:30px; color:white;"><b>We discuss our issues and help each other in the chat!</b> 😇 </p>
+	<p style="font-size: 25px; padding:30px; color:white;"><b>We discuss and help each other in the chat!</b> 😇 </p>
 	<img id="card-img-top" src="https://i.imgur.com/dYeW02Q.png" style="height:300px; margin:30px;" />
 </div>
 
 <div style="height:500px; text-align: center; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%);">
 	<p style="font-size: 25px; padding:30px;"><b>We send out CVs every single day and keep each other accountable!</b> 😎</p>
-	
-	<% @developers.each do |developer| %>
+	<div style="padding-left: 10%;">
+		<% @developers.each do |developer| %>
 			<div style="float: left; padding-left: 3%;">
-				<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a>
-				<p><span class="glyphicon glyphicon-fire"></span> 26 applications this month!</p>
-				<p><span class="glyphicon glyphicon-fire"></span> 1 new project this month!</p>
+				<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a><br>
+				<span style="font-size: 11px;"><span class="glyphicon glyphicon-fire"></span> <b>26 applications this month!</b></p>
+				<p><span class="glyphicon glyphicon-fire"></span> <b>1 new project this month!</b></p>
 			</div>
 
 		<% end %>
+	</div>
+	
 </div>
 
 <footer style="background-color: black; text-align: center; color:white; font-size: 13px;">
