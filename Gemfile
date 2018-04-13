@@ -39,6 +39,7 @@ gem 'devise'
 
 # For web scraping
 gem 'nokogiri'
+gem 'mechanize'
 
 # For web scraping Twitter
 gem 'twurl'

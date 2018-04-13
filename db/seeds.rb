@@ -1,157 +1,88 @@
-require 'open-uri'
-require 'nokogiri'
+require 'mechanize'
 
-$jobs = Array.new([])
+class Angellist
+	URI = 'https://angel.co/login'
 
-
-def createJob(title, description, url)
-
-	j = Job.where(title: title).take
-
-	if j == nil
-		j = Job.create(title: title, description: description, url: url)
-	else
-		j.title = title
-		j.description = description
-		j.url = url
-		j.save
+	def initialize
+		@agent = Mechanize.new
+		@page = @agent.get(URI)
+		@agent.user_agent_alias = 'Windows Chrome'
 	end
 
-	$jobs.push(j)
+	def login
+
+		# Log in to angel.co
+		puts @page.uri
+		form = @page.form_with :action => '/login'
+		form.field_with(:id => 'user_email').value = 'alexcs02356@gmail.com'
+		form.field_with(:id => 'user_password').value = '*super_secret_password*'
+
+		@page = @agent.submit form
+		gather_jobs()
+
+	end
+
+	def gather_jobs
+		# Click on the Jobs tab (angel.co is good at detecting bots so we can't just throw in a url)	
+		puts @page.uri
+
+		@page = @agent.click(@page.link_with(:text => 'Jobs'))
+
+		puts @page.uri
+
+		number_of_jobs = @page.css('div#root').css('.page').css('.container').css('div#startups_content').css('.label-container')
+		puts number_of_jobs.inner_html
+
+	end
 
 end
 
 
-def scrape(website)
+class StackOverflow
+	URI = 'https://stackoverflow.com/jobs?sort=i&l=Remote&d=20&u=Km'
 
-	document = open(website)
-	content = document.read
-
-	parsed_content = Nokogiri::HTML(content)
-
-	# Get the divisions
-	posts = parsed_content.css('div#timeline').css('.tweet').css('.content').css('.card2').css('.js-macaw-cards-iframe-container')
-	tweet_texts = parsed_content.css('div#timeline').css('.tweet').css('.content').css('.js-tweet-text-container').css('.tweet-text')
-
-	i = 0
-	posts.each{|post|
-
-		tweet_text = tweet_texts[i].inner_html
-
-		url = post['data-card-url']
-
-		document_two = open('https://twitter.com'+post['data-full-card-iframe-url'])
-		content_two = document_two.read
-
-		parsed_content_two = Nokogiri::HTML(content_two)
+	def initialize
 		
-		title = parsed_content_two.css('.SummaryCard-content').css('.TwitterCard-title').inner_html
+	end
 
+	def gather_jobs
+		document = open(URI)
+		content = document.read
 
-		description = "DESCRIPTION: " + parsed_content_two.css('.SummaryCard-content').css('.tcu-resetMargin').inner_html
+		parsed_content = Nokogiri::HTML(content)
 
-		if website == 'https://twitter.com/authenticjobs'
+		# Get the divisions
+		posts = parsed_content.css('div#content').css('.inner-content').css('.content').css('.-row').css('.main').css('.listResults')
 
-			if tweet_text.include? "Junior"
-				if tweet_text.include? "<s>#</s><b>remote</b>"
-					createJob(title, description, url)
-				end
-			end
+		i = 0
+		posts.each{|post|
+
+			puts post.inner_html
+
+			#document_two = open('https://twitter.com'+post['data-full-card-iframe-url'])
+			#content_two = document_two.read
+
+			#parsed_content_two = Nokogiri::HTML(content_two)
 			
+			#title = parsed_content_two.css('.SummaryCard-content').css('.TwitterCard-title').inner_html
 
-		elsif website == 'https://twitter.com/StackDevJobs'
 
-			if tweet_text.include? "Junior"
+			#description = "DESCRIPTION: " + parsed_content_two.css('.SummaryCard-content').css('.tcu-resetMargin').inner_html
 
-				if tweet_text.include? "(Remote)"
-					createJob(title, description, url)
-					break
-				end
+			#if website == 'https://twitter.com/authenticjobs'
 
-				if tweet_text.include? "[Remote]"
-					createJob(title, description, url)
-					break
-				end
+				#if tweet_text.include? "Junior"
+					#if tweet_text.include? "<s>#</s><b>remote</b>"
+						#createJob(title, description, url)
+					#end
+				#end
 				
-			end
-
-		elsif website == 'https://twitter.com/dribbblejobs'
-
-			if tweet_text.include? "Junior"
-
-				if tweet_text.include? "anywhere"
-					createJob(title, description, url)
-					break
-				end
-
-			end
-
-		elsif website == 'https://twitter.com/hasjob'
-
-			if tweet_text.include? "Junior"
-
-				if tweet_text.include? "<s>#</s><b>Anywhere</b>"
-					createJob(title, description, url)
-					break
-				end
-
-			end
-
-		elsif website == 'https://twitter.com/Jobspresso'
-
-			if tweet_text.include? "Junior"
-				createJob(title, description, url)
-				break
-			end
-
-		elsif website == 'https://twitter.com/nofluffjobs'
-
-			if tweet_text.include? "Junior"
-				if tweet_text.include? "Fully remote job"
-					createJob(title, description, url)
-					break
-				end
-			end
-
-		elsif website == 'https://twitter.com/remote_ok'
-
-			if tweet_text.include? "Junior"
-				createJob(title, description, url)
-				break
-			end
-
-		elsif website == 'https://twitter.com/wfhio'
-
-			if tweet_text.include? "Junior"
-				
-				if tweet_text.include? "[Anywhere]"
-					createJob(title, description, url)
-					break
-				end
-				
-				if tweet_text.include? "[Anywhere*]"
-					createJob(title, description, url)
-					break
-				end
-				
-			end
-
+			#end
 		end
 
-		i = i + 1
+	end
 
-		
-	}
 
 end
 
-
-
-Job.destroy_all
-all_websites = ['https://twitter.com/authenticjobs','https://twitter.com/StackDevJobs', 'https://twitter.com/dribbblejobs', 'https://twitter.com/hasjob', 'https://twitter.com/jobmote', 'https://twitter.com/Jobspresso', 'https://twitter.com/nofluffjobs', 'https://twitter.com/remote_ok', 'https://twitter.com/wfhio' ,'https://twitter.com/workingnomads', 'https://twitter.com/weworkremotely']
-websites=['https://twitter.com/authenticjobs','https://twitter.com/StackDevJobs', 'https://twitter.com/dribbblejobs', 'https://twitter.com/hasjob', 'https://twitter.com/jobmote', 'https://twitter.com/Jobspresso', 'https://twitter.com/nofluffjobs', 'https://twitter.com/remote_ok', 'https://twitter.com/wfhio', 'https://twitter.com/workingnomads', 'https://twitter.com/weworkremotely']
-websites.each{|website|
-	scrape(website)
-}
-
-
+StackOverflow.new.gather_jobs
