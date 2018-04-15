@@ -1,0 +1,27 @@
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+
+<div style="text-align: center; font-size: 20px; padding-top: 60px; background-color: white;">
+	<h1 style="margin:30px;">New Application</h1>
+
+
+	<%= form_for @application do |ap| %>
+
+		</br>
+		<p style="color: green;">Url.</p>
+
+		<%= ap.label :job %> <b>Link</b></br>
+		<%= ap.text_field :job, :required => true, :style => "width: 400px;" %>
+		<br></br><br></br>
+
+		
+		<br></br><br></br>
+
+		
+
+		<%= ap.submit %>
+
+		<br><br>
+		
+	<% end %>
+</div>

@@ -9,20 +9,19 @@
         text-align: center;
         text-shadow: 0 1px 3px rgba(0,0,0,.5);">
 	    <p style="padding-top:20%; font-size:35px; background-color: #;">Awesome remote jobs from all over the globe</p>
-	    <p style="padding-left: 15%; padding-right: 15%;">This is the best job board in the world for junior developers looking to go remote. <br>'Junior', 'Mid level' and 'Senior' are very fluid terms.<br>For that reason, I don't just scrape popular job boards and job aggregators for junior positions, but also look for positions asking for zero, one or two years of experience and don't specifically say 'junior'. I also collect job positions that don't specify years of experience at all.</p>
+	    <p style="padding-left: 15%; padding-right: 15%;">This will be the best job board in the world for junior developers looking to go remote. <br>'Junior', 'Mid level' and 'Senior' are very fluid terms.<br>For that reason, I won't just scrape popular job boards and job aggregators for junior positions, but also look for positions asking for zero, one or two years of experience and don't specifically say 'junior'. <br>I will also collect job positions that don't specify years of experience at all.</p>
 	    <img id="card-img-top" src="https://i.imgur.com/Bdx6K2Z.png" style="height:100px; margin:30px;" />
 
 
 	</div>
 
 </header>
-<div style="text-align: center; background-color: white;">
+<div style="text-align: center; background-color: white; height:200px;">
 
-	<% @jobs.each do |job| %>
-		<h3 style="margin: 20px; margin-top: 0px;"><%= job.title %></h3>
-		<p style="margin: 20px;"><%= job.description %></p>
-		<a target="_blank" class="btn btn-primary" style="" href="<%= job.url %>">Apply Now</a><br>
-		<hr>
-	<% end %>
+	<h1>Under construction <span class="glyphicon glyphicon-road"></span></h1>
+	<hr>
+	<p>Applied for a job? Had an interview? Let others know as well and inspire them!</p>
+	<a href="/applications/new" class="btn btn-success">Add Application</a>
+	<a href="/applications/new" class="btn btn-success">Add Interview</a>
 
 </div>

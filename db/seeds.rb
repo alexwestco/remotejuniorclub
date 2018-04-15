@@ -39,7 +39,7 @@ end
 
 
 class StackOverflow
-	URI = 'https://stackoverflow.com/jobs?sort=i&l=Remote&d=20&u=Km'
+	URI = 'https://stackoverflow.com/jobs?l=remote&d=20&u=Km&sort=p'
 
 	def initialize
 		
@@ -52,34 +52,16 @@ class StackOverflow
 		parsed_content = Nokogiri::HTML(content)
 
 		# Get the divisions
-		posts = parsed_content.css('div#content').css('.inner-content').css('.content').css('.-row').css('.main').css('.listResults')
+		posts = parsed_content.css('div#content').css('.inner-content').css('.content').css('.-row').css('.main').css('.listResults').css('.-job-summary')
 
-		i = 0
-		posts.each{|post|
-
-			puts post.inner_html
-
-			#document_two = open('https://twitter.com'+post['data-full-card-iframe-url'])
-			#content_two = document_two.read
-
-			#parsed_content_two = Nokogiri::HTML(content_two)
-			
-			#title = parsed_content_two.css('.SummaryCard-content').css('.TwitterCard-title').inner_html
-
-
-			#description = "DESCRIPTION: " + parsed_content_two.css('.SummaryCard-content').css('.tcu-resetMargin').inner_html
-
-			#if website == 'https://twitter.com/authenticjobs'
-
-				#if tweet_text.include? "Junior"
-					#if tweet_text.include? "<s>#</s><b>remote</b>"
-						#createJob(title, description, url)
-					#end
-				#end
-				
-			#end
+		posts.each do |post|
+			#puts post.inner_html
 		end
 
+		puts posts[0].css('.-title').css('.job-link').inner_html
+		puts posts[0].css('.-company').css('.-name').inner_html
+		puts posts[0].css('.-title').inner_html
+		puts posts.length
 	end
 
 
