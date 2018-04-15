@@ -10,8 +10,7 @@ class DevelopersController < ApplicationController
 
 	def create
 	    @developer = Developer.new(post_params)
-	    @developer.developer = current_developer.id
-
+	    
 	    if @developer.save
 	   	  redirect_to "/"
 	    else

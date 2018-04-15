@@ -15,6 +15,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
+  get 'frontpage', to: 'welcome/frontpage', controller: 'welcome'
+
+  get 'chat', to: 'welcome/chat', controller: 'welcome'
+
   root 'welcome#index'
 
   resources :developers

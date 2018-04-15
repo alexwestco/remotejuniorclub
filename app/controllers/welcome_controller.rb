@@ -6,4 +6,14 @@ class WelcomeController < ApplicationController
   	@side_projects = SideProject.all
   end
 
+  def frontpage
+  	@developers = Developer.all
+  	@posts = Post.all.reverse
+  end
+
+  def chat
+  	@developers = Developer.all
+  	@posts = Post.all.reverse
+  end
+
 end

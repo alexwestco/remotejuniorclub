@@ -1,0 +1,30 @@
+<h1 style="text-align: center; margin:30px;">Front Page 😜</h1>
+<hr>
+
+<div class="col col-lg-4" style="text-align: center; background-color: white;">
+	<h3 style="padding-bottom: 30px;">Leaderboard</h3>
+	<% @developers.each do |developer| %>
+	<div style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); padding: 10px; margin: 10px; font-size: 11px;">
+		<img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:50px; margin-bottom:0px;" />
+		<p style="font-size: 14px; margin: 0px; margin-top: 0px; margin: 5px;"><b><%= developer.name %></b></p>
+		<p style="margin: 0px; margin-top: 0px;"><b>5 interviews this month</b></p>
+		<p style="margin: 0px; margin-top: 0px;"><b>22 applications this month</b></p>
+		<p style="margin: 0px; margin-top: 0px;"><b>2 new side projects this month</b></p>
+		<p style="color:#191919; margin: 0px; margin-top: 0px;"><span class="glyphicon glyphicon-fire"></span> <b>Total points: 112</b></p>
+	</div>
+	<% end %>
+
+
+</div>
+
+<div class="col col-lg-8" style="text-align: center; background-color: white;">
+	<h3 style="padding-bottom: 30px;">Recent Activity</h3>
+	<% @posts.each do |post| %>
+	<div style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); padding: 10px; margin: 10px;">
+		<img id="card-img-top" src="<%= Developer.find(post.developer).profile_image.url %>" style="border-radius: 50%; height:50px; margin-bottom:10px;" />
+		<p style="margin: 0px; margin-top: 0px;"><b><%= post.body %></b></p>
+	</div>
+	<% end %>
+
+
+</div>

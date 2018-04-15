@@ -1,27 +1,27 @@
-<header>
-	<div style=" background: url(https://images.unsplash.com/photo-1503503330041-4cd943d2b61f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c0b4a2d3084b493224a1c47daff8b390&auto=format&fit=crop&w=1702&q=80) ; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        height: 100vh;
-        color: #fff;
-        text-align: center;
-        text-shadow: 0 1px 3px rgba(0,0,0,.5);">
-	    <p style="padding-top:20%; font-size:35px; background-color: #;">Awesome remote jobs from all over the globe</p>
-	    <p style="padding-left: 15%; padding-right: 15%;">This will be the best job board in the world for junior developers looking to go remote. <br>'Junior', 'Mid level' and 'Senior' are very fluid terms.<br>For that reason, I won't just scrape popular job boards and job aggregators for junior positions, but also look for positions asking for zero, one or two years of experience and don't specifically say 'junior'. <br>I will also collect job positions that don't specify years of experience at all.</p>
-	    <img id="card-img-top" src="https://i.imgur.com/Bdx6K2Z.png" style="height:100px; margin:30px;" />
+<h1 style="text-align: center; margin:30px;">Job Board 🕵🏼</h1>
+<hr>
+<p style="text-align: center; padding-right: 10%; padding-left: 10%;"><b>This will be the best job board in the world for junior developers looking to go remote. <br>I won't just scrape popular job boards and job aggregators for junior positions, but also look for positions asking for zero, one or two years of experience and don't specifically say 'junior'. I will also collect job positions that don't specify years of experience at all.</b></p>
 
+<hr>
+<div style="text-align: center; margin:30px;">
 
-	</div>
-
-</header>
-<div style="text-align: center; background-color: white; height:200px;">
-
-	<h1>Under construction <span class="glyphicon glyphicon-road"></span></h1>
-	<hr>
-	<p>Applied for a job? Had an interview? Let others know as well and inspire them!</p>
-	<a href="/applications/new" class="btn btn-success">Add Application</a>
-	<a href="/applications/new" class="btn btn-success">Add Interview</a>
-
+	<a href="" class="btn" style="color:white; background-color: #404040">Have Applied</a>
+	<a href="" class="btn" style="color:white; background-color: #404040">Have not Applied</a>
 </div>
+
+<div style="text-align: center; margin:30px;">
+	<a href="" class="btn" style="color:white; background-color: #404040">All Jobs</a>
+	<a href="" class="btn" style="color:white; background-color: #404040">Says Junior</a>
+	<a href="" class="btn" style="color:white; background-color: #404040">0+ years</a>
+	<a href="" class="btn" style="color:white; background-color: #404040">1+ years</a>
+	<a href="" class="btn" style="color:white; background-color: #404040">2+ years</a>
+	<a href="" class="btn" style="color:white; background-color: #404040">Does not specify experience</a>
+</div>
+
+<% @jobs.each do |job| %>
+	
+	<div class="col col-lg-12" style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); text-align: center; margin-left: auto; margin-right: auto; display: block; align-self: center; margin-bottom: 20px;">
+		<a style="padding:10px; color:black; text-decoration: none;" href="" ><b><%= job.title %> - <span style="margin: 15px;" class="btn btn-info">I Applied for this job</span></b></a>
+		
+	</div>
+	<% end %>

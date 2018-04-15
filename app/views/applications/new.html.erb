@@ -8,7 +8,7 @@
 	<%= form_for @application do |ap| %>
 
 		</br>
-		<p style="color: green;">Url.</p>
+		<p style="color: green;">Url. Must start with http:// or https://</p>
 
 		<%= ap.label :job %> <b>Link</b></br>
 		<%= ap.text_field :job, :required => true, :style => "width: 400px;" %>

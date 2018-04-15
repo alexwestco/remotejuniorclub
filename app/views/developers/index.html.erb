@@ -1,16 +1,15 @@
-<h1 style="text-align: center; margin:30px;">Our Community</h1>
+<h1 style="text-align: center; margin:30px;">Developers 🤓</h1>
 <hr>
-<p style="padding-left: 20%; padding-right: 20%; text-align: center;"><b>This is our small community of junior developers.<br>Although we are from completely different parts of the world, we all share and are chasing the same dream, that of going remote.</b></p>
+<p style="padding-left: 20%; padding-right: 20%; text-align: center;"><b>This is our small community of junior developers.<br>Although we are from completely different parts of the world, we all share and are chasing the same goal.</b></p>
 
 <hr>
 <div style="text-align: center; background-color: white;">
 
 	<% @developers.each do |developer| %>
-	<div style="background-image: linear-gradient(to bottom, #fff 0%, #cfd9df 100%);">
-		<img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:150px; margin:30px;" />
-		<p style="margin: 0px; margin-top: 0px;"><b><%= developer.name %></b></p>
-		<p style="margin: 20px;"><%= developer.bio %></p>
-		<a class="btn btn-primary" style="" href="/developers/show_profile?id=<%= developer.id %>">View Profile</a><br><br><br><hr>
+	
+	<div class="col col-lg-12" style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); text-align: center; margin-left: auto; margin-right: auto; display: block; align-self: center; margin-bottom: 20px;">
+		<a style="color:black; text-decoration: none;" href="/developers/show_profile?id=<%= developer.id %>" ><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:75px; margin:10px;" /><b><%= developer.name %> </b>- <%= developer.bio %></a>
+		
 	</div>
 	<% end %>
 
