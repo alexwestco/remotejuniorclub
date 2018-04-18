@@ -44,6 +44,10 @@ gem 'mechanize'
 # For web scraping Twitter
 gem 'twurl'
 
+
+gem 'google-api-client'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

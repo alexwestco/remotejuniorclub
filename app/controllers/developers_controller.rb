@@ -1,4 +1,6 @@
 class DevelopersController < ApplicationController
+	before_action :authenticate_developer!, only: [:new, :create, :edit, :update, :destroy]
+
 
 	def index
 		@developers = Developer.all
@@ -10,7 +12,7 @@ class DevelopersController < ApplicationController
 
 	def create
 	    @developer = Developer.new(post_params)
-	    
+	    @developer.CV_counter = 0
 	    if @developer.save
 	   	  redirect_to "/"
 	    else

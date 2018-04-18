@@ -1,4 +1,6 @@
 class SideProjectsController < ApplicationController
+	before_action :authenticate_developer!, only: [:new, :create, :edit, :update, :destroy]
+
 	def index
 		@side_projects = SideProject.all
 	end
@@ -11,8 +13,19 @@ class SideProjectsController < ApplicationController
 	    @side_project = SideProject.new(post_params)
 	    @side_project.developer_id = current_developer.id
 
+
+	    @post = Post.new
+	    @post.developer = current_developer.id
+	    @post.body = current_developer.name + ' just created a new side project: ' + post_params[:name]
+	    @post.save
+	    
+	    current_developer.CV_counter = current_developer.CV_counter + 1
+	    current_developer.save
+
+
+
 	    if @side_project.save
-	   	  redirect_to "/"
+	   	  redirect_to "/frontpage"
 	    else
 	      render 'new'
 	    end
