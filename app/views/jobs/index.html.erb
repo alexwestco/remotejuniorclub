@@ -6,24 +6,17 @@
 <hr>
 
 
-<div style="text-align: center; margin:30px;">
+<div style="text-align: center; margin:20px;">
 	<a href="/jobs/new" class="btn btn-success" style="color:white;">I applied for a job!</a>
 </div>
 
 <hr>
 
-<div style="text-align: center; margin:30px;">
-	<span style="font-size: 16px;"><b>Filter: </b></span>
-
-	<a href="" class="btn" style="color:white; background-color: #404040">Have Applied</a>
-	<a href="" class="btn" style="color:white; background-color: #404040">Have not Applied</a>
-</div>
-
 
 <% @jobs.each do |job| %>
 	
 	<div class="col col-lg-12" style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); text-align: center; margin-left: auto; margin-right: auto; display: block; align-self: center; margin-bottom: 20px;">
-		<a style="padding:10px; color:black; text-decoration: none;" target="_blank" href="/jobs" ><b><%= job.title %><span style="margin: 15px;" class="btn btn-info">I Applied</span></b></a>
+		<a style="padding:10px; color:black; text-decoration: none;" target="_blank" href="<%= job.url %>" ><b><%= job.title %> at <%= job.company %><span style="margin: 15px;" class="btn btn-info">Apply</span></b></a>
 		
 	</div>
 	<% end %>

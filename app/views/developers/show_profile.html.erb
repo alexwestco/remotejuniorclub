@@ -1,21 +1,36 @@
 <div style="height:1000px; text-align: center; margin-top: 50px;">
 
 <div style="">
-	<img id="card-img-top" src="<%= @developer.profile_image.url %>" style="border-radius: 50%; height:150px; margin:30px;" />
+	<div class="col col-lg-6">
+		<img id="card-img-top" src="<%= @developer.profile_image.url %>" style="border-radius: 50%; height:150px; margin:30px;" />
 
-	<h1 style="margin: 30px;"><%= @developer.name %></h1>
-	<p style="margin: 30px;"><%= @developer.bio %></p>
-	<a target="_blank" style="margin: 30px;" href="<%= @developer.personal_website %>">Personal website/blog.</a><br><br>
+		<h1 style="margin: 0px;"><%= @developer.name %></h1>
+		<p style="margin: 30px;"><%= @developer.bio %></p>
+		<a target="_blank" class= "btn" style="margin:20px; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); padding: 10px; color: black; border: none;" href="<%= @developer.personal_website %>"><b>Personal website/blog.</b></a><br>
+	</div>
+	<div class="col col-lg-6" style="text-align: center; background-color: white;">
+		<h3 style="padding-bottom: 30px;">Recent Activity</h3>
+		<% @posts.each do |post| %>
+		<div style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); padding: 10px; margin: 10px;">
+			<a href="/developers/show_profile?id=<%= post.developer %>"><img id="card-img-top" src="<%= Developer.find(post.developer).profile_image.url %>" style="border-radius: 50%; height:50px; margin-bottom:10px;" /></a>
+			<p style="margin: 0px; margin-top: 0px;"><b><%= post.body %></b></p>
+		</div>
+		<% end %>
+
+
+	</div>
 </div>
-<hr>
-<h1><%= @developer.name.strip.split(" ")[0] %>'s Side Projects</h1>
-<hr>
+
+<div class="col col-lg-12" style="margin-top: 50px;">
+	<hr>
+	<h1><%= @developer.name.strip.split(" ")[0] %>'s Side Projects</h1>
+	<hr>
 
 	<% @side_projects.each do |sp| %>
-	<div class="col col-lg-12" style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); text-align: center; margin-left: auto; margin-right: auto; display: block; align-self: center;">
-		<a style="color:black; text-decoration: none;" href="/side_projects/<%= sp.id %>" ><img id="card-img-top" src="<%= sp.image.url %>" style="border-radius: 50%; height:50px; margin:20px;" /><b><%= sp.name %> </b>- <%= sp.description %></a>
-		
-	</div>
+		<div class="col col-lg-12" style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); text-align: center; margin-left: auto; margin-right: auto; display: block; align-self: center; margin-bottom: 20px;">
+			<a style="color:black; text-decoration: none;" href="/side_projects/<%= sp.id %>" ><img id="card-img-top" src="<%= sp.image.url %>" style="border-radius: 50%; height:50px; margin:20px;" /><b><%= sp.name %> </b>- <%= sp.description %></a>
+			
+		</div>
 	<% end %>
 
 </div>

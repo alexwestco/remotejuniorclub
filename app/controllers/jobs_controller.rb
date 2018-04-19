@@ -26,11 +26,6 @@ class JobsController < ApplicationController
 		    # Update his/her CV counter
 		    current_developer.CV_counter = current_developer.CV_counter + 1
 		    current_developer.save
-
-		    # Set job to applied for user
-		    application = Application.new
-		    application.developer = current_developer.id
-		    application.job = @job.id
 		    
 	   	  	redirect_to "/frontpage"
 	    else

@@ -38,10 +38,10 @@
 <div style=" height:500px; text-align: center; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%);">
 	<p style="font-size: 25px; padding:30px; "><b>We show off our work and inspire each other!</b> 😍</p>
 	
-	<div style="padding-left: 10%;">
-		<% @side_projects.each do |sp| %>
-			<div style="float: left; padding-left: 3%;">
-				<a href="/side_projects/<%= sp.id %>"><img id="card-img-top" src="<%= sp.image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a><br>
+	<div style="">
+		<% @side_projects.first(6).each do |sp| %>
+			<div class="col col-lg-4 col-md-6 col-sm-12" style="padding-left: 3%;">
+				<a href="/side_projects/<%= sp.id %>"><img id="card-img-top" src="<%= sp.image.url %>" style="height:80px; margin:30px;" /></a><br>
 						<a style="color:black; text-decoration: none;" href="/side_projects/<%= sp.id %>" style="font-size: 18px;"><b><%= sp.name %></b></a>
 
 			</div>

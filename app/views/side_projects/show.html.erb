@@ -1,1 +1,22 @@
-hhhads
+<div style="height:1000px; text-align: center; margin-top: 50px;">
+
+<div style="">
+	<div class="col col-lg-12">
+		<img id="card-img-top" src="<%= @side_project.image.url %>" style="height:150px; margin:30px;" />
+
+		<h1 style="margin: 0px;"><%= @side_project.name %></h1>
+		<p style="margin: 20px;"><%= @side_project.description %></p>
+		<% if @side_project.website != nil %>
+			<p style="color: black;"><b>Tech Stack: </b><%= @side_project.tech_stack %></p><br>
+		<% end %>
+		<% if @side_project.website != "" %>
+			<a target="_blank" class= "btn" style="margin:10px; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); padding: 10px; color: black; border: none;" href="<%= @side_project.website %>"><b>View Website</b></a><br>
+		<% end %>
+		<% if @side_project.github_repo != "" %>
+			<a target="_blank" class= "btn" style="margin:20px; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); padding: 10px; color: black; border: none;" href="<%= @side_project.github_repo %>"><b>View Code</b></a><br>
+		<% end %>
+		<a style="font-size: 11px; color:grey;" href='/developers/show_profile?id=<%= @side_project.developer_id %>'>Made by <%= Developer.find(@side_project.developer_id).name %></a><br>
+		
+	</div>
+	
+</div>

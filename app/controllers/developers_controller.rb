@@ -45,6 +45,7 @@ class DevelopersController < ApplicationController
 	def show_profile
 		@developer = Developer.find(params[:id])
 		@side_projects = SideProject.where(:developer_id => params[:id]).reverse
+		@posts = Post.where(:developer => Developer.find(params[:id])).reverse.first(3)
 	end
 
 	def destroy

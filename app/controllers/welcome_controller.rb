@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
   # GET /welcome
   def index
   	@developers = Developer.all
-  	@side_projects = SideProject.all
+  	@side_projects = SideProject.all.first(6)
   end
 
   def frontpage
