@@ -5,9 +5,9 @@
 		<img id="card-img-top" src="<%= @developer.profile_image.url %>" style="border-radius: 50%; height:150px; margin:30px;" />
 		<h1 style="margin: 0px;"><%= @developer.name %></h1>
 		<p style="margin: 20px;"><%= @developer.bio %></p>
-		<p style="color: orange;"><span class="glyphicon glyphicon-fire"></span> <b><%= @developer.CV_counter %> applications this month.</b></p>
-		<p style="color: orange;"><span class="glyphicon glyphicon-fire"></span> <b><%= @developer.side_project_counter %> side projects this month.</b></p>
-		<p style="color: orange;"><span class="glyphicon glyphicon-fire"></span> <b>Total: <%= @developer.points %></b></p>
+		<p style=""><span class="glyphicon glyphicon-fire"></span> <b><%= @developer.CV_counter %> applications this month.</b></p>
+		<p style=""><span class="glyphicon glyphicon-fire"></span> <b><%= @developer.side_project_counter %> side projects this month.</b></p>
+		<p style=""><span class="glyphicon glyphicon-fire"></span> <b>Total: <%= @developer.points %></b></p>
 		<a target="_blank" class= "btn" style="margin:20px; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); padding: 10px; color: black; border: none;" href="<%= @developer.personal_website %>"><b>Personal website/blog.</b></a><br>
 	</div>
 	<div class="col col-lg-6" style="text-align: center; background-color: white;">

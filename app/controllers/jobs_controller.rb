@@ -20,7 +20,7 @@ class JobsController < ApplicationController
 	   	  	# Create a new post for the frontpage
 		    @post = Post.new
 		    @post.developer = current_developer.id
-		    @post.body = current_developer.name + ' just applied for a new job: ' + post_params[:url]
+		    @post.body = current_developer.name + ' just applied for a new job: ' + post_params[:url]+' (+1 points)'
 		    @post.save
 
 		    # Update his/her CV counter
