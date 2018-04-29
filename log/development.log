@@ -36026,3 +36026,155 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 319ms (Views: 268.5ms | ActiveRecord: 8.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:34:40 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `filter' for #<Class:0x007ff95f4d1fb0>):
+  
+app/controllers/welcome_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:34:54 +0300
+  
+SyntaxError (/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/controllers/welcome_controller.rb:5: syntax error, unexpected keyword_not, expecting ')'
+s = Developer.filter(:name not nil)
+                              ^):
+  
+app/controllers/welcome_controller.rb:5: syntax error, unexpected keyword_not, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:35:51 +0300
+  
+SyntaxError (/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/controllers/welcome_controller.rb:5: syntax error, unexpected '=', expecting ')'
+ers = Developer.filter(:name = 'john')
+                              ^
+/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/controllers/welcome_controller.rb:5: syntax error, unexpected ')', expecting keyword_end
+veloper.filter(:name = 'john')
+                              ^):
+  
+app/controllers/welcome_controller.rb:5: syntax error, unexpected '=', expecting ')'
+app/controllers/welcome_controller.rb:5: syntax error, unexpected ')', expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:35:58 +0300
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `filter' for #<Class:0x007ff95f390818>):
+  
+app/controllers/welcome_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:36:04 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (1.9ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 401 Unauthorized in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" LIMIT $1[0m  [["LIMIT", 11]]
+NoMethodError (undefined method `filter' for #<Developer::ActiveRecord_Relation:0x007ff960c43ab8>):
+  
+app/controllers/welcome_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:36:17 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mSideProject Load (0.5ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered welcome/index.erb within layouts/application (34.7ms)
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 322ms (Views: 299.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:36:32 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered welcome/index.erb within layouts/application (28.3ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 49.3ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-29 19:37:01 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (14.2ms)
+  [1m[36mDeveloper Load (1.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 273ms (Views: 201.6ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:37:14 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered welcome/index.erb within layouts/application (27.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 44.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:37:15 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered welcome/index.erb within layouts/application (4.3ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:37:25 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered welcome/index.erb within layouts/application (40.5ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 93.6ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:38:25 +0300
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unsupported argument type: true (TrueClass)):
+  
+app/controllers/welcome_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:38:39 +0300
+  
+SyntaxError (/Users/alexandersideris/Documents/GitHub/remotejuniorclub/app/controllers/welcome_controller.rb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+ers = Developer.where(:name is not nil)
+                              ^):
+  
+app/controllers/welcome_controller.rb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:41:28 +0300
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `not' for #<Class:0x007ff9624cebf0>
+Did you mean?  none):
+  
+app/controllers/welcome_controller.rb:5:in `index'
+Started GET "/" for 127.0.0.1 at 2018-04-29 19:41:41 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  Rendered welcome/index.erb within layouts/application (34.3ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 57.9ms | ActiveRecord: 6.7ms)
+
+

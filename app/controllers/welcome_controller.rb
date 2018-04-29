@@ -2,17 +2,17 @@ class WelcomeController < ApplicationController
 
   # GET /welcome
   def index
-  	@developers = Developer.all
+  	@developers = Developer.where.not(name: nil).first(6)
   	@side_projects = SideProject.all.first(6)
   end
 
   def frontpage
-  	@developers = Developer.all.sort_by(&:points).reverse
+  	@developers = Developer.where.not(name: nil).sort_by(&:points).reverse
   	@posts = Post.all.reverse
   end
 
   def chat
-  	@developers = Developer.all
+  	@developers = Developer.where.not(name: nil)
   	@posts = Post.all.reverse
   end
 
