@@ -35802,3 +35802,227 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 95ms (Views: 81.2ms | ActiveRecord: 8.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-28 16:32:19 +0300
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mSideProject Load (1.5ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (19.5ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered welcome/index.erb within layouts/application (77.1ms)
+  [1m[36mDeveloper Load (2.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 374ms (Views: 282.0ms | ActiveRecord: 51.3ms)
+
+
+Started GET "/assets/jobs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/side_projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/widgets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/application.self-85a3df08aab34bc6a22c0cf18bd349b5a3fda5edca3e6dead5e0390446173b12.js?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/developers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/jobs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/side_projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/theme.self-015073ec8c8a7f78216fa8285175dcd2b6c671aa576e48a046e10e85e91bfed1.css?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/widgets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/application.self-565a90fd247bd9ef75cf5f71be1e11e37c3ad80695d8bdfb331fe844afbe0a9e.css?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+Started GET "/assets/developers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-28 16:32:20 +0300
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (395.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-28 16:32:37 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (1.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mPost Load (17.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (14.5ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 155ms (Views: 71.6ms | ActiveRecord: 35.0ms)
+
+
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-28 16:32:49 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.9ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (9.8ms)
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 34.2ms | ActiveRecord: 2.8ms)
+
+
+  [1m[36mDeveloper Load (0.8ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "developers" SET "updated_at" = $1, "points" = $2 WHERE "developers"."id" = $3[0m  [["updated_at", "2018-04-28 13:33:38.482735"], ["points", 1], ["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-28 16:33:40 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (10.3ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-28 16:38:36 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+Completed 401 Unauthorized in 88ms (ActiveRecord: 5.5ms)
+
+
+  
+NoMethodError (private method `attribute' called for #<Developer:0x007ff9af8eb3a8>
+Did you mean?  attributes
+               attributes=):
+  
+app/controllers/welcome_controller.rb:10:in `sort_by'
+app/controllers/welcome_controller.rb:10:in `frontpage'
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-28 16:38:47 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (14.5ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 241ms (Views: 206.0ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-28 16:40:24 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (8.5ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-28 16:40:34 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (10.3ms)
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 33.9ms | ActiveRecord: 7.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "developers" SET "updated_at" = $1, "points" = $2 WHERE "developers"."id" = $3[0m  [["updated_at", "2018-04-28 13:40:50.794695"], ["points", 3], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-28 16:40:52 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (8.9ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 30.2ms | ActiveRecord: 1.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "developers" SET "updated_at" = $1, "points" = $2 WHERE "developers"."id" = $3[0m  [["updated_at", "2018-04-28 13:41:00.783416"], ["points", 6], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-28 16:41:02 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (7.9ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 50.4ms | ActiveRecord: 1.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "developers" SET "updated_at" = $1, "points" = $2 WHERE "developers"."id" = $3[0m  [["updated_at", "2018-04-28 13:41:09.472336"], ["points", 0], ["id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-28 16:41:11 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.1ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (16.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 51.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-28 16:58:16 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mSideProject Load (0.6ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers"[0m
+  Rendered welcome/index.erb within layouts/application (46.8ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 319ms (Views: 268.5ms | ActiveRecord: 8.7ms)
+
+

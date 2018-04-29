@@ -25,7 +25,9 @@ class JobsController < ApplicationController
 
 		    # Update his/her CV counter
 		    current_developer.CV_counter = current_developer.CV_counter + 1
-		    current_developer.save
+		    current_developer.points = current_developer.points + 1
+	    	
+	    	current_developer.save
 		    
 	   	  	redirect_to "/frontpage"
 	    else

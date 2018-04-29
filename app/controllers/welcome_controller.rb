@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
   end
 
   def frontpage
-  	@developers = Developer.all
+  	@developers = Developer.all.sort_by(&:points).reverse
   	@posts = Post.all.reverse
   end
 
