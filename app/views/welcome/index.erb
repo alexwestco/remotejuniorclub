@@ -22,7 +22,7 @@
 	<p style="font-size: 25px; padding:30px; color: white;"><b>We are a community of junior developers chasing down the same dream!</b> 💻</p>
 	<div style="padding-left: 10%;">
 		<% @developers.each do |developer| %>
-			<div style="float: left; padding-left: 3%;">
+			<div class="col col-lg-4 col-md-6 col-sm-12" style="padding-left: 3%;">
 				<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a>
 				<% if developer.name != nil %>
 					<p style="color:white;"><b><%= developer.name.strip.split(" ")[0] %></b></p>
@@ -61,7 +61,7 @@
 	<p style="font-size: 25px; padding:30px;"><b>We send out CVs every single day and keep each other accountable!</b> 😎</p>
 	<div style="padding-left: 10%;">
 		<% @developers.each do |developer| %>
-			<div style="float: left; padding-left: 3%;">
+			<div class="col col-lg-4 col-md-6 col-sm-12" style="padding-left: 3%;">
 				<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a><br>
 				<span style="font-size: 11px;"> <b><%= developer.name.strip.split(" ")[0] %></b></p>
 				<p style="margin:0px; margin-top: 10px;"><span class="glyphicon glyphicon-fire"></span> <b><%= developer.CV_counter %> applications this month.</b></p>
