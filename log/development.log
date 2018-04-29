@@ -37498,3 +37498,17 @@ Processing by WelcomeController#frontpage as HTML
 Completed 200 OK in 71ms (Views: 34.4ms | ActiveRecord: 18.2ms)
 
 
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-29 23:32:51 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (1.0ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (13.0ms)
+  [1m[36mDeveloper Load (0.8ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 392ms (Views: 307.6ms | ActiveRecord: 9.9ms)
+
+

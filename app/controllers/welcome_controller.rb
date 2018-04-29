@@ -7,13 +7,12 @@ class WelcomeController < ApplicationController
   end
 
   def frontpage
-  	@developers = Developer.where.not(name: nil).sort_by(&:points).reverse
-  	@posts = Post.all.reverse
+  	@developers = Developer.where.not(name: nil).sort_by(&:points).reverse.first(5)
+  	@posts = Post.all.reverse.first(20)
   end
 
   def chat
-  	@developers = Developer.where.not(name: nil)
-  	@posts = Post.all.reverse
+  	
   end
 
 end
