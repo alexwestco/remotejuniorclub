@@ -18,7 +18,7 @@
 
 </header>
 
-<div style="background-color: #222222; height:500px; text-align: center; ">
+<div style="background-color: #222222; overflow:hidden; text-align: center;  padding-bottom: 50px;">
 	<p style="font-size: 25px; padding:30px; color: white;"><b>We are a community of junior developers chasing down the same dream!</b> 💻</p>
 	<div style="padding-left: 10%;">
 		<% @developers.each do |developer| %>
@@ -35,7 +35,7 @@
 	
 </div>
 
-<div style=" height:500px; text-align: center; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%);">
+<div style="text-align: center; overflow:hidden; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); padding-bottom: 50px;">
 	<p style="font-size: 25px; padding:30px; "><b>We show off our work and inspire each other!</b> 😍</p>
 	
 	<div style="">
@@ -46,17 +46,18 @@
 
 			</div>
 
+
 		<% end %>
 
 	</div>
 </div>
 
-<div style="background-color: #222222; height:500px; text-align: center;">
-	<p style="font-size: 25px; padding:30px; color:white;"><b>We discuss and help each other in the chat!</b> 😇 </p>
+<div style="background-color: #222222; overflow:hidden; text-align: center;">
+	<p style="font-size: 25px; padding:30px; color:white; padding-bottom: 50px;"><b>We discuss and help each other in the chat!</b> 😇 </p>
 	<img id="card-img-top" src="https://i.imgur.com/dYeW02Q.png" style="height:300px; margin:30px;" />
 </div>
 
-<div style="height:500px; text-align: center; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%);">
+<div style="overflow:hidden; text-align: center; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); padding-bottom: 50px;">
 	<p style="font-size: 25px; padding:30px;"><b>We send out CVs every single day and keep each other accountable!</b> 😎</p>
 	<div style="padding-left: 10%;">
 		<% @developers.each do |developer| %>
