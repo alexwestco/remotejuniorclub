@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
 
   # GET /welcome
   def index
-  	@developers = Developer.where.not(name: nil).first(6)
+  	@developers = Developer.where.not(name: nil).sort_by(&:points).reverse.first(6)
   	@side_projects = SideProject.all.first(6)
   end
 
