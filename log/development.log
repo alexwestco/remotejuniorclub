@@ -37787,3 +37787,14 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 91ms (Views: 80.9ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-30 00:33:20 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.6ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (8.9ms)
+  [1m[36mDeveloper Load (0.9ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 466ms (Views: 331.4ms | ActiveRecord: 9.1ms)
+
+
