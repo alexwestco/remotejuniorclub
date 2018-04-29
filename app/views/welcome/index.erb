@@ -20,7 +20,7 @@
 
 <div style="background-color: #222222; overflow:hidden; text-align: center;  padding-bottom: 50px;">
 	<p style="font-size: 25px; padding:30px; color: white;"><b>We are a community of junior developers chasing down the same dream!</b> 💻</p>
-	<div style="padding-left: 10%;">
+	<div style="">
 		<% @developers.each do |developer| %>
 			<div class="col col-lg-4 col-md-6 col-sm-12" style="padding-left: 3%;">
 				<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a>
@@ -59,7 +59,7 @@
 
 <div style="overflow:hidden; text-align: center; background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); padding-bottom: 50px;">
 	<p style="font-size: 25px; padding:30px;"><b>We send out CVs every single day and keep each other accountable!</b> 😎</p>
-	<div style="padding-left: 10%;">
+	<div style="">
 		<% @developers.each do |developer| %>
 			<div class="col col-lg-4 col-md-6 col-sm-12" style="padding-left: 3%;">
 				<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a><br>
