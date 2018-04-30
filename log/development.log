@@ -38072,3 +38072,70 @@ Processing by JobsController#index as HTML
 Completed 200 OK in 70ms (Views: 60.0ms | ActiveRecord: 5.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-30 11:44:12 +0300
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (1.0ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.5ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (8.8ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 328ms (Views: 219.2ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-30 12:01:35 +0300
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.6ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (8.3ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 327ms (Views: 227.0ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2018-04-30 12:01:40 +0300
+Processing by WelcomeController#chat as HTML
+  Rendering welcome/chat.erb within layouts/application
+  Rendered welcome/chat.erb within layouts/application (0.4ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2018-04-30 12:01:56 +0300
+Processing by WelcomeController#chat as HTML
+  Rendering welcome/chat.erb within layouts/application
+  Rendered welcome/chat.erb within layouts/application (0.3ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2018-04-30 12:02:12 +0300
+Processing by WelcomeController#chat as HTML
+  Rendering welcome/chat.erb within layouts/application
+  Rendered welcome/chat.erb within layouts/application (0.3ms)
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/frontpage" for 127.0.0.1 at 2018-04-30 12:02:21 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mPost Load (6.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (7.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 30.8ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2018-04-30 12:02:28 +0300
+Processing by WelcomeController#chat as HTML
+  Rendering welcome/chat.erb within layouts/application
+  Rendered welcome/chat.erb within layouts/application (0.5ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 48.3ms | ActiveRecord: 0.5ms)
+
+
