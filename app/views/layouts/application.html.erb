@@ -24,12 +24,14 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
+            <% if developer_signed_in? %>
+              <a class="navbar-brand" href="/frontpage" style="font-size: 14px;"><span class="glyphicon glyphicon-plane"></span> Remote Junior Club</a>
+            <% else %>
+              <a class="navbar-brand" href="/" style="font-size: 14px;"><span class="glyphicon glyphicon-plane"></span> Remote Junior Club</a>         
+            <% end %>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li>
-        <a href="/"><span class="glyphicon glyphicon-plane"></span> Remote Junior Club</a>
-      </li>
       <li>
         <a href="/frontpage"><span class="glyphicon glyphicon-fire"></span> Front Page</a>
       </li>
