@@ -46,7 +46,19 @@ class DevelopersController < ApplicationController
 	def show_profile
 		@developer = Developer.find(params[:id])
 		@side_projects = SideProject.where(:developer_id => params[:id]).reverse
-		@posts = Post.where(:developer => Developer.find(params[:id])).reverse.first(3)
+		@all_posts = Post.all
+		@posts = []
+		@all_posts.each do |post|
+			if post.kind == 'Side Project'
+				if SideProject.find(post.side_project).developer_id == params[:id]
+					@posts.push(post)
+				end
+			elsif post.kind == 'Job Application'
+				if JobApplication.find(post.application).developer == params[:id]
+					@posts.push(post)
+				end
+			end
+		end
 	end
 
 	def destroy

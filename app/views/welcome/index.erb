@@ -64,8 +64,8 @@
 			<div class="col col-lg-4 col-md-6 col-sm-12" style="padding-left: 3%;">
 				<a href="/developers/show_profile?id=<%= developer.id %>"><img id="card-img-top" src="<%= developer.profile_image.url %>" style="border-radius: 50%; height:120px; margin:10px;" /></a><br>
 				<span style="font-size: 11px;"> <b><%= developer.name.strip.split(" ")[0] %></b></p>
-				<p style="margin:0px; margin-top: 10px;"><span class="glyphicon glyphicon-fire"></span> <b><%= developer.CV_counter %> applications this month.</b></p>
-				<p style="margin:0px;"><span class="glyphicon glyphicon-fire"></span> <b><%= developer.side_project_counter %> side projects this month.</b></p>
+				<p style="margin:0px; margin-top: 10px;"><span class="glyphicon glyphicon-fire"></span> <b><%= developer.CV_counter %> job applications this month.</b></p>
+				<p style="margin:0px;"><span class="glyphicon glyphicon-fire"></span> <b><%= developer.side_project_counter %> new side projects this month.</b></p>
 				<p style="margin:0px;"><span class="glyphicon glyphicon-fire"></span> <b>Total: <%= developer.points %> points</b></p>
 			</div>
 

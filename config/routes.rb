@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
   get 'developers/show_profile'
 
+  get 'jobs/checkAppliedCheckbox'
+
+  get 'jobs/uncheckAppliedCheckbox'
+
   devise_for :developers
 
   resources :widgets

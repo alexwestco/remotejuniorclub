@@ -12,17 +12,83 @@
 
 <hr>
 
+<div style="text-align: center;">
+	<a id="all_btn" class="btn" style="background-color: grey; color:white; margin-bottom: 20px;">All</a>
+	<a id="applied_btn" class="btn" style="background-color: #191919; color:white; margin-bottom: 20px;">Applied</a>
+	<a id="have_not_applied_btn" class="btn" style="background-color: #191919; color:white; margin-bottom: 20px;">Have not Applied</a>
+</div>
 
-<% @jobs.each do |job| %>
-	
-	<div class="col col-lg-12" style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); text-align: center; margin-left: auto; margin-right: auto; display: block; align-self: center; margin-bottom: 20px;">
-		<a style="padding:10px; color:black; text-decoration: none;" target="_blank" href="<%= job.url %>" ><b><%= job.title %> at <%= job.company %><span style="margin: 15px;" class="btn btn-info">Apply</span></b></a>
-		
-		<span style="font-size: 11px; color:grey;">Added by <%= Developer.find(job.creator).name %></span>
+<div id="all">
+	<% @jobs.each do |job| %>
 		<% if developer_signed_in? %>
-			<% if current_developer.id == job.creator %>
-				<a style="padding-left: 10px;" href="/jobs/<%= job.id %>/edit">Edit</a>
+			<div class="col col-lg-12" style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); text-align: center; margin-left: auto; margin-right: auto; display: block; align-self: center; margin-bottom: 20px;">
+				<% if developer_signed_in? %>
+					<% if current_developer.id == job.creator %>
+						<a style="padding-left: 10px;" href="/jobs/<%= job.id %>/edit">Edit</a>
+					<% end %>
+				<% end %>
+
+				
+				<% if !JobApplication.where(:job => job.id, :developer => current_developer.id).empty? %>
+					<a style="padding:10px; color:black; text-decoration: none;" target="_blank" href="<%= job.url %>" ><b><%= job.title %> at <%= job.company %><span style="margin: 15px; background-color: grey; color: white;" class="btn">Applied</span></b></a>
+					<input type="checkbox" value="<%= job.id %>" onchange="toggleCheckbox(this)" checked><span style="font-size: 14px;"> I Applied for this job</span>
+				<% else %>
+					<a style="padding:10px; color:black; text-decoration: none;" target="_blank" href="<%= job.url %>" ><b><%= job.title %> at <%= job.company %><span style="margin: 15px;" class="btn btn-info">Apply</span></b></a>
+					<input type="checkbox" value="<%= job.id %>" onchange="toggleCheckbox(this)"><span style="font-size: 14px;"> I Applied for this job</span>
+
+				<% end %>
+			</div>
+
+		<% else %>
+			<div class="col col-lg-12" style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); text-align: center; margin-left: auto; margin-right: auto; display: block; align-self: center; margin-bottom: 20px;">
+				<a style="padding:10px; color:black; text-decoration: none;" target="_blank" href="<%= job.url %>" ><b><%= job.title %> at <%= job.company %><span style="margin: 15px;" class="btn btn-info">Apply</span></b></a>
+			</div>
+
+		<% end %>
+	<% end %>
+</div>
+
+<div id="have_not_applied" style="display: none;">
+	<% if developer_signed_in? %>
+		<% @jobs.each do |job| %>
+			<% if JobApplication.where({ job: job.id, developer: current_developer.id }).empty? %>
+				<div class="col col-lg-12" style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); text-align: center; margin-left: auto; margin-right: auto; display: block; align-self: center; margin-bottom: 20px;">
+					<% if developer_signed_in? %>
+						<% if current_developer.id == job.creator %>
+							<a style="padding-left: 10px;" href="/jobs/<%= job.id %>/edit">Edit</a>
+						<% end %>
+					<% end %>
+
+					<a style="padding:10px; color:black; text-decoration: none;" target="_blank" href="<%= job.url %>" ><b><%= job.title %> at <%= job.company %><span style="margin: 15px;" class="btn btn-info">Apply</span></b></a>
+					<input type="checkbox" value="<%= job.id %>" onchange="toggleCheckbox(this)"><span style="font-size: 14px;"> I Applied for this job</span>
+
+					
+				</div>
 			<% end %>
 		<% end %>
-	</div>
 	<% end %>
+</div>
+
+<div id="have_applied" style="display: none;">
+	<% @jobs.each do |job| %>
+		<% if developer_signed_in? %>
+			<% if !JobApplication.where({ job: job.id, developer: current_developer.id }).empty? %>
+				<div class="col col-lg-12" style="background-image: linear-gradient(to top, #a8edea 10%, #fed6e3 120%); text-align: center; margin-left: auto; margin-right: auto; display: block; align-self: center; margin-bottom: 20px;">
+
+					<% if developer_signed_in? %>
+						<% if current_developer.id == job.creator %>
+							<a style="padding-left: 10px;" href="/jobs/<%= job.id %>/edit">Edit</a>
+						<% end %>
+					<% end %>
+					<a style="padding:10px; color:black; text-decoration: none;" target="_blank" href="<%= job.url %>" ><b><%= job.title %> at <%= job.company %><span style="margin: 15px; background-color: grey; color: white;" class="btn">Applied</span></b></a>
+					
+					<input type="checkbox" value="<%= job.id %>" onchange="toggleCheckbox(this)" checked><span style="font-size: 14px;"> I Applied for this job</span>
+
+					
+					
+				</div>
+			<% end %>
+		<% end %>
+	<% end %>
+</div>
+

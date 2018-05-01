@@ -5,10 +5,6 @@ class JobsController < ApplicationController
 		@jobs = Job.all
 	end
 
-	def index
-		@jobs = Job.all
-	end
-
 	def new
 		@job = Job.new
 	end
@@ -64,6 +60,44 @@ class JobsController < ApplicationController
 
 	    @job.destroy
 	    redirect_to "/"
+	end
+
+	def checkAppliedCheckbox
+		# Create a new application and save it
+		@application = JobApplication.new
+		@application.job = params[:job]
+	    @application.developer = current_developer.id
+	    @application.save
+
+	    @post = Post.new
+	    @post.kind = 'Job Application'
+	    @post.application = @application.id
+	    @post.save
+
+	    # Update his/her CV counter and save
+	    current_developer.CV_counter = current_developer.CV_counter + 1
+	    current_developer.points = current_developer.points + 1
+	    	
+    	current_developer.save
+
+	end
+
+	def uncheckAppliedCheckbox
+		# Find the job application and post, delete them
+		@application = JobApplication.where(:job => params[:job], :developer => current_developer.id).first
+	    @post = Post.where(:kind => 'Job Application', :application => @application.id).first
+	    
+	    puts @post
+
+	    @application.destroy
+	    @post.destroy
+
+	    # Update his/her CV counter and save it
+	    current_developer.CV_counter = current_developer.CV_counter - 1
+	    current_developer.points = current_developer.points - 1
+	    	
+    	current_developer.save
+
 	end
 
 	

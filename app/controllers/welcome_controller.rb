@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
 
   def frontpage
   	@developers = Developer.where.not(name: nil).sort_by(&:points).reverse.first(5)
-  	@posts = Post.all.reverse.first(20)
+  	@posts = Post.all.reverse.first(15)
   end
 
   def chat
