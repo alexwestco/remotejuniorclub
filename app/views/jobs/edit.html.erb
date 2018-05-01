@@ -1,0 +1,38 @@
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+
+<div style="text-align: center; font-size: 20px; padding-top: 60px; background-color: white;">
+	<h1 style="margin:30px;">Edit Job</h1>
+
+
+	<%= form_for @job do |ap| %>
+
+		</br>
+		<p style="color: green;">Title. ex 'Junior Software Engineer'</p>
+
+		<%= ap.label :title %> </br>
+		<%= ap.text_field :title, :required => true, :style => "width: 400px;" %>
+		<br></br><br></br>
+
+		<p style="color: green;">Company. ex 'ProductHunt'</p>
+		<%= ap.label :company %> </br>
+		<%= ap.text_field :company, :required => true, :style => "width: 400px;" %>
+		<br></br><br></br>
+
+
+		<p style="color: green;">Url. Must start with http:// or https://</p>
+		<%= ap.label :url %> </br>
+		<%= ap.text_field :url, :required => true, :style => "width: 400px;" %>
+		<br></br><br></br>
+
+		
+		<br></br><br></br>
+
+		
+
+		<%= ap.submit %>
+
+		<br><br>
+		
+	<% end %>
+</div>

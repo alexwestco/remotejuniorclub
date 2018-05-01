@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180429164853) do
+ActiveRecord::Schema.define(version: 20180430102815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180429164853) do
     t.integer "developer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "job"
   end
 
   create_table "developers", force: :cascade do |t|
@@ -49,20 +50,28 @@ ActiveRecord::Schema.define(version: 20180429164853) do
     t.index ["reset_password_token"], name: "index_developers_on_reset_password_token", unique: true
   end
 
+  create_table "job_applications", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "developer"
+    t.integer "job"
+  end
+
   create_table "jobs", force: :cascade do |t|
     t.string "title"
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "description"
     t.string "company"
+    t.integer "creator"
   end
 
   create_table "posts", force: :cascade do |t|
-    t.integer "developer"
-    t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "kind"
+    t.integer "application"
+    t.integer "side_project"
   end
 
   create_table "side_projects", force: :cascade do |t|

@@ -16,9 +16,9 @@ class SideProjectsController < ApplicationController
 	    if @side_project.save
 
 	    	@post = Post.new
-	    	@post.developer = current_developer.id
-	    	@post.body = current_developer.name + ' just created a new side project: ' + post_params[:name]+' (+25 points)'
-	    	@post.save
+		    @post.kind = 'Side Project'
+		    @post.side_project = @side_project.id
+		    @post.save
 	    
 	    	current_developer.side_project_counter = current_developer.side_project_counter + 1
 	    	current_developer.points = current_developer.points + 25

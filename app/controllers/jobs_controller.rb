@@ -15,12 +15,19 @@ class JobsController < ApplicationController
 
 	def create
 	    @job = Job.new(post_params)
+	    @job.creator = current_developer.id
 	    
 	    if @job.save
 	   	  	# Create a new post for the frontpage
 		    @post = Post.new
-		    @post.developer = current_developer.id
-		    @post.body = current_developer.name + ' just applied for a new job: ' + post_params[:url]+' (+1 points)'
+		    @post.kind = 'Job Application'
+
+		    @application = JobApplication.new
+		    @application.job = @job.id
+		    @application.developer = current_developer.id
+		    @application.save
+
+		    @post.application = @application.id
 		    @post.save
 
 		    # Update his/her CV counter
@@ -37,6 +44,9 @@ class JobsController < ApplicationController
 
 	def edit
 		@job = Job.find(params[:id])
+		if current_developer.id != @job.creator
+			redirect_to "/frontpage"
+		end
 	end
 
 	def update
