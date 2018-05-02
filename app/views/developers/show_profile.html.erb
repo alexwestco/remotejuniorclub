@@ -15,10 +15,10 @@
 		<% @posts.each do |post| %>
 			<% if post.kind == 'Job Application' %>
 				<a href="/developers/show_profile?id=<%= Developer.find(JobApplication.find(post.application).developer).id %>"><img id="card-img-top" src="<%= Developer.find(JobApplication.find(post.application).developer).profile_image.url %>" style="border-radius: 50%; height:50px; margin-bottom:10px;" /></a>
-				<p style="margin: 0px; margin-top: 0px;"><b><%= Developer.find(JobApplication.find(post.application).developer).name %> just applied for a job: <%= Job.find(JobApplication.find(post.application).job).url %></b></p>
+				<p style="margin: 0px; margin-top: 0px;"><b><%= Developer.find(JobApplication.find(post.application).developer).name %> just applied for a job: <%= Job.find(JobApplication.find(post.application).job).url %></b> (+1 points)</p>
 			<% elsif post.kind == 'Side Project' %>
 				<a href="/developers/show_profile?id=<%= Developer.find(SideProject.find(post.side_project).developer_id).id %>"><img id="card-img-top" src="<%= Developer.find(SideProject.find(post.side_project).developer_id).profile_image.url %>" style="border-radius: 50%; height:50px; margin-bottom:10px;" /></a>
-					<p style="margin: 0px; margin-top: 0px;"><b><%= Developer.find(SideProject.find(post.side_project).developer_id).name %> just created a new side project: <%= SideProject.find(post.side_project).name %></b></p>
+					<p style="margin: 0px; margin-top: 0px;"><b><%= Developer.find(SideProject.find(post.side_project).developer_id).name %> just created a new side project: <%= SideProject.find(post.side_project).name %></b> (+25 points)</p>
 			<% end %>
 		<% end %>
 
