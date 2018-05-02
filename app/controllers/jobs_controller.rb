@@ -40,6 +40,14 @@ class JobsController < ApplicationController
 	def destroy
 		@job = Job.find(params[:id])
 
+		@applications = JobApplication.where(:job => @job.id)
+		@applications.each do |application|
+			@posts = Post.where(:application => application.id)
+			@posts.each do |post|
+				post.destroy
+			end
+			application.destroy
+		end
 	    @job.destroy
 	    redirect_to "/"
 	end
