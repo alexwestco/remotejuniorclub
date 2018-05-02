@@ -14,24 +14,6 @@ class JobsController < ApplicationController
 	    @job.creator = current_developer.id
 	    
 	    if @job.save
-	   	  	# Create a new post for the frontpage
-		    @post = Post.new
-		    @post.kind = 'Job Application'
-
-		    @application = JobApplication.new
-		    @application.job = @job.id
-		    @application.developer = current_developer.id
-		    @application.save
-
-		    @post.application = @application.id
-		    @post.save
-
-		    # Update his/her CV counter
-		    current_developer.CV_counter = current_developer.CV_counter + 1
-		    current_developer.points = current_developer.points + 1
-	    	
-	    	current_developer.save
-		    
 	   	  	redirect_to "/frontpage"
 	    else
 	      render 'new'
