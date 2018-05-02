@@ -45308,3 +45308,473 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 101ms (Views: 34.5ms | ActiveRecord: 6.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:10:44 +0300
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (1.2ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.6ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (12.6ms)
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 558ms (Views: 348.8ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-02 17:10:48 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mJobApplication Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 63ms (Views: 50.2ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/developers/profile" for 127.0.0.1 at 2018-05-02 17:10:52 +0300
+Processing by DevelopersController#profile as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mDeveloper Load (0.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering developers/profile.html.erb within layouts/application
+  Rendered developers/profile.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 47ms (Views: 38.0ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/developers/sign_out/" for 127.0.0.1 at 2018-05-02 17:10:54 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PtBEqN+Tz3CiE48YsH1JzjHQX8elpnk0lX7Tb+g5EVvkQyywXgz8PBjuIeuhj+fYB+OjBWz71moylZuWF8i2RQ=="}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:10:54 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.5ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (3.4ms)
+Completed 200 OK in 38ms (Views: 32.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-05-02 17:10:55 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 72ms (Views: 66.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/developers/sign_in" for 127.0.0.1 at 2018-05-02 17:10:59 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r9c0ZIlCXAJg9edPlTDnAp8ONN/ARTIaxyiiGrvTydLuLQ5l/3p9YMmA5PdIR25hluiCTAPFwsJhjDEzhiNF2w==", "developer"=>{"email"=>"alexander.sideris.west@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mDeveloper Load (0.9ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["email", "alexander.sideris.west@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "developers" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "developers"."id" = $5[0m  [["current_sign_in_at", "2018-05-02 14:10:59.911609"], ["last_sign_in_at", "2018-05-01 11:11:58.826544"], ["sign_in_count", 4], ["updated_at", "2018-05-02 14:10:59.913408"], ["id", 4]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 166ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:10:59 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (5.0ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-02 17:11:01 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[36mDeveloper Load (1.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mJobApplication Exists (4.1ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 4], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 4], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 4], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 68ms (Views: 58.5ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/jobs/229/edit" for 127.0.0.1 at 2018-05-02 17:11:03 +0300
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"229"}
+  [1m[36mDeveloper Load (0.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 229], ["LIMIT", 1]]
+  Rendering jobs/edit.html.erb within layouts/application
+  Rendered jobs/edit.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 72ms (Views: 62.2ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/jobs/229" for 127.0.0.1 at 2018-05-02 17:11:06 +0300
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3lEXiqVFFBVvyz153IpaBfz2vwk2Y+vOhxoMsC+3r0MblJxI2kJld1H9cpkyhSxcJXHedm7o9jLmhTeI+X2YrA==", "id"=>"229"}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 229], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `length' for nil:NilClass):
+  
+app/controllers/jobs_controller.rb:44:in `destroy'
+Started DELETE "/jobs/229" for 127.0.0.1 at 2018-05-02 17:11:42 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3lEXiqVFFBVvyz153IpaBfz2vwk2Y+vOhxoMsC+3r0MblJxI2kJld1H9cpkyhSxcJXHedm7o9jLmhTeI+X2YrA==", "id"=>"229"}
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 229], ["LIMIT", 1]]
+  [1m[36mJobApplication Load (1.0ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications" WHERE "job_applications"."job" = $1[0m  [["job", 229]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:11:42 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.5ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (8.9ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 257ms (Views: 219.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-02 17:11:45 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[36mDeveloper Load (4.6ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mJobApplication Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 4], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 4], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 4], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 54ms (Views: 46.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/developers/profile" for 127.0.0.1 at 2018-05-02 17:11:48 +0300
+Processing by DevelopersController#profile as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering developers/profile.html.erb within layouts/application
+  Rendered developers/profile.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/frontpage" for 127.0.0.1 at 2018-05-02 17:11:49 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  [1m[36mJobApplication Load (1.8ms)[0m  [1m[34mSELECT  "job_applications".* FROM "job_applications" WHERE "job_applications"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mDeveloper Load (1.8ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Load (0.0ms)[0m  [1m[34mSELECT  "job_applications".* FROM "job_applications" WHERE "job_applications"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Load (0.0ms)[0m  [1m[34mSELECT  "job_applications".* FROM "job_applications" WHERE "job_applications"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE Developer Load (0.0ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Load (0.0ms)[0m  [1m[34mSELECT  "job_applications".* FROM "job_applications" WHERE "job_applications"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 229], ["LIMIT", 1]]
+  Rendered welcome/frontpage.erb within layouts/application (17.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 41.9ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/developers/profile" for 127.0.0.1 at 2018-05-02 17:11:51 +0300
+Processing by DevelopersController#profile as HTML
+  [1m[36mDeveloper Load (2.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering developers/profile.html.erb within layouts/application
+  Rendered developers/profile.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 65ms (Views: 52.4ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/developers/sign_out/" for 127.0.0.1 at 2018-05-02 17:11:52 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"asr++EFv+V5HO5vJGv0NRtP2PVyNdYqcGuCZGV69o9WvD3U6PmiIPHkN1Cn08nsfCnFcI9X+l2B7f6IhiHeUOg=="}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:11:52 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (4.4ms)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-05-02 17:11:52 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/developers/sign_in" for 127.0.0.1 at 2018-05-02 17:11:57 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rxZVIpJJ5m1hl0jaEzOvGa3fBLNmOUZSaQVBQsewnyt1Xi/A4SA4jLqZHWXjNVKi8IuI1KVYmuFDH58JWZddWw==", "developer"=>{"email"=>"alexcs02356@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mDeveloper Load (0.7ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["email", "alexcs02356@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "developers" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "developers"."id" = $5[0m  [["current_sign_in_at", "2018-05-02 14:11:57.244501"], ["last_sign_in_at", "2018-05-01 13:44:26.624037"], ["sign_in_count", 8], ["updated_at", "2018-05-02 14:11:57.246266"], ["id", 3]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 168ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:11:57 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (4.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 31.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-02 17:11:58 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mJobApplication Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/jobs/uncheckAppliedCheckbox?job=229" for 127.0.0.1 at 2018-05-02 17:12:00 +0300
+Processing by JobsController#uncheckAppliedCheckbox as */*
+  Parameters: {"job"=>"229"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mJobApplication Load (0.3ms)[0m  [1m[34mSELECT  "job_applications".* FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 ORDER BY "job_applications"."id" ASC LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."kind" = $1 AND "posts"."application" = $2 ORDER BY "posts"."id" ASC LIMIT $3[0m  [["kind", "Job Application"], ["application", 17], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "job_applications" WHERE "job_applications"."id" = $1[0m  [["id", 17]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 35]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "developers" SET "CV_counter" = $1, "points" = $2, "updated_at" = $3 WHERE "developers"."id" = $4[0m  [["CV_counter", 13], ["points", 38], ["updated_at", "2018-05-02 14:12:00.967224"], ["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+No template found for JobsController#uncheckAppliedCheckbox, rendering head :no_content
+Completed 204 No Content in 154ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/frontpage" for 127.0.0.1 at 2018-05-02 17:12:02 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (3.0ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  Rendered welcome/frontpage.erb within layouts/application (5.8ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 49.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-02 17:12:04 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mJobApplication Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 71ms (Views: 66.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/developers/profile" for 127.0.0.1 at 2018-05-02 17:12:06 +0300
+Processing by DevelopersController#profile as HTML
+  [1m[36mDeveloper Load (1.2ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering developers/profile.html.erb within layouts/application
+  Rendered developers/profile.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 56ms (Views: 47.3ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/developers/sign_out/" for 127.0.0.1 at 2018-05-02 17:12:12 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qR3Bok4ARrLm76t4dmmhyoyqrUffN1JdbdQbjbbd9edCrU+4SpNqC1CkBMYHL51tVxXBD/TC7HhapnvXoxamxg=="}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:12:12 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (5.9ms)
+Completed 200 OK in 48ms (Views: 42.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-05-02 17:12:13 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/developers/sign_in" for 127.0.0.1 at 2018-05-02 17:12:15 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QwFCxutb7EHTbIqwMDPnd+g4cV5vFccjdE2jPBwX/8Gxr09UJggnDYUdfwsGW56lerX78S8Dgl2pGRXMqDQ4lw==", "developer"=>{"email"=>"alexcs02356@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["email", "alexcs02356@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "developers" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "developers"."id" = $5[0m  [["current_sign_in_at", "2018-05-02 14:12:15.998530"], ["last_sign_in_at", "2018-05-02 14:11:57.244501"], ["sign_in_count", 9], ["updated_at", "2018-05-02 14:12:15.999685"], ["id", 3]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 146ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:12:16 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (5.2ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-02 17:12:17 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mJobApplication Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 3], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 50ms (Views: 44.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/developers/profile" for 127.0.0.1 at 2018-05-02 17:12:19 +0300
+Processing by DevelopersController#profile as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering developers/profile.html.erb within layouts/application
+  Rendered developers/profile.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 49ms (Views: 41.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/developers/sign_out/" for 127.0.0.1 at 2018-05-02 17:12:20 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"21eaiU0DwUQWD7vBnIj/aJ2DjJOAdIdr71iAJDxJNiCXaS4sxUjTBdtZo9MPC8l3S/TmuZEs4B69/vFCN4u0XA=="}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:12:20 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (3.8ms)
+Completed 200 OK in 33ms (Views: 27.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2018-05-02 17:12:21 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/developers/sign_in" for 127.0.0.1 at 2018-05-02 17:12:28 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7xdltPrnplz1celPzpBpscE5psuBEsnUbxBnK1NTHxHUGswjqu+IbxGjLTbx/aj7UlBdpXGt28HAEDEUx8G01w==", "developer"=>{"email"=>"alexander.sideris.west@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."email" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["email", "alexander.sideris.west@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "developers" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "developers"."id" = $5[0m  [["current_sign_in_at", "2018-05-02 14:12:28.550295"], ["last_sign_in_at", "2018-05-02 14:10:59.911609"], ["sign_in_count", 5], ["updated_at", "2018-05-02 14:12:28.551739"], ["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 145ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:12:28 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.4ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (3.1ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 33.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-02 17:12:30 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mJobApplication Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 4], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 4], ["LIMIT", 1]]
+  [1m[36mCACHE JobApplication Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "job_applications" WHERE "job_applications"."job" = $1 AND "job_applications"."developer" = $2 LIMIT $3[0m  [["job", 229], ["developer", 4], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/jobs/229/edit" for 127.0.0.1 at 2018-05-02 17:12:32 +0300
+Processing by JobsController#edit as HTML
+  Parameters: {"id"=>"229"}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mJob Load (1.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 229], ["LIMIT", 1]]
+  Rendering jobs/edit.html.erb within layouts/application
+  Rendered jobs/edit.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 50ms (Views: 42.3ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/jobs/229" for 127.0.0.1 at 2018-05-02 17:12:34 +0300
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DTHALXCo0DWGVYIKA8cX/JQR+uFMKo/Yo1t284ZmGG5vyuF0yuB3HmDgUKayqe0YKsBWF9PHNh0e/q5TpocXWg==", "id"=>"229"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 229], ["LIMIT", 1]]
+  [1m[36mJobApplication Load (0.3ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications" WHERE "job_applications"."job" = $1[0m  [["job", 229]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "jobs" WHERE "jobs"."id" = $1[0m  [["id", 229]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-02 17:12:34 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mSideProject Load (0.3ms)[0m  [1m[34mSELECT  "side_projects".* FROM "side_projects" ORDER BY "side_projects"."id" ASC LIMIT $1[0m  [["LIMIT", 6]]
+  Rendering welcome/index.erb within layouts/application
+  Rendered welcome/index.erb within layouts/application (6.7ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2018-05-02 17:12:35 +0300
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  [1m[36mDeveloper Load (0.4ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered jobs/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 47ms (Views: 43.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/frontpage" for 127.0.0.1 at 2018-05-02 17:12:36 +0300
+Processing by WelcomeController#frontpage as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1m[34mSELECT "developers".* FROM "developers" WHERE ("developers"."name" IS NOT NULL)[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendering welcome/frontpage.erb within layouts/application
+  Rendered welcome/frontpage.erb within layouts/application (2.6ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1m[34mSELECT  "developers".* FROM "developers" WHERE "developers"."id" = $1 ORDER BY "developers"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 42.7ms | ActiveRecord: 1.1ms)
+
+
