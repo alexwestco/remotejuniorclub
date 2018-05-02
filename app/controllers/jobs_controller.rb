@@ -2,7 +2,7 @@ class JobsController < ApplicationController
 	before_action :authenticate_developer!, only: [:new, :create, :edit, :update, :destroy]
 
 	def index
-		@jobs = Job.all
+		@jobs = Job.all.reverse
 	end
 
 	def new
